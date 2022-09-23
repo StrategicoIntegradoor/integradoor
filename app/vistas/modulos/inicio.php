@@ -19,7 +19,7 @@ if ($_SESSION["rol"] != 1 && $_SESSION["rol"] != 2) {
     
     <h1>
       
-      Admin. Cotizaciones JAJAJAJAJAJA
+      Admin. Cotizaciones JUJUJUJUJUJUJU X_X
     
     </h1>
 
