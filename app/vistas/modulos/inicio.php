@@ -27,7 +27,7 @@ if ($_SESSION["rol"] != 1 && $_SESSION["rol"] != 2) {
       
       <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
-      <li class="active">Admin. cotizaciones x_x x_x x_x x_x</li>
+      <li class="active">Admin. cotizaciones o_o_o_-_-_-_</li>
     
     </ol>
 
