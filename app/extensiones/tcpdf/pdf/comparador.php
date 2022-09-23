@@ -151,7 +151,7 @@ $pdf->SetFont('dejavusanscondensed', '', 2);
 $pdf->SetFont('dejavusanscondensed', 'B', 12);
 $pdf->SetXY(160, 3);
 $pdf->SetTextColor(104, 104, 104);
-$pdf->Cell(25, 6, "cotización #". $identificador ." y fin", 0, 1, '');
+$pdf->Cell(25, 6, "cotización #". $identificador ."", 0, 1, '');
 
 $pdf->SetFont('dejavusanscondensed', 'B', 12);
 $pdf->SetXY(98, 19.2);
@@ -2268,7 +2268,7 @@ $pdf->writeHTML($html4, true, false, true, false, '');
 $pdf->Ln();
 $pdf->writeHTML($html5, true, false, true, false, '');
 //$pdf->Ln();
-$pdf->SetXY(0, 280);
+$pdf->SetXY(0, 274);
 $htmlFooter = '<p style="font-size: 7px;">Nota: Esta cotización no constituye una oferta comercial. La misma se expide única y exclusivamente con un propósito informativo sobre los posibles costos del seguro y sus condiciones, los cuales serán susceptibles de modificación hasta tanto no se concreten y determinen las características de los respectivos riesgos.</p>';
 $pdf->writeHTML($htmlFooter, true, false, true, false, '');
 $pdf->Ln();
