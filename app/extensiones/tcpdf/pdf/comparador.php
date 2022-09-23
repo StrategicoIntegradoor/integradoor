@@ -149,6 +149,11 @@ $pdf->Image('../../../vistas/img/logos/cheque.png', 100.5, 150.5, 0, -12, 'PNG',
 $pdf->SetFont('dejavusanscondensed', '', 2);
 
 $pdf->SetFont('dejavusanscondensed', 'B', 12);
+$pdf->SetXY(160, 3);
+$pdf->SetTextColor(104, 104, 104);
+$pdf->Cell(25, 6, "cotización #". $identificador ."", 0, 1, '');
+
+$pdf->SetFont('dejavusanscondensed', 'B', 12);
 $pdf->SetXY(98, 19.2);
 $pdf->SetTextColor(235, 135, 39);
 $pdf->Cell(25, 6, "  " . strtoupper($rest) . "" . strtoupper($rest2), 0, 1, '');
@@ -2266,7 +2271,9 @@ $pdf->writeHTML($html5, true, false, true, false, '');
 $pdf->SetXY(0, 280);
 $htmlFooter = '<p style="font-size: 7px;">Nota: Esta cotización no constituye una oferta comercial. La misma se expide única y exclusivamente con un propósito informativo sobre los posibles costos del seguro y sus condiciones, los cuales serán susceptibles de modificación hasta tanto no se concreten y determinen las características de los respectivos riesgos.</p>';
 $pdf->writeHTML($htmlFooter, true, false, true, false, '');
-//$pdf->Ln();
+$pdf->Ln();
+$htmlFooter = '<p style="font-size: 12px;">Documento Generado Por Software Integradoor.</p>';
+$pdf->writeHTML($htmlFooter, true, false, true, false, '');
 
 
 //$pdf->lastPage();
