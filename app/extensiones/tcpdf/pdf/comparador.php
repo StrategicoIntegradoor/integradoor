@@ -151,7 +151,7 @@ $pdf->SetFont('dejavusanscondensed', '', 2);
 $pdf->SetFont('dejavusanscondensed', 'B', 12);
 $pdf->SetXY(160, 3);
 $pdf->SetTextColor(104, 104, 104);
-$pdf->Cell(25, 6, "cotización #". $identificador ."", 0, 1, '');
+$pdf->Cell(25, 6, "cotización #". $identificador ." y fin", 0, 1, '');
 
 $pdf->SetFont('dejavusanscondensed', 'B', 12);
 $pdf->SetXY(98, 19.2);
