@@ -19,7 +19,7 @@ if ($_SESSION["rol"] != 1 && $_SESSION["rol"] != 2) {
     
     <h1>
       
-      Admin. Cotizaciones x_x o_o
+      Admin. Cotizaciones 
     
     </h1>
 
@@ -27,7 +27,7 @@ if ($_SESSION["rol"] != 1 && $_SESSION["rol"] != 2) {
       
       <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
-      <li class="active">Admin. cotizaciones u_u_u_u  </li>
+      <li class="active">Admin. cotizaciones </li>
     
     </ol>
 
@@ -41,7 +41,7 @@ if ($_SESSION["rol"] != 1 && $_SESSION["rol"] != 2) {
   
         <a href="cotizar">
 
-          <button class="btn btn-warning">
+          <button class="btn btn-primary">
             
             Cotizar Nuevo Vehículo
 
