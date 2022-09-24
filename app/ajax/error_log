@@ -1,0 +1,2 @@
+[22-Aug-2022 16:12:48 UTC] PHP Notice:  Undefined variable: _SESSION in /home3/grupoasi/public_html/integradoor.com/app/modelos/clientes.modelo.php on line 65
+[15-Sep-2022 20:02:51 UTC] PHP Notice:  Undefined variable: _SESSION in /home3/grupoasi/public_html/integradoor.com/app/modelos/clientes.modelo.php on line 65
