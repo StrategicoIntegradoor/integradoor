@@ -1,6 +1,58 @@
 /*=============================================
-SUBIENDO LA FOTO DEL USUARIO
+CARGANDO DATOS DE INICIO
 =============================================*/
+(()=>{
+cargarIntermediario();
+cargarRoll();
+})();
+
+
+
+/*=============================================
+CARGAR INTERMEDIARIO
+=============================================*/
+
+function cargarIntermediario (){
+	alert("TAMO ACTIVO")
+	var saludo = "hola"
+	const $idInter = document.getElementById("idIntermediario")
+
+$.ajax({
+
+	url: "ajax/cargarIntermediario.php",
+	method : "POST",
+	data : {saludo: saludo},
+	success : function (respuesta){
+
+		console.log(respuesta);
+	   $idInter.innerHTML=respuesta;
+
+     
+		
+
+	}
+
+
+
+})
+
+
+	
+}
+
+
+
+/*=============================================
+CARGAR ROLL
+=============================================*/
+
+function cargarRoll (){
+	alert("TAMO ACTIVO 2")
+}
+
+
+
+
 $(".nuevaFoto").change(function(){
 
 	var imagen = this.files[0];
