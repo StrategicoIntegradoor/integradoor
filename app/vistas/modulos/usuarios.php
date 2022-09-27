@@ -38,8 +38,50 @@ if ($_SESSION["rol"] != 1) {
     <div class="box">
 
       <div class="box-header with-border">
+<style>
 
-        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarUsuario">
+.btnAgregarUsuario {
+  border-radius: 4px;
+  background-color: #A4EE04;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 5px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  /* box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7); */
+}
+
+.btnAgregarUsuario{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.btnAgregarUsuario:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;  
+  top: 4px;
+  right: -30px;
+  transition: 0.5s;
+}
+
+.btnAgregarUsuario:hover{
+  padding-right: 24px;
+  padding-left:8px;
+}
+
+.btnAgregarUsuario:hover:after {
+  opacity: 1;
+  right: 10px;
+} 
+
+</style>
+        <button class="btnAgregarUsuario" data-toggle="modal" data-target="#modalAgregarUsuario">
 
           Agregar usuario
 
