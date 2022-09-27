@@ -269,7 +269,7 @@ MODAL AGREGAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-users"></i></span>
 
-                <select class="form-control input-lg" name="nuevoRol">
+                <select class="form-control input-lg" name="nuevoRol" id="idRoll">
 
                   <option value="">Selecionar rol</option>
 
@@ -352,17 +352,13 @@ MODAL AGREGAR USUARIO
 
                 <!-- ENTRADA PARA SELECCIONAR SU INTERMEDIARIO -->
 
-                <div class="col-xs-12 col-sm-6 col-md-12 form-group">
+                <div class="col-lg-12 form-group">
 
                   <div class="input-group">
 
                     <span class="input-group-addon"><i class="fa fa-users"></i></span>
 
                     <select class="form-control input-lg" name="Intermediario" id="idIntermediario">
-
-                      <option value="">Selecionar Intermediario</option>
-
-                     
 
                     </select>
 

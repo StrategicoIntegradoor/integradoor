@@ -13,7 +13,7 @@ CARGAR INTERMEDIARIO
 =============================================*/
 
 function cargarIntermediario (){
-	alert("TAMO ACTIVO")
+
 	var saludo = "hola"
 	const $idInter = document.getElementById("idIntermediario")
 
@@ -27,17 +27,10 @@ $.ajax({
 		console.log(respuesta);
 	   $idInter.innerHTML=respuesta;
 
-     
-		
-
 	}
-
-
 
 })
 
-
-	
 }
 
 
@@ -45,14 +38,31 @@ $.ajax({
 /*=============================================
 CARGAR ROLL
 =============================================*/
-
 function cargarRoll (){
-	alert("TAMO ACTIVO 2")
+
+	var saludo = "roll"
+	const $idRoll = document.getElementById("idRoll")
+
+$.ajax({
+
+	url: "ajax/cargarRoll.php",
+	method : "POST",
+	data : {saludo: saludo},
+	success : function (respuesta){
+
+		console.log(respuesta);
+	   $idRoll.innerHTML=respuesta;
+
+	}
+
+})
+
+	
 }
 
-
-
-
+/*=============================================
+CARGAR Foto
+=============================================*/
 $(".nuevaFoto").change(function(){
 
 	var imagen = this.files[0];
