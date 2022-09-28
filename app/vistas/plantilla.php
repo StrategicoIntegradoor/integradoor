@@ -225,7 +225,7 @@ CUERPO DOCUMENTO
 
 
   <script src="vistas/js/plantilla.js?v=<?php echo (rand()); ?>"></script>
-  <script src="vistas/js/usuarios.js?v=<?php echo (rand()); ?>"></script>
+ 
   <script src="vistas/js/clientes.js?v=<?php echo (rand()); ?>"></script>
   <script src="vistas/js/cotizar.js?v=<?php echo (rand()); ?>"></script>
   <script src="vistas/js/fasecolda.js?v=<?php echo (rand()); ?>"></script>
