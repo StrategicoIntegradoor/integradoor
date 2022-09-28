@@ -186,7 +186,8 @@ CUERPO DOCUMENTO
         $_GET["ruta"] == "autogestion" ||
         $_GET["ruta"] == "salir" || 
         $_GET["ruta"] == "modificacion-productos" ||
-        $_GET["ruta"] == "ayuda-ventas"
+        $_GET["ruta"] == "ayuda-ventas" ||
+        $_GET["ruta"] == "intermediario"
       ) {
         if ($_GET['ruta'] == 'modificacion-productos') {
           $_GET['ruta'] = 'ModificacionProductos/ModificacionProductosView';

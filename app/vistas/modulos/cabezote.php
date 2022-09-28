@@ -68,16 +68,27 @@
 					<!-- Dropdown-toggle -->
 
 					<ul class="dropdown-menu">
+
+						<?php
+
+							if ($_SESSION["rol"] == 1) {
+						?>
+						
+							<li class="user-body">
+									
+								<a href="intermediario" class="btn btn-default btn-flat">Ver mi perfil</a>
+							</li>
+
+						<?php
+								}
+						?>
 						
 						<li class="user-body">
-							
-							<div class="pull-right">
 								
-								<a href="salir" class="btn btn-default btn-flat">Salir</a>
-
-							</div>
+							<a href="salir" class="btn btn-default btn-flat">Cerrar Sesión</a>
 
 						</li>
+						
 
 					</ul>
 
