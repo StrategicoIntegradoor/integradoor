@@ -262,7 +262,7 @@ if ($_SESSION["rol"] != 1) {
                                   </div>
                                   <div class="row" style="margin-top: 10px; padding: 10px;">
                                     <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                                      <label for="">Codigo Agente:</label>
+                                      <label for="">Id Agente:</label>
                                     </div>
                                     <div class="col-md-6" style="display: flex; justify-content:center;">
                                       <label for="">Codigo Partner:</label>
