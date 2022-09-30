@@ -90,7 +90,7 @@ if ($_SESSION["rol"] != 1) {
   }
 </style>
 
-<div class="content-flex" style="margin-left: 40px;">
+<div class="container" >
   <section class="content-header">
 
     <h1>
@@ -108,8 +108,8 @@ if ($_SESSION["rol"] != 1) {
     </ol>
 
   </section>
-  <section class="content">
-    <div class="box row">
+  <section class="container-fluid">
+    <div class="box">
       <div class="box-header with-border ">
         <div class="row">
           <div class="col-md-3">
@@ -231,62 +231,42 @@ if ($_SESSION["rol"] != 1) {
                       <h4>Credenciales Allianz</h4>
                     </div>
                   </div>
-                  <div class="row" style="border: 1px solid #ddd;">
+                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
                     <div class="col-md-12">
-                      <div class="row" style="margin-top: 10px; padding: 10px;">
-                        <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                          <label for="" style="margin-right: 6%;">Ssl Certfile:</label>
-                          <input type="file" id="certfileAlli" style="color: transparent" disabled="disabled">
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                        <div class="col-md-3">
+                          <label for="">Contraseña:</label> 
                         </div>
-                        <div class="col-md-6" style="display: flex; justify-content:center;">
-                          <label for="" style="margin-right: 6%;">Ssl Keyfile:</label>
-                          <input type="file" name="contac" id="keyfileAlli" style="color: transparent" disabled="disabled">
+                        <div class="col-md-3" >
+                        <input type="text" id="contraseñaAlli" disabled="disabled">
                         </div>
-                      </div>
-                      <div class="row" style="margin-top: 10px; padding: 10px;">
-                        <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                          <label for="" style="margin-right: 6%;">Contraseña:</label>
-                          <input type="text" id="contraseñaAlli" disabled="disabled">
+                        <div class="col-md-3">
+                          <label for="">Id Partner:</label>
                         </div>
-                        <div class="col-md-6" style="display: flex; justify-content:center;">
-                          <label for="" style="margin-right: 6%;">Id Partner:</label>
+                        <div class="col-md-3" >
                           <input type="text" name="contac" id="idPartAlli" disabled="disabled">
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            
-                          </div>
-                        </div>
                       </div>
-                      <div class="row" style="margin-top: -10px; padding: 10px;">
-                        <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
+                      <div class="row" style="margin-bottom: 10px;">
+                        <div class="col-md-3">
                           <label for="">Id Agente:</label>
                         </div>
-                        <div class="col-md-6" style="display: flex; justify-content:center;">
-                          <label for="">Codigo Partner:</label>
-                        </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
+                        <div class="col-md-3" >
                             <input type="text" id="idagentAlli" disabled="disabled">
                           </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
+                        <div class="col-md-3">
+                          <label for="">Codigo Partner:</label>
+                        </div>
+                        <div class="col-md-3" >
                             <input type="text" name="contac" id="codigoPartAlli" disabled="disabled">
                           </div>
-                        </div>
                       </div>
-                      <div class="row" style="margin-top: -10px; padding: 10px;">
-                        <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
+                      <div class="row">
+                        <div class="col-md-3" style="margin-bottom: 10px;">
                           <label for="">Codigo Agente:</label>
                         </div>
-                        <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                        </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="text" id="codigoagenAlli" disabled="disabled">
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="text" id="codigoagenAlli" disabled="disabled">
                         </div>
                       </div>
                     </div>
@@ -305,22 +285,20 @@ if ($_SESSION["rol"] != 1) {
                       <h4>Credenciales Bolivar</h4>
                     </div>
                   </div>
-                  <div class="row" style="border: 1px solid #ddd;">
+                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
                     <div class="col-md-12">
-                      <div class="row" style="margin-top: 10px; padding: 10px;">
-                        <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                        <div class="col-md-3" >
                           <label for="">Api Key</label>
                         </div>
-                        <div class="col-md-6" style="display: flex; justify-content:center;">
+                        <div class="col-md-3" >
+                          <input type="text" id="apikeyBo" disabled="disabled">
+                        </div>
+                        <div class="col-md-3" >
                           <label for="">Clave Asesor:</label>
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="text" id="apikeyBo" disabled="disabled">
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="text " name="contac" id="ClaveABo" disabled="disabled">
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="text " name="contac" id="ClaveABo" disabled="disabled">
                         </div>
                       </div>
                     </div>
@@ -341,32 +319,28 @@ if ($_SESSION["rol"] != 1) {
                       <h4>Credenciales Equidad</h4>
                     </div>
                   </div>
-                  <div class="row" style="border: 1px solid #ddd;">
+                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
                     <div class="col-md-12">
-                      <div class="row" style="margin-top: 10px; padding: 10px;">
-                        <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                        <div class="col-md-3" >
                           <label for="">Usuario:</label>
                         </div>
-                        <div class="col-md-6" style="display: flex; justify-content:center;">
+                        <div class="col-md-3" >
+                          <input type="text" id="usuEqui" disabled="disabled">
+                        </div>
+                        <div class="col-md-3" >
                           <label for="">Contraseña:</label>
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="text" id="usuEqui" disabled="disabled">
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="password" name="contraseñaEqui" id="contraseñaEqui" disabled="disabled">
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="password" name="contraseñaEqui" id="contraseñaEqui" disabled="disabled">
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <label for="">Codigo Sucursal</label>
-                          </div>
+                      </div>
+                      <div class="row"  style="margin-bottom: 10px;margin-top: 5px;">
+                        <div class="col-md-3" >
+                          <label for="">Codigo Sucursal</label>
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="text" id="codSucuEqui" disabled="disabled">
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="text" id="codSucuEqui" disabled="disabled">
                         </div>
                       </div>
                     </div>
@@ -387,10 +361,10 @@ if ($_SESSION["rol"] != 1) {
                       <h4>Credenciales Mapfre</h4>
                     </div>
                   </div>
-                  <div class="row" style="border: 1px solid #ddd;">
+                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
                     <div class="col-md-12">
-                      <div class="row" style="margin-top: 10px; padding: 10px;">
-                        <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                        <div class="col-md-6" >
                           <label for="">Ups, no hay nada que mostrar</label>
                         </div>
 
@@ -413,22 +387,11 @@ if ($_SESSION["rol"] != 1) {
                       <h4>Credenciales Previsora</h4>
                     </div>
                   </div>
-                  <div class="row" style="border: 1px solid #ddd;">
+                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
                     <div class="col-md-12">
-                      <div class="row" style="margin-top: 10px; padding: 10px;">
-                        <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                          <label for="">nombre campo2:</label>
-                        </div>
-                        <div class="col-md-6" style="display: flex; justify-content:center;">
-                          <label for="">Nombre campo2:</label>
-                        </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="file" id="repre" disabled="disabled">
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="file" name="contac" id="contac" disabled="disabled">
-                          </div>
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                        <div class="col-md-6" >
+                          <label for="">Ups, no hay nada que mostrar</label>
                         </div>
                       </div>
                     </div>
@@ -449,64 +412,56 @@ if ($_SESSION["rol"] != 1) {
                       <h4>Credenciales Solidaria</h4>
                     </div>
                   </div>
-                  <div class="row" style="border: 1px solid #ddd;">
+                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
                     <div class="col-md-12">
-                      <div class="row" style="margin-top: 10px; padding: 10px;">
-                        <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                        <div class="col-md-3" >
                           <label for="">Codigo Sucursal:</label>
                         </div>
-                        <div class="col-md-6" style="display: flex; justify-content:center;">
+                        <div class="col-md-3" >
+                          <input type="text" id="codSucuSoli" disabled="disabled">
+                        </div>
+                        <div class="col-md-3" >
                           <label for="">Codigo Persona:</label>
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="text" id="codSucuSoli" disabled="disabled">
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="text" name="contac" id="codPerSoli" disabled="disabled">
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="text" name="contac" id="codPerSoli" disabled="disabled">
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <label for="">Tipo Agente:</label>
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <label for="">Codigo Agente:</label>
-                          </div>
+                      </div>
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                        <div class="col-md-3" >
+                          <label for="">Tipo Agente:</label>
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="text" id="tipAgeSoli" disabled="disabled">
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="text" name="contac" id="codigoAgeSoli" disabled="disabled">
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="text" id="tipAgeSoli" disabled="disabled">
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <label for="">Codigo Punto de venta:</label>
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <label for="">Grant Type:</label>
-                          </div>
+                        <div class="col-md-3" >
+                          <label for="">Codigo Agente:</label>
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="text" id="codPunVenSoli" disabled="disabled">
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="text" name="contac" id="grantTypeSoli" disabled="disabled">
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="text" name="contac" id="codigoAgeSoli" disabled="disabled">
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <label for="">Cookie:</label>
-                          </div>
+                      </div>
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                        <div class="col-md-3" >
+                          <label for="">Codigo Punto de venta:</label>
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="text" id="cookieSoli" disabled="disabled"
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="text" id="codPunVenSoli" disabled="disabled">
+                        </div>
+                        <div class="col-md-3" >
+                          <label for="">Grant Type:</label>
+                        </div>
+                        <div class="col-md-3" >
+                          <input type="text" name="contac" id="grantTypeSoli" disabled="disabled">
+                        </div>
+                      </div>
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                        <div class="col-md-3" >
+                          <label for="">Cookie:</label>
+                        </div>
+                        <div class="col-md-3" >
+                          <input type="text" id="cookieSoli" disabled="disabled">
                         </div>
                       </div>
                     </div>
@@ -527,70 +482,62 @@ if ($_SESSION["rol"] != 1) {
                       <h4>Credenciales Liberty</h4>
                     </div>
                   </div>
-                  <div class="row" style="border: 1px solid #ddd;">
+                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
                     <div class="col-md-12">
-                      <div class="row" style="margin-top: 10px; padding: 10px;">
-                        <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                        <div class="col-md-3" >
                           <label for="">Cookie Token:</label>
                         </div>
-                        <div class="col-md-6" style="display: flex; justify-content:center;">
+                        <div class="col-md-3" >
+                          <input type="text" id="cookieToLibe" disabled="disabled">
+                        </div>
+                        <div class="col-md-3" >
                           <label for="">Cookie Peticion:</label>
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="text" id="cookieToLibe" disabled="disabled">
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="text" name="contac" id="cookieReLibe" disabled="disabled">
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="text" name="contac" id="cookieReLibe" disabled="disabled">
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <label for="">Autorización:</label>
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <label for="">Codigo Agente:</label>
-                          </div>
+                      </div>
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                        <div class="col-md-3" >
+                          <label for="">Autorización:</label>
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="text" id="autoLibe" disabled="disabled">
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="text" name="contac" id="codigoAgenLibe" disabled="disabled">
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="text" id="autoLibe" disabled="disabled">
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <label for="">Aplicacion Cliente:</label>
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <label for="">Ip:</label>
-                          </div>
+                        <div class="col-md-3" >
+                          <label for="">Codigo Agente:</label>
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="text" id="ApliCliLibe" disabled="disabled">
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="text" name="contac" id="ipLibe" disabled="disabled">
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="text" name="contac" id="codigoAgenLibe" disabled="disabled">
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <label for="">Id Request:</label>
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <label for="">Terminal:</label>
-                          </div>
+                      </div>
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                        <div class="col-md-3" >
+                          <label for="">Aplicacion Cliente:</label>
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="text" id="idRequeLibe" disabled="disabled">
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="text" name="contac" id="termilibe" disabled="disabled">
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="text" id="ApliCliLibe" disabled="disabled">
+                        </div>
+                        <div class="col-md-3" >
+                          <label for="">Ip:</label>
+                        </div>
+                        <div class="col-md-3" >
+                          <input type="text" name="contac" id="ipLibe" disabled="disabled">
+                        </div>
+                      </div>
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                        <div class="col-md-3" >
+                          <label for="">Id Request:</label>
+                        </div>
+                        <div class="col-md-3" >
+                          <input type="text" id="idRequeLibe" disabled="disabled">
+                        </div>
+                        <div class="col-md-3" >
+                          <label for="">Terminal:</label>
+                        </div>
+                        <div class="col-md-3" >
+                          <input type="text" name="contac" id="termilibe" disabled="disabled">
                         </div>
                       </div>
                     </div>
@@ -611,22 +558,20 @@ if ($_SESSION["rol"] != 1) {
                       <h4>Credenciales Estado</h4>
                     </div>
                   </div>
-                  <div class="row" style="border: 1px solid #ddd;">
+                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
                     <div class="col-md-12">
-                      <div class="row" style="margin-top: 10px; padding: 10px;">
-                        <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                        <div class="col-md-3" >
                           <label for="">Usuario:</label>
                         </div>
-                        <div class="col-md-6" style="display: flex; justify-content:center;">
+                        <div class="col-md-3" >
+                          <input type="text" id="usuEst" disabled="disabled">
+                        </div>
+                        <div class="col-md-3" >
                           <label for="">Contraseña:</label>
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="text" id="usuEst" disabled="disabled">
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="password" name="contac" id="ContraLibe" disabled="disabled">
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="password" name="contac" id="ContraLibe" disabled="disabled">
                         </div>
                       </div>
                     </div>
@@ -647,70 +592,48 @@ if ($_SESSION["rol"] != 1) {
                       <h4>Credenciales Axa</h4>
                     </div>
                   </div>
-                  <div class="row" style="border: 1px solid #ddd;">
+                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
                     <div class="col-md-12">
-                      <div class="row" style="margin-top: 10px; padding: 10px;">
-                        <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                          <label for="">Ssl Certfile:</label>
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px">
+                        <div class="col-md-3" >
+                          <label for="">Contraseña:</label>
                         </div>
-                        <div class="col-md-6" style="display: flex; justify-content:center;">
-                          <label for="">Ssl Keyfile:</label>
+                        <div class="col-md-3" >
+                          <input type="password" id="contraseñaaxa" disabled="disabled">
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="file" id="certFileaxa" disabled="disabled">
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="file" name="contac" id="keyfileaxa" disabled="disabled">
-                          </div>
+                        <div class="col-md-3" >
+                          <label for="">Codigo Distribuidor:</label>
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <label for="">Contraseña:</label>
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <label for="">Codigo Distribuidor:</label>
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="text" name="contac" id="codigodistriaxa" disabled="disabled">
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="password" id="contraseñaaxa" disabled="disabled">
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="text" name="contac" id="codigodistriaxa" disabled="disabled">
-                          </div>
+                      </div>
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px">
+                        <div class="col-md-3" >
+                          <label for="">Tipo Distribuidor:</label>
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <label for="">Tipo Distribuidor:</label>
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <label for="">Codigo Ciudad:</label>
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="text" id="tipdistriaxa" disabled="disabled">
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="text" id="tipdistriaxa" disabled="disabled">
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="text" name="contac" id="codCiuaxa" disabled="disabled">
-                          </div>
+                        <div class="col-md-3" >
+                          <label for="">Codigo Ciudad:</label>
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <label for="">Canal:</label>
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <label for="">Validacion de Eventos:</label>
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="text" name="contac" id="codCiuaxa" disabled="disabled">
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="text" id="canalaxa" disabled="disabled">
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="text" name="contac" id="valEveaxa" disabled="disabled">
-                          </div>
+                      </div>
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px">
+                        <div class="col-md-3" >
+                          <label for="">Canal:</label>
+                        </div>
+                        <div class="col-md-3" >
+                          <input type="text" id="canalaxa" disabled="disabled">
+                        </div>
+                        <div class="col-md-3" >
+                          <label for="">Validacion de Eventos:</label>
+                        </div>
+                        <div class="col-md-3" >
+                          <input type="text" name="contac" id="valEveaxa" disabled="disabled">
                         </div>
                       </div>
                     </div>
@@ -731,38 +654,34 @@ if ($_SESSION["rol"] != 1) {
                       <h4>Credenciales HDI</h4>
                     </div>
                   </div>
-                  <div class="row" style="border: 1px solid #ddd;">
+                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
                     <div class="col-md-12">
-                      <div class="row" style="margin-top: 10px; padding: 10px;">
-                        <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px">
+                        <div class="col-md-3" >
                           <label for="">Codigo Sucursal:</label>
                         </div>
-                        <div class="col-md-6" style="display: flex; justify-content:center;">
+                        <div class="col-md-3" >
+                          <input type="text" id="codSucurhdi" disabled="disabled">
+                        </div>
+                        <div class="col-md-3" >
                           <label for="">Codigo Agente:</label>
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="text" id="codSucurhdi" disabled="disabled">
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="text" name="contac" id="codigoagenhdi" disabled="disabled">
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="text" name="contac" id="codigoagenhdi" disabled="disabled">
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <label for="">Usuario:</label>
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <label for="">Contraseña:</label>
-                          </div>
+                      </div>
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px">
+                        <div class="col-md-3" >
+                          <label for="">Usuario:</label>
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="text" id="usuhdi" disabled="disabled">
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="password" name="contac" id="contraseñahdi" disabled="disabled">
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="text" id="usuhdi" disabled="disabled">
+                        </div>
+                        <div class="col-md-3" >
+                          <label for="">Contraseña:</label>
+                        </div>
+                        <div class="col-md-3" >
+                          <input type="password" name="contac" id="contraseñahdi" disabled="disabled">
                         </div>
                       </div>
                     </div>
@@ -783,22 +702,20 @@ if ($_SESSION["rol"] != 1) {
                       <h4>Credenciales SBS</h4>
                     </div>
                   </div>
-                  <div class="row" style="border: 1px solid #ddd;">
+                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
                     <div class="col-md-12">
-                      <div class="row" style="margin-top: 10px; padding: 10px;">
-                        <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px">
+                        <div class="col-md-3" >
                           <label for="">Usuario:</label>
                         </div>
-                        <div class="col-md-6" style="display: flex; justify-content:center;">
+                        <div class="col-md-3" >
+                          <input type="text" id="ususbs" disabled="disabled">
+                        </div>
+                        <div class="col-md-3" >
                           <label for="">Contraseña:</label>
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="text" id="ususbs" disabled="disabled">
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="password" name="contac" id="contraseñasbs" disabled="disabled">
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="password" name="contac" id="contraseñasbs" disabled="disabled">
                         </div>
                       </div>
                     </div>
@@ -819,39 +736,36 @@ if ($_SESSION["rol"] != 1) {
                       <h4>Credenciales Zurich</h4>
                     </div>
                   </div>
-                  <div class="row" style="border: 1px solid #ddd;">
+                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
                     <div class="col-md-12">
-                      <div class="row" style="margin-top: 10px; padding: 10px;">
-                        <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px">
+                        <div class="col-md-3" >
                           <label for="">Usuario:</label>
                         </div>
-                        <div class="col-md-6" style="display: flex; justify-content:center;">
+                        <div class="col-md-3" >
+                          <input type="text" id="usuzur" disabled="disabled">
+                        </div>
+                        <div class="col-md-3" >
                           <label for="">Contraseña:</label>
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="text" id="usuzur" disabled="disabled">
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="password" name="contac" id="contraseñazur" disabled="disabled">
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="password" name="contac" id="contraseñazur" disabled="disabled">
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <label for="">Correo:</label>
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <label for="">Cookie:</label>
-                          </div>
+                      </div>
+                      <div class="row" style="margin-bottom: 10px;margin-top: 5px">
+                        <div class="col-md-3" >
+                          <label for="">Correo:</label>
                         </div>
-                        <div class="row" style="margin-top: 10px; padding: 10px;">
-                          <div class="col-md-6" style="display: flex; justify-content:center;   align-items: center;">
-                            <input type="text" id="correozur" disabled="disabled">
-                          </div>
-                          <div class="col-md-6" style="display: flex; justify-content:center;">
-                            <input type="text" name="contac" id="cookiezur" disabled="disabled">
-                          </div>
+                        <div class="col-md-3" >
+                          <input type="text" id="correozur" disabled="disabled">
                         </div>
+                        <div class="col-md-3" >
+                          <label for="">Cookie:</label>
+                        </div>
+                        <div class="col-md-3" >
+                          <input type="text" name="contac" id="cookiezur" disabled="disabled">
+                        </div>
+                      </div>
                       </div>
                     </div>
                   </div>
