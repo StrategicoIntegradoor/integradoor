@@ -280,6 +280,7 @@ function consulPlaca() {
   var apellidosAseg = document.getElementById("txtApellidos").value;
   var generoAseg = document.getElementById("genero").value;
   var estadoCivil = document.getElementById("estadoCivil").value;
+  var intermediario = document.getElementById("intermediario").value;
 
   if (
     numplaca != "" &&
@@ -303,7 +304,7 @@ function consulPlaca() {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
-    var raw = JSON.stringify({ Placa: valnumplaca });
+    var raw = JSON.stringify({ Placa: valnumplaca, intermediario: intermediario });
 
     var requestOptions = {
       mode: "cors",
