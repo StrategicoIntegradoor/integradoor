@@ -114,12 +114,12 @@ if ($_SESSION["rol"] != 1) {
         <div class="row">
           <div class="col-md-3">
             <div class="info">
-              <div class="avatar-wrapper">
-                <img class="profile-pic" src="https://www.grupoasistencia.com/autogestionpro/Assets/images/default-image.png">
-                <input class="file-upload" name="file-upload" id="file-upload" type="file" accept="image/*">
-                <div class="upload-button">
-                  <i class="fa fa-camera-retro" aria-hidden="true"></i>
-                </div>
+              <div class="avatar-wrapper" style="text-align: center;">
+                <img class="profile-pic" src="https://www.grupoasistencia.com/autogestionpro/Assets/images/default-image.png" width="70%">
+                <label class="btn btn-primary">
+                  <input type="file" name="ImgInter" id="ImgInter" style="display:none;"/>
+                  Subir archivo
+                </label>
               </div>
             </div>
           </div>
@@ -199,581 +199,581 @@ if ($_SESSION["rol"] != 1) {
                 <input type="number" name="cel" id="cel">
               </div>
             </div>
-            <div clas="row" style="margin-bottom: 30px;">
-              <b style="font-size: 35px">Informacion Aseguradoras Aliadas</b>
+          </div>
+        </div>
+        <div clas="row" style="margin-bottom: 30px;">
+          <b style="font-size: 35px">Informacion Aseguradoras Aliadas</b>
+        </div>
+        <div clas="row" style="margin-bottom: 30px;">
+          <b style="font-size: 20px">Administracion de claves</b>
+        </div>
+
+        <!-- ::::::::::::::::CABEZOTE CON NAVEGACION::::::::::::::::::::::::::::::::::::::::::::::: -->
+        <div class="row" style="margin:auto;">
+          <div class="col-12 ">
+            <ul class="nav nav-tabs contentnav">
+              <li role="presentation" class="classli" id="ballili"><a class="classa" id="balli">Allianz</a></li>
+              <li role="presentation" class="classli" id="bbolili"><a class="classa" id="bboli">Bolivar</a></li>
+              <li role="presentation" class="classli" id="bequili"><a class="classa" id="bequi">La Equidad</a></li>
+              <li role="presentation" class="classli" id="bmapli"><a class="classa" id="bmap">Mapfre</a></li>
+              <li role="presentation" class="classli" id="bprevili"><a class="classa" id="bprevi">Previsora</a></li>
+              <li role="presentation" class="classli" id="bsolili"><a class="classa" id="bsoli">Solidaria</a></li>
+              <li role="presentation" class="classli" id="blibeli"><a class="classa" id="blibe">Liberty</a></li>
+              <li role="presentation" class="classli" id="bestali"><a class="classa" id="besta">Estado</a></li>
+              <li role="presentation" class="classli" id="baxali"><a class="classa" id="baxa">AXA</a></li>
+              <li role="presentation" class="classli" id="bhdili"><a class="classa" id="bhdi">HDI</a></li>
+              <li role="presentation" class="classli" id="bsbsli"><a class="classa" id="bsbs">SBS</a></li>
+              <li role="presentation" class="classli" id="bzurili"><a class="classa" id="bzuri">Zurich</a></li>
+            </ul>
+          </div>
+          <div class="row" id="allianzdiv" style="display: none;">
+            <div class="col-md-12">
+              <div class="row" style="display: flex;">
+                <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
+                  <h4>Credenciales Allianz</h4>
+                </div>
+              </div>
+              <div class="row" style="padding:10px; border: 1px solid #ddd;">
+                <div class="col-md-12">
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                    <div class="col-md-3">
+                      <label for="">Contraseña:</label> 
+                    </div>
+                    <div class="col-md-3" >
+                    <input type="text" id="contraseñaAlli" disabled="disabled">
+                    </div>
+                    <div class="col-md-3">
+                      <label for="">Id Partner:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" name="contac" id="idPartAlli" disabled="disabled">
+                    </div>
+                  </div>
+                  <div class="row" style="margin-bottom: 10px;">
+                    <div class="col-md-3">
+                      <label for="">Id Agente:</label>
+                    </div>
+                    <div class="col-md-3" >
+                        <input type="text" id="idagentAlli" disabled="disabled">
+                      </div>
+                    <div class="col-md-3">
+                      <label for="">Codigo Partner:</label>
+                    </div>
+                    <div class="col-md-3" >
+                        <input type="text" name="contac" id="codigoPartAlli" disabled="disabled">
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3" style="margin-bottom: 10px;">
+                      <label for="">Codigo Agente:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" id="codigoagenAlli" disabled="disabled">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px;">
+                <div class="col-md-12 divBoton">
+                  <button class="btn btn-primary" onclick="guardarcredenAlli()">Guardar</button>
+                </div>
+              </div>
             </div>
-            <div clas="row" style="margin-bottom: 30px;">
-              <b style="font-size: 20px">Administracion de claves</b>
+          </div>
+          <div class="row" id="bolivardiv" style="display: none;">
+            <div class="col-md-12">
+              <div class="row" style="display: flex;">
+                <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
+                  <h4>Credenciales Bolivar</h4>
+                </div>
+              </div>
+              <div class="row" style="padding:10px; border: 1px solid #ddd;">
+                <div class="col-md-12">
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                    <div class="col-md-3" >
+                      <label for="">Api Key</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" id="apikeyBo" disabled="disabled">
+                    </div>
+                    <div class="col-md-3" >
+                      <label for="">Clave Asesor:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text " name="contac" id="ClaveABo" disabled="disabled">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px;">
+                <div class="col-md-12 divBoton">
+                  <button class="btn btn-primary" onclick="guardarcredenBoli()">Guardar</button>
+                </div>
+
+              </div>
+
             </div>
-
-            <!-- ::::::::::::::::CABEZOTE CON NAVEGACION::::::::::::::::::::::::::::::::::::::::::::::: -->
-            <div class="row" style="margin:auto;">
-              <div class="col-12 ">
-                <ul class="nav nav-tabs contentnav">
-                  <li role="presentation" class="classli" id="ballili"><a class="classa" id="balli">Allianz</a></li>
-                  <li role="presentation" class="classli" id="bbolili"><a class="classa" id="bboli">Bolivar</a></li>
-                  <li role="presentation" class="classli" id="bequili"><a class="classa" id="bequi">La Equidad</a></li>
-                  <li role="presentation" class="classli" id="bmapli"><a class="classa" id="bmap">Mapfre</a></li>
-                  <li role="presentation" class="classli" id="bprevili"><a class="classa" id="bprevi">Previsora</a></li>
-                  <li role="presentation" class="classli" id="bsolili"><a class="classa" id="bsoli">Solidaria</a></li>
-                  <li role="presentation" class="classli" id="blibeli"><a class="classa" id="blibe">Liberty</a></li>
-                  <li role="presentation" class="classli" id="bestali"><a class="classa" id="besta">Estado</a></li>
-                  <li role="presentation" class="classli" id="baxali"><a class="classa" id="baxa">AXA</a></li>
-                  <li role="presentation" class="classli" id="bhdili"><a class="classa" id="bhdi">HDI</a></li>
-                  <li role="presentation" class="classli" id="bsbsli"><a class="classa" id="bsbs">SBS</a></li>
-                  <li role="presentation" class="classli" id="bzurili"><a class="classa" id="bzuri">Zurich</a></li>
-                </ul>
+          </div>
+          <div class="row" id="equidaddiv" style="display: none;">
+            <div class="col-md-12">
+              <div class="row" style="display: flex;">
+                <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
+                  <h4>Credenciales Equidad</h4>
+                </div>
               </div>
-              <div class="row" id="allianzdiv" style="display: none;">
+              <div class="row" style="padding:10px; border: 1px solid #ddd;">
                 <div class="col-md-12">
-                  <div class="row" style="display: flex;">
-                    <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
-                      <h4>Credenciales Allianz</h4>
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                    <div class="col-md-3" >
+                      <label for="">Usuario:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" id="usuEqui" disabled="disabled">
+                    </div>
+                    <div class="col-md-3" >
+                      <label for="">Contraseña:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="password" name="contraseñaEqui" id="contraseñaEqui" disabled="disabled">
                     </div>
                   </div>
-                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
-                    <div class="col-md-12">
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                        <div class="col-md-3">
-                          <label for="">Contraseña:</label> 
-                        </div>
-                        <div class="col-md-3" >
-                        <input type="text" id="contraseñaAlli" disabled="disabled">
-                        </div>
-                        <div class="col-md-3">
-                          <label for="">Id Partner:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" name="contac" id="idPartAlli" disabled="disabled">
-                        </div>
-                      </div>
-                      <div class="row" style="margin-bottom: 10px;">
-                        <div class="col-md-3">
-                          <label for="">Id Agente:</label>
-                        </div>
-                        <div class="col-md-3" >
-                            <input type="text" id="idagentAlli" disabled="disabled">
-                          </div>
-                        <div class="col-md-3">
-                          <label for="">Codigo Partner:</label>
-                        </div>
-                        <div class="col-md-3" >
-                            <input type="text" name="contac" id="codigoPartAlli" disabled="disabled">
-                          </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-3" style="margin-bottom: 10px;">
-                          <label for="">Codigo Agente:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" id="codigoagenAlli" disabled="disabled">
-                        </div>
-                      </div>
+                  <div class="row"  style="margin-bottom: 10px;margin-top: 5px;">
+                    <div class="col-md-3" >
+                      <label for="">Codigo Sucursal</label>
                     </div>
-                  </div>
-                  <div class="row" style="margin: 10px;">
-                    <div class="col-md-12 divBoton">
-                      <button class="btn btn-primary" onclick="guardarcredenAlli()">Guardar</button>
+                    <div class="col-md-3" >
+                      <input type="text" id="codSucuEqui" disabled="disabled">
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="row" id="bolivardiv" style="display: none;">
-                <div class="col-md-12">
-                  <div class="row" style="display: flex;">
-                    <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
-                      <h4>Credenciales Bolivar</h4>
-                    </div>
-                  </div>
-                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
-                    <div class="col-md-12">
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                        <div class="col-md-3" >
-                          <label for="">Api Key</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" id="apikeyBo" disabled="disabled">
-                        </div>
-                        <div class="col-md-3" >
-                          <label for="">Clave Asesor:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text " name="contac" id="ClaveABo" disabled="disabled">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row" style="margin: 10px;">
-                    <div class="col-md-12 divBoton">
-                      <button class="btn btn-primary" onclick="guardarcredenBoli()">Guardar</button>
-                    </div>
+              <div class="row" style="margin: 10px;">
+                <div class="col-md-12 divBoton">
+                  <button class="btn btn-primary" onclick="guardarcredenEqui()">Guardar</button>
+                </div>
 
-                  </div>
+              </div>
 
+            </div>
+          </div>
+          <div class="row" id="mapfrediv" style="display: none;">
+            <div class="col-md-12">
+              <div class="row" style="display: flex;">
+                <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
+                  <h4>Credenciales Mapfre</h4>
                 </div>
               </div>
-              <div class="row" id="equidaddiv" style="display: none;">
+              <div class="row" style="padding:10px; border: 1px solid #ddd;">
                 <div class="col-md-12">
-                  <div class="row" style="display: flex;">
-                    <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
-                      <h4>Credenciales Equidad</h4>
-                    </div>
-                  </div>
-                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
-                    <div class="col-md-12">
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                        <div class="col-md-3" >
-                          <label for="">Usuario:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" id="usuEqui" disabled="disabled">
-                        </div>
-                        <div class="col-md-3" >
-                          <label for="">Contraseña:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="password" name="contraseñaEqui" id="contraseñaEqui" disabled="disabled">
-                        </div>
-                      </div>
-                      <div class="row"  style="margin-bottom: 10px;margin-top: 5px;">
-                        <div class="col-md-3" >
-                          <label for="">Codigo Sucursal</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" id="codSucuEqui" disabled="disabled">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row" style="margin: 10px;">
-                    <div class="col-md-12 divBoton">
-                      <button class="btn btn-primary" onclick="guardarcredenEqui()">Guardar</button>
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                    <div class="col-md-6" >
+                      <label for="">Ups, no hay nada que mostrar</label>
                     </div>
 
                   </div>
-
                 </div>
               </div>
-              <div class="row" id="mapfrediv" style="display: none;">
-                <div class="col-md-12">
-                  <div class="row" style="display: flex;">
-                    <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
-                      <h4>Credenciales Mapfre</h4>
-                    </div>
-                  </div>
-                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
-                    <div class="col-md-12">
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                        <div class="col-md-6" >
-                          <label for="">Ups, no hay nada que mostrar</label>
-                        </div>
+              <div class="row" style="margin: 10px;">
+                <div class="col-md-12 divBoton">
+                  <button class="btn btn-primary" disabled="disabled" onclick="guardarcredenMap()">Guardar</button>
+                </div>
 
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row" style="margin: 10px;">
-                    <div class="col-md-12 divBoton">
-                      <button class="btn btn-primary" disabled="disabled" onclick="guardarcredenMap()">Guardar</button>
-                    </div>
+              </div>
 
-                  </div>
-
+            </div>
+          </div>
+          <div class="row" id="previsoradiv" style="display: none;">
+            <div class="col-md-12">
+              <div class="row" style="display: flex;">
+                <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
+                  <h4>Credenciales Previsora</h4>
                 </div>
               </div>
-              <div class="row" id="previsoradiv" style="display: none;">
+              <div class="row" style="padding:10px; border: 1px solid #ddd;">
                 <div class="col-md-12">
-                  <div class="row" style="display: flex;">
-                    <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
-                      <h4>Credenciales Previsora</h4>
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                    <div class="col-md-6" >
+                      <label for="">Ups, no hay nada que mostrar</label>
                     </div>
                   </div>
-                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
-                    <div class="col-md-12">
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                        <div class="col-md-6" >
-                          <label for="">Ups, no hay nada que mostrar</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row" style="margin: 10px;">
-                    <div class="col-md-12 divBoton">
-                      <button class="btn btn-primary" onclick="guardarcredenPrevi()">Guardar</button>
-                    </div>
-
-                  </div>
-
                 </div>
               </div>
-              <div class="row" id="solidariadiv" style="display: none;">
-                <div class="col-md-12">
-                  <div class="row" style="display: flex;">
-                    <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
-                      <h4>Credenciales Solidaria</h4>
-                    </div>
-                  </div>
-                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
-                    <div class="col-md-12">
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                        <div class="col-md-3" >
-                          <label for="">Codigo Sucursal:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" id="codSucuSoli" disabled="disabled">
-                        </div>
-                        <div class="col-md-3" >
-                          <label for="">Codigo Persona:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" name="contac" id="codPerSoli" disabled="disabled">
-                        </div>
-                      </div>
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                        <div class="col-md-3" >
-                          <label for="">Tipo Agente:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" id="tipAgeSoli" disabled="disabled">
-                        </div>
-                        <div class="col-md-3" >
-                          <label for="">Codigo Agente:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" name="contac" id="codigoAgeSoli" disabled="disabled">
-                        </div>
-                      </div>
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                        <div class="col-md-3" >
-                          <label for="">Codigo Punto de venta:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" id="codPunVenSoli" disabled="disabled">
-                        </div>
-                        <div class="col-md-3" >
-                          <label for="">Grant Type:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" name="contac" id="grantTypeSoli" disabled="disabled">
-                        </div>
-                      </div>
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                        <div class="col-md-3" >
-                          <label for="">Cookie:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" id="cookieSoli" disabled="disabled">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row" style="margin: 10px;">
-                    <div class="col-md-12 divBoton">
-                      <button class="btn btn-primary" onclick="guardarcredenSoli()">Guardar</button>
-                    </div>
+              <div class="row" style="margin: 10px;">
+                <div class="col-md-12 divBoton">
+                  <button class="btn btn-primary" onclick="guardarcredenPrevi()">Guardar</button>
+                </div>
 
-                  </div>
+              </div>
 
+            </div>
+          </div>
+          <div class="row" id="solidariadiv" style="display: none;">
+            <div class="col-md-12">
+              <div class="row" style="display: flex;">
+                <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
+                  <h4>Credenciales Solidaria</h4>
                 </div>
               </div>
-              <div class="row" id="libertydiv" style="display: none;">
+              <div class="row" style="padding:10px; border: 1px solid #ddd;">
                 <div class="col-md-12">
-                  <div class="row" style="display: flex;">
-                    <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
-                      <h4>Credenciales Liberty</h4>
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                    <div class="col-md-3" >
+                      <label for="">Codigo Sucursal:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" id="codSucuSoli" disabled="disabled">
+                    </div>
+                    <div class="col-md-3" >
+                      <label for="">Codigo Persona:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" name="contac" id="codPerSoli" disabled="disabled">
                     </div>
                   </div>
-                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
-                    <div class="col-md-12">
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                        <div class="col-md-3" >
-                          <label for="">Cookie Token:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" id="cookieToLibe" disabled="disabled">
-                        </div>
-                        <div class="col-md-3" >
-                          <label for="">Cookie Peticion:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" name="contac" id="cookieReLibe" disabled="disabled">
-                        </div>
-                      </div>
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                        <div class="col-md-3" >
-                          <label for="">Autorización:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" id="autoLibe" disabled="disabled">
-                        </div>
-                        <div class="col-md-3" >
-                          <label for="">Codigo Agente:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" name="contac" id="codigoAgenLibe" disabled="disabled">
-                        </div>
-                      </div>
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                        <div class="col-md-3" >
-                          <label for="">Aplicacion Cliente:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" id="ApliCliLibe" disabled="disabled">
-                        </div>
-                        <div class="col-md-3" >
-                          <label for="">Ip:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" name="contac" id="ipLibe" disabled="disabled">
-                        </div>
-                      </div>
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                        <div class="col-md-3" >
-                          <label for="">Id Request:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" id="idRequeLibe" disabled="disabled">
-                        </div>
-                        <div class="col-md-3" >
-                          <label for="">Terminal:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" name="contac" id="termilibe" disabled="disabled">
-                        </div>
-                      </div>
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                    <div class="col-md-3" >
+                      <label for="">Tipo Agente:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" id="tipAgeSoli" disabled="disabled">
+                    </div>
+                    <div class="col-md-3" >
+                      <label for="">Codigo Agente:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" name="contac" id="codigoAgeSoli" disabled="disabled">
                     </div>
                   </div>
-                  <div class="row" style="margin: 10px;">
-                    <div class="col-md-12 divBoton">
-                      <button class="btn btn-primary" onclick="guardarcredenLiberty()">Guardar</button>
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                    <div class="col-md-3" >
+                      <label for="">Codigo Punto de venta:</label>
                     </div>
-
+                    <div class="col-md-3" >
+                      <input type="text" id="codPunVenSoli" disabled="disabled">
+                    </div>
+                    <div class="col-md-3" >
+                      <label for="">Grant Type:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" name="contac" id="grantTypeSoli" disabled="disabled">
+                    </div>
                   </div>
-
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                    <div class="col-md-3" >
+                      <label for="">Cookie:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" id="cookieSoli" disabled="disabled">
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="row" id="estadodiv" style="display: none;">
-                <div class="col-md-12">
-                  <div class="row" style="display: flex;">
-                    <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
-                      <h4>Credenciales Estado</h4>
-                    </div>
-                  </div>
-                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
-                    <div class="col-md-12">
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                        <div class="col-md-3" >
-                          <label for="">Usuario:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" id="usuEst" disabled="disabled">
-                        </div>
-                        <div class="col-md-3" >
-                          <label for="">Contraseña:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="password" name="contac" id="ContraLibe" disabled="disabled">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row" style="margin: 10px;">
-                    <div class="col-md-12 divBoton">
-                      <button class="btn btn-primary" onclick="guardarcredenEst()">Guardar</button>
-                    </div>
+              <div class="row" style="margin: 10px;">
+                <div class="col-md-12 divBoton">
+                  <button class="btn btn-primary" onclick="guardarcredenSoli()">Guardar</button>
+                </div>
 
-                  </div>
+              </div>
 
+            </div>
+          </div>
+          <div class="row" id="libertydiv" style="display: none;">
+            <div class="col-md-12">
+              <div class="row" style="display: flex;">
+                <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
+                  <h4>Credenciales Liberty</h4>
                 </div>
               </div>
-              <div class="row" id="axadiv" style="display: none;">
+              <div class="row" style="padding:10px; border: 1px solid #ddd;">
                 <div class="col-md-12">
-                  <div class="row" style="display: flex;">
-                    <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
-                      <h4>Credenciales Axa</h4>
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                    <div class="col-md-3" >
+                      <label for="">Cookie Token:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" id="cookieToLibe" disabled="disabled">
+                    </div>
+                    <div class="col-md-3" >
+                      <label for="">Cookie Peticion:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" name="contac" id="cookieReLibe" disabled="disabled">
                     </div>
                   </div>
-                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
-                    <div class="col-md-12">
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px">
-                        <div class="col-md-3" >
-                          <label for="">Contraseña:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="password" id="contraseñaaxa" disabled="disabled">
-                        </div>
-                        <div class="col-md-3" >
-                          <label for="">Codigo Distribuidor:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" name="contac" id="codigodistriaxa" disabled="disabled">
-                        </div>
-                      </div>
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px">
-                        <div class="col-md-3" >
-                          <label for="">Tipo Distribuidor:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" id="tipdistriaxa" disabled="disabled">
-                        </div>
-                        <div class="col-md-3" >
-                          <label for="">Codigo Ciudad:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" name="contac" id="codCiuaxa" disabled="disabled">
-                        </div>
-                      </div>
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px">
-                        <div class="col-md-3" >
-                          <label for="">Canal:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" id="canalaxa" disabled="disabled">
-                        </div>
-                        <div class="col-md-3" >
-                          <label for="">Validacion de Eventos:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" name="contac" id="valEveaxa" disabled="disabled">
-                        </div>
-                      </div>
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                    <div class="col-md-3" >
+                      <label for="">Autorización:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" id="autoLibe" disabled="disabled">
+                    </div>
+                    <div class="col-md-3" >
+                      <label for="">Codigo Agente:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" name="contac" id="codigoAgenLibe" disabled="disabled">
                     </div>
                   </div>
-                  <div class="row" style="margin: 10px;">
-                    <div class="col-md-12 divBoton">
-                      <button class="btn btn-primary" onclick="guardarcredenAxa()">Guardar</button>
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                    <div class="col-md-3" >
+                      <label for="">Aplicacion Cliente:</label>
                     </div>
-
+                    <div class="col-md-3" >
+                      <input type="text" id="ApliCliLibe" disabled="disabled">
+                    </div>
+                    <div class="col-md-3" >
+                      <label for="">Ip:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" name="contac" id="ipLibe" disabled="disabled">
+                    </div>
                   </div>
-
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                    <div class="col-md-3" >
+                      <label for="">Id Request:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" id="idRequeLibe" disabled="disabled">
+                    </div>
+                    <div class="col-md-3" >
+                      <label for="">Terminal:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" name="contac" id="termilibe" disabled="disabled">
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="row" id="hdidiv" style="display: none;">
-                <div class="col-md-12">
-                  <div class="row" style="display: flex;">
-                    <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
-                      <h4>Credenciales HDI</h4>
-                    </div>
-                  </div>
-                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
-                    <div class="col-md-12">
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px">
-                        <div class="col-md-3" >
-                          <label for="">Codigo Sucursal:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" id="codSucurhdi" disabled="disabled">
-                        </div>
-                        <div class="col-md-3" >
-                          <label for="">Codigo Agente:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" name="contac" id="codigoagenhdi" disabled="disabled">
-                        </div>
-                      </div>
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px">
-                        <div class="col-md-3" >
-                          <label for="">Usuario:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" id="usuhdi" disabled="disabled">
-                        </div>
-                        <div class="col-md-3" >
-                          <label for="">Contraseña:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="password" name="contac" id="contraseñahdi" disabled="disabled">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row" style="margin: 10px;">
-                    <div class="col-md-12 divBoton">
-                      <button class="btn btn-primary" onclick="guardarcredenHdi()">Guardar</button>
-                    </div>
+              <div class="row" style="margin: 10px;">
+                <div class="col-md-12 divBoton">
+                  <button class="btn btn-primary" onclick="guardarcredenLiberty()">Guardar</button>
+                </div>
 
-                  </div>
+              </div>
 
+            </div>
+          </div>
+          <div class="row" id="estadodiv" style="display: none;">
+            <div class="col-md-12">
+              <div class="row" style="display: flex;">
+                <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
+                  <h4>Credenciales Estado</h4>
                 </div>
               </div>
-              <div class="row" id="sbsdiv" style="display: none;">
+              <div class="row" style="padding:10px; border: 1px solid #ddd;">
                 <div class="col-md-12">
-                  <div class="row" style="display: flex;">
-                    <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
-                      <h4>Credenciales SBS</h4>
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                    <div class="col-md-3" >
+                      <label for="">Usuario:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" id="usuEst" disabled="disabled">
+                    </div>
+                    <div class="col-md-3" >
+                      <label for="">Contraseña:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="password" name="contac" id="ContraLibe" disabled="disabled">
                     </div>
                   </div>
-                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
-                    <div class="col-md-12">
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px">
-                        <div class="col-md-3" >
-                          <label for="">Usuario:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" id="ususbs" disabled="disabled">
-                        </div>
-                        <div class="col-md-3" >
-                          <label for="">Contraseña:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="password" name="contac" id="contraseñasbs" disabled="disabled">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row" style="margin: 10px;">
-                    <div class="col-md-12 divBoton">
-                      <button class="btn btn-primary" onclick="guardarcredenSbs()">Guardar</button>
-                    </div>
-
-                  </div>
-
                 </div>
               </div>
-              <div class="row" id="zuridiv" style="display: none;">
+              <div class="row" style="margin: 10px;">
+                <div class="col-md-12 divBoton">
+                  <button class="btn btn-primary" onclick="guardarcredenEst()">Guardar</button>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="row" id="axadiv" style="display: none;">
+            <div class="col-md-12">
+              <div class="row" style="display: flex;">
+                <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
+                  <h4>Credenciales Axa</h4>
+                </div>
+              </div>
+              <div class="row" style="padding:10px; border: 1px solid #ddd;">
                 <div class="col-md-12">
-                  <div class="row" style="display: flex;">
-                    <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
-                      <h4>Credenciales Zurich</h4>
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px">
+                    <div class="col-md-3" >
+                      <label for="">Contraseña:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="password" id="contraseñaaxa" disabled="disabled">
+                    </div>
+                    <div class="col-md-3" >
+                      <label for="">Codigo Distribuidor:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" name="contac" id="codigodistriaxa" disabled="disabled">
                     </div>
                   </div>
-                  <div class="row" style="padding:10px; border: 1px solid #ddd;">
-                    <div class="col-md-12">
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px">
-                        <div class="col-md-3" >
-                          <label for="">Usuario:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" id="usuzur" disabled="disabled">
-                        </div>
-                        <div class="col-md-3" >
-                          <label for="">Contraseña:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="password" name="contac" id="contraseñazur" disabled="disabled">
-                        </div>
-                      </div>
-                      <div class="row" style="margin-bottom: 10px;margin-top: 5px">
-                        <div class="col-md-3" >
-                          <label for="">Correo:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" id="correozur" disabled="disabled">
-                        </div>
-                        <div class="col-md-3" >
-                          <label for="">Cookie:</label>
-                        </div>
-                        <div class="col-md-3" >
-                          <input type="text" name="contac" id="cookiezur" disabled="disabled">
-                        </div>
-                      </div>
-                      </div>
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px">
+                    <div class="col-md-3" >
+                      <label for="">Tipo Distribuidor:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" id="tipdistriaxa" disabled="disabled">
+                    </div>
+                    <div class="col-md-3" >
+                      <label for="">Codigo Ciudad:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" name="contac" id="codCiuaxa" disabled="disabled">
                     </div>
                   </div>
-                  <div class="row" style="margin: 10px;">
-                    <div class="col-md-12 divBoton">
-                      <button class="btn btn-primary" onclick="guardarcredenZuri()">Guardar</button>
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px">
+                    <div class="col-md-3" >
+                      <label for="">Canal:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" id="canalaxa" disabled="disabled">
+                    </div>
+                    <div class="col-md-3" >
+                      <label for="">Validacion de Eventos:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" name="contac" id="valEveaxa" disabled="disabled">
                     </div>
                   </div>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px;">
+                <div class="col-md-12 divBoton">
+                  <button class="btn btn-primary" onclick="guardarcredenAxa()">Guardar</button>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="row" id="hdidiv" style="display: none;">
+            <div class="col-md-12">
+              <div class="row" style="display: flex;">
+                <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
+                  <h4>Credenciales HDI</h4>
+                </div>
+              </div>
+              <div class="row" style="padding:10px; border: 1px solid #ddd;">
+                <div class="col-md-12">
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px">
+                    <div class="col-md-3" >
+                      <label for="">Codigo Sucursal:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" id="codSucurhdi" disabled="disabled">
+                    </div>
+                    <div class="col-md-3" >
+                      <label for="">Codigo Agente:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" name="contac" id="codigoagenhdi" disabled="disabled">
+                    </div>
+                  </div>
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px">
+                    <div class="col-md-3" >
+                      <label for="">Usuario:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" id="usuhdi" disabled="disabled">
+                    </div>
+                    <div class="col-md-3" >
+                      <label for="">Contraseña:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="password" name="contac" id="contraseñahdi" disabled="disabled">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px;">
+                <div class="col-md-12 divBoton">
+                  <button class="btn btn-primary" onclick="guardarcredenHdi()">Guardar</button>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="row" id="sbsdiv" style="display: none;">
+            <div class="col-md-12">
+              <div class="row" style="display: flex;">
+                <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
+                  <h4>Credenciales SBS</h4>
+                </div>
+              </div>
+              <div class="row" style="padding:10px; border: 1px solid #ddd;">
+                <div class="col-md-12">
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px">
+                    <div class="col-md-3" >
+                      <label for="">Usuario:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" id="ususbs" disabled="disabled">
+                    </div>
+                    <div class="col-md-3" >
+                      <label for="">Contraseña:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="password" name="contac" id="contraseñasbs" disabled="disabled">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px;">
+                <div class="col-md-12 divBoton">
+                  <button class="btn btn-primary" onclick="guardarcredenSbs()">Guardar</button>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="row" id="zuridiv" style="display: none;">
+            <div class="col-md-12">
+              <div class="row" style="display: flex;">
+                <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
+                  <h4>Credenciales Zurich</h4>
+                </div>
+              </div>
+              <div class="row" style="padding:10px; border: 1px solid #ddd;">
+                <div class="col-md-12">
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px">
+                    <div class="col-md-3" >
+                      <label for="">Usuario:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" id="usuzur" disabled="disabled">
+                    </div>
+                    <div class="col-md-3" >
+                      <label for="">Contraseña:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="password" name="contac" id="contraseñazur" disabled="disabled">
+                    </div>
+                  </div>
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px">
+                    <div class="col-md-3" >
+                      <label for="">Correo:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" id="correozur" disabled="disabled">
+                    </div>
+                    <div class="col-md-3" >
+                      <label for="">Cookie:</label>
+                    </div>
+                    <div class="col-md-3" >
+                      <input type="text" name="contac" id="cookiezur" disabled="disabled">
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px;">
+                <div class="col-md-12 divBoton">
+                  <button class="btn btn-primary" onclick="guardarcredenZuri()">Guardar</button>
                 </div>
               </div>
             </div>
