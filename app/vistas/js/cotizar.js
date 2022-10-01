@@ -315,7 +315,7 @@ function consulPlaca() {
     };
 
     // Llama la informacion del Vehiculo por medio de la Placa
-    fetch("https://grupoasistencia.com/webservicepruebasIntegrador/Vehiculo", requestOptions)
+    fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/Vehiculo", requestOptions)
       .then(function (response) {
         if (!response.ok) {
           throw Error(response.statusText);
@@ -644,7 +644,7 @@ function consulValorfasecolda(codFasecolda, edadVeh) {
     redirect: "follow",
   };
 
-  fetch("https://grupoasistencia.com/webservicepruebasIntegrador/VehiculoFasecolda", requestOptions)
+  fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/VehiculoFasecolda", requestOptions)
     .then(function (response) {
       if (!response.ok) {
         throw Error(response.statusText);
@@ -1172,6 +1172,7 @@ function cotizarOfertas() {
   var isBenefOneroso = $("input:radio[name=oneroso]:checked").val(); // Valida que alguno de los 2 este selecionado
   var benefOneroso = document.getElementById("benefOneroso").value;
   var TokenPrevisora = document.getElementById("previsoraToken").value;
+  var intermediario = document.getElementById("intermediario").value;
 
   if (ciudadCirculacion.length == 4) {
     ciudadCirculacion = "0" + ciudadCirculacion;
@@ -1241,7 +1242,8 @@ function cotizarOfertas() {
         AniosAsegurados: AniosAsegurados,
         NivelEducativo: NivelEducativo,
         Estrato: Estrato,
-        TokenPrevisora: TokenPrevisora
+        TokenPrevisora: TokenPrevisora,
+        intermediario:intermediario
       };
 
       var requestOptions = {
@@ -1475,7 +1477,7 @@ function cotizarOfertas() {
         
                   /* Estado */
                     cont.push(
-                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador/Estado", requestOptions)
+                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/Estado", requestOptions)
                           .then((res) => {
                             if (!res.ok) throw Error(res.statusText);
                             return res.json();
