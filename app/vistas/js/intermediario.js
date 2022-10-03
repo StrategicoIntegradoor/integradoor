@@ -100,6 +100,8 @@ function traerCredenciales(){
 
 //Funciones para enviar a guardar o actualizar credenciales.
 
+// holiiiii
+
 function guardarcredenAlli(){
     let contra = $("#contraseñaAlli").val();
     let part = $("#idPartAlli").val();
