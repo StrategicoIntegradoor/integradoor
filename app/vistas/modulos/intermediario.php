@@ -90,7 +90,7 @@ if ($_SESSION["rol"] != 1) {
   }
 </style>
 
-<div class="container" >
+<div class="container">
   <section class="content-header">
 
     <h1>
@@ -117,7 +117,7 @@ if ($_SESSION["rol"] != 1) {
               <div class="avatar-wrapper" style="text-align: center;">
                 <img class="profile-pic" src="https://www.grupoasistencia.com/autogestionpro/Assets/images/default-image.png" width="70%">
                 <label class="btn btn-primary">
-                  <input type="file" name="ImgInter" id="ImgInter" style="display:none;"/>
+                  <input type="file" name="ImgInter" id="ImgInter" style="display:none;" />
                   Subir archivo
                 </label>
               </div>
@@ -140,7 +140,7 @@ if ($_SESSION["rol"] != 1) {
                 <label for="">Correo Electronico:</label>
               </div>
               <div class="col-md-3">
-                <input type="email" name="email" id="email" >
+                <input type="email" name="email" id="email">
               </div>
             </div>
             <div class="row" style="margin-bottom: 22px;">
@@ -148,7 +148,7 @@ if ($_SESSION["rol"] != 1) {
                 <label for="">No. Identificación:</label>
               </div>
               <div class="col-md-3">
-                <input type="number" id="numero_identificacionInter" >
+                <input type="number" id="numero_identificacionInter">
               </div>
               <div class="col-md-3">
                 <label for="">Dirección:</label>
@@ -237,15 +237,15 @@ if ($_SESSION["rol"] != 1) {
                 <div class="col-md-12">
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
                     <div class="col-md-3">
-                      <label for="">Contraseña:</label> 
+                      <label for="">Contraseña:</label>
                     </div>
-                    <div class="col-md-3" >
-                    <input type="text" id="contraseñaAlli" disabled="disabled">
+                    <div class="col-md-3">
+                      <input type="text" id="contraseñaAlli" disabled="disabled">
                     </div>
                     <div class="col-md-3">
                       <label for="">Id Partner:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" name="contac" id="idPartAlli" disabled="disabled">
                     </div>
                   </div>
@@ -253,21 +253,21 @@ if ($_SESSION["rol"] != 1) {
                     <div class="col-md-3">
                       <label for="">Id Agente:</label>
                     </div>
-                    <div class="col-md-3" >
-                        <input type="text" id="idagentAlli" disabled="disabled">
-                      </div>
+                    <div class="col-md-3">
+                      <input type="text" id="idagentAlli" disabled="disabled">
+                    </div>
                     <div class="col-md-3">
                       <label for="">Codigo Partner:</label>
                     </div>
-                    <div class="col-md-3" >
-                        <input type="text" name="contac" id="codigoPartAlli" disabled="disabled">
-                      </div>
+                    <div class="col-md-3">
+                      <input type="text" name="contac" id="codigoPartAlli" disabled="disabled">
+                    </div>
                   </div>
                   <div class="row">
                     <div class="col-md-3" style="margin-bottom: 10px;">
                       <label for="">Codigo Agente:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" id="codigoagenAlli" disabled="disabled">
                     </div>
                   </div>
@@ -290,16 +290,16 @@ if ($_SESSION["rol"] != 1) {
               <div class="row" style="padding:10px; border: 1px solid #ddd;">
                 <div class="col-md-12">
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Api Key</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" id="apikeyBo" disabled="disabled">
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Clave Asesor:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text " name="contac" id="ClaveABo" disabled="disabled">
                     </div>
                   </div>
@@ -324,24 +324,24 @@ if ($_SESSION["rol"] != 1) {
               <div class="row" style="padding:10px; border: 1px solid #ddd;">
                 <div class="col-md-12">
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Usuario:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" id="usuEqui" disabled="disabled">
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Contraseña:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="password" name="contraseñaEqui" id="contraseñaEqui" disabled="disabled">
                     </div>
                   </div>
-                  <div class="row"  style="margin-bottom: 10px;margin-top: 5px;">
-                    <div class="col-md-3" >
+                  <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
+                    <div class="col-md-3">
                       <label for="">Codigo Sucursal</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" id="codSucuEqui" disabled="disabled">
                     </div>
                   </div>
@@ -366,7 +366,7 @@ if ($_SESSION["rol"] != 1) {
               <div class="row" style="padding:10px; border: 1px solid #ddd;">
                 <div class="col-md-12">
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                    <div class="col-md-6" >
+                    <div class="col-md-6">
                       <label for="">Ups, no hay nada que mostrar</label>
                     </div>
 
@@ -392,7 +392,7 @@ if ($_SESSION["rol"] != 1) {
               <div class="row" style="padding:10px; border: 1px solid #ddd;">
                 <div class="col-md-12">
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                    <div class="col-md-6" >
+                    <div class="col-md-6">
                       <label for="">Ups, no hay nada que mostrar</label>
                     </div>
                   </div>
@@ -400,7 +400,7 @@ if ($_SESSION["rol"] != 1) {
               </div>
               <div class="row" style="margin: 10px;">
                 <div class="col-md-12 divBoton">
-                  <button class="btn btn-primary" onclick="guardarcredenPrevi()">Guardar</button>
+                  <button class="btn btn-primary" onclick="guardarcredenPrevi()" disabled>Guardar</button>
                 </div>
 
               </div>
@@ -417,52 +417,52 @@ if ($_SESSION["rol"] != 1) {
               <div class="row" style="padding:10px; border: 1px solid #ddd;">
                 <div class="col-md-12">
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Codigo Sucursal:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" id="codSucuSoli" disabled="disabled">
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Codigo Persona:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" name="contac" id="codPerSoli" disabled="disabled">
                     </div>
                   </div>
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Tipo Agente:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" id="tipAgeSoli" disabled="disabled">
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Codigo Agente:</label>
                     </div>
-                    <div class="col-md-3" >
-                      <input type="text" name="contac" id="codigoAgeSoli" disabled="disabled">
+                    <div class="col-md-3">
+                      <input type="text" name="codigoAgeSoli" id="codigoAgeSoli" disabled="disabled">
                     </div>
                   </div>
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Codigo Punto de venta:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" id="codPunVenSoli" disabled="disabled">
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Grant Type:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" name="contac" id="grantTypeSoli" disabled="disabled">
                     </div>
                   </div>
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Cookie:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" id="cookieSoli" disabled="disabled">
                     </div>
                   </div>
@@ -487,58 +487,58 @@ if ($_SESSION["rol"] != 1) {
               <div class="row" style="padding:10px; border: 1px solid #ddd;">
                 <div class="col-md-12">
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Cookie Token:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" id="cookieToLibe" disabled="disabled">
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Cookie Peticion:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" name="contac" id="cookieReLibe" disabled="disabled">
                     </div>
                   </div>
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Autorización:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" id="autoLibe" disabled="disabled">
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Codigo Agente:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" name="contac" id="codigoAgenLibe" disabled="disabled">
                     </div>
                   </div>
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Aplicacion Cliente:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" id="ApliCliLibe" disabled="disabled">
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Ip:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" name="contac" id="ipLibe" disabled="disabled">
                     </div>
                   </div>
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Id Request:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" id="idRequeLibe" disabled="disabled">
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Terminal:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" name="contac" id="termilibe" disabled="disabled">
                     </div>
                   </div>
@@ -563,16 +563,16 @@ if ($_SESSION["rol"] != 1) {
               <div class="row" style="padding:10px; border: 1px solid #ddd;">
                 <div class="col-md-12">
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px;">
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Usuario:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" id="usuEst" disabled="disabled">
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Contraseña:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="password" name="contac" id="ContraLibe" disabled="disabled">
                     </div>
                   </div>
@@ -597,44 +597,44 @@ if ($_SESSION["rol"] != 1) {
               <div class="row" style="padding:10px; border: 1px solid #ddd;">
                 <div class="col-md-12">
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px">
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Contraseña:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="password" id="contraseñaaxa" disabled="disabled">
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Codigo Distribuidor:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" name="contac" id="codigodistriaxa" disabled="disabled">
                     </div>
                   </div>
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px">
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Tipo Distribuidor:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" id="tipdistriaxa" disabled="disabled">
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Codigo Ciudad:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" name="contac" id="codCiuaxa" disabled="disabled">
                     </div>
                   </div>
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px">
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Canal:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" id="canalaxa" disabled="disabled">
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Validacion de Eventos:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" name="contac" id="valEveaxa" disabled="disabled">
                     </div>
                   </div>
@@ -659,30 +659,30 @@ if ($_SESSION["rol"] != 1) {
               <div class="row" style="padding:10px; border: 1px solid #ddd;">
                 <div class="col-md-12">
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px">
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Codigo Sucursal:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" id="codSucurhdi" disabled="disabled">
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Codigo Agente:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" name="contac" id="codigoagenhdi" disabled="disabled">
                     </div>
                   </div>
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px">
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Usuario:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" id="usuhdi" disabled="disabled">
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Contraseña:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="password" name="contac" id="contraseñahdi" disabled="disabled">
                     </div>
                   </div>
@@ -707,16 +707,16 @@ if ($_SESSION["rol"] != 1) {
               <div class="row" style="padding:10px; border: 1px solid #ddd;">
                 <div class="col-md-12">
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px">
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Usuario:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" id="ususbs" disabled="disabled">
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Contraseña:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="password" name="contac" id="contraseñasbs" disabled="disabled">
                     </div>
                   </div>
@@ -741,47 +741,47 @@ if ($_SESSION["rol"] != 1) {
               <div class="row" style="padding:10px; border: 1px solid #ddd;">
                 <div class="col-md-12">
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px">
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Usuario:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" id="usuzur" disabled="disabled">
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Contraseña:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="password" name="contac" id="contraseñazur" disabled="disabled">
                     </div>
                   </div>
                   <div class="row" style="margin-bottom: 10px;margin-top: 5px">
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Correo:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" id="correozur" disabled="disabled">
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <label for="">Cookie:</label>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3">
                       <input type="text" name="contac" id="cookiezur" disabled="disabled">
                     </div>
                   </div>
-                  </div>
                 </div>
               </div>
-              <div class="row" style="margin: 10px;">
-                <div class="col-md-12 divBoton">
-                  <button class="btn btn-primary" onclick="guardarcredenZuri()">Guardar</button>
-                </div>
+            </div>
+            <div class="row" style="margin: 10px;">
+              <div class="col-md-12 divBoton">
+                <button class="btn btn-primary" onclick="guardarcredenZuri()">Guardar</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+</div>
+</section>
 </div>
 
 
@@ -790,4 +790,5 @@ if ($_SESSION["rol"] != 1) {
 
 <!-- scrip -->
 
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="vistas/js/intermediario.js?v=<?php echo (rand()); ?>"></script>

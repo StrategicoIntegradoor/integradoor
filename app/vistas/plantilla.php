@@ -222,7 +222,7 @@ CUERPO DOCUMENTO
   }
 
   ?>
-
+  
 
   <script src="vistas/js/plantilla.js?v=<?php echo (rand()); ?>"></script>
  

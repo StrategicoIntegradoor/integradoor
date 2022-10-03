@@ -101,15 +101,95 @@ function traerCredenciales(){
 //Funciones para enviar a guardar o actualizar credenciales.
 
 function guardarcredenAlli(){
+    let contra = $("#contraseñaAlli").val();
+    let part = $("#idPartAlli").val();
+    let idAge = $("#idagentAlli").val();
+    let codPat = $("#codigoPartAlli").val();
+    let codAge = $("#codigoagenAlli").val();
 
+    $.ajax({
+        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=guardarallianz",
+        method: "POST",
+        data: { contra,
+            part,
+            idAge,
+            codPat,
+            codAge
+        },
+        success: function (data) {
+
+            if(data == "exitoso"){
+                Swal.fire({
+                    icon: 'success',
+                    text: '¡Credenciales guardadas con exito!'
+                  })
+            }else{
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: '¡No pudimos guardar las credenciales!'
+                  })
+            }
+        }
+    });
 }
 
 function guardarcredenBoli(){
-    
+    let apikey = $("#apikeyBo").val();
+    let clave = $("#ClaveABo").val();
+
+    $.ajax({
+        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=guardarvoli",
+        method: "POST",
+        data: { apikey,
+            clave
+        },
+        success: function (data) {
+
+            if(data == "exitoso"){
+                Swal.fire({
+                    icon: 'success',
+                    text: '¡Credenciales guardadas con exito!'
+                  })
+            }else{
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: '¡No pudimos guardar las credenciales!'
+                  })
+            }
+        }
+    });
 }
 
 function guardarcredenEqui(){
-    
+    let usu = $("#usuEqui").val();
+    let contra = $("#contraseñaEqui").val();
+    let sucur  =$("#codSucuEqui").val();
+
+    $.ajax({
+        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=guardarequi",
+        method: "POST",
+        data: { usu,
+            contra,
+            sucur
+        },
+        success: function (data) {
+
+            if(data == "exitoso"){
+                Swal.fire({
+                    icon: 'success',
+                    text: '¡Credenciales guardadas con exito!'
+                  })
+            }else{
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: '¡No pudimos guardar las credenciales!'
+                  })
+            }
+        }
+    });
 }
 
 function guardarcredenMap(){
@@ -121,35 +201,237 @@ function guardarcredenPrevi(){
 }
 
 function guardarcredenSoli(){
-    
+    let sucur = $("#codSucuSoli").val();
+    let codPer = $("#codPerSoli").val();
+    let tipAge = $("#tipAgeSoli").val();
+    let codAge = $("#codigoAgeSoli").val();
+    let PunVen = $("#codPunVenSoli").val();
+    let grantTy = $("#grantTypeSoli").val();
+    let cookie  = $("#cookieSoli").val();
+
+    $.ajax({
+        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=guardarsoli",
+        method: "POST",
+        data: { sucur,
+            codPer,
+            tipAge,
+            codAge,
+            PunVen,
+            grantTy,
+            cookie
+        },
+        success: function (data) {
+
+            if(data == "exitoso"){
+                Swal.fire({
+                    icon: 'success',
+                    text: '¡Credenciales guardadas con exito!'
+                  })
+            }else{
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: '¡No pudimos guardar las credenciales!'
+                  })
+            }
+        }
+    });
 }
 
 function guardarcredenLiberty(){
-    
+    let cookTo = $("#cookieToLibe").val();
+    let cookRe = $("#cookieReLibe").val();
+    let auto = $("#autoLibe").val();
+    let codAge = $("#codigoAgenLibe").val();
+    let apliCli = $("#ApliCliLibe").val();
+    let ip = $("#ipLibe").val();
+    let  idReq= $("#idRequeLibe").val();
+    let terminal = $("#termilibe").val();
+
+    $.ajax({
+        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=guardarliber",
+        method: "POST",
+        data: { cookTo,
+            cookRe,
+            auto,
+            codAge,
+            apliCli,
+            ip,
+            idReq,
+            terminal
+        },
+        success: function (data) {
+
+            if(data == "exitoso"){
+                Swal.fire({
+                    icon: 'success',
+                    text: '¡Credenciales guardadas con exito!'
+                  })
+            }else{
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: '¡No pudimos guardar las credenciales!'
+                  })
+            }
+        }
+    });
 }
 
 function guardarcredenEst(){
-    
+    let usu  = $("#usuEst").val();
+    let contra = $("#ContraLibe").val();
+
+    $.ajax({
+        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=guardarest",
+        method: "POST",
+        data: { usu,
+            contra
+        },
+        success: function (data) {
+
+            if(data == "exitoso"){
+                Swal.fire({
+                    icon: 'success',
+                    text: '¡Credenciales guardadas con exito!'
+                  })
+            }else{
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: '¡No pudimos guardar las credenciales!'
+                  })
+            }
+        }
+    });
+}
+
+function guardarcredenAxa(){
+    let contra = $("#contraseñaaxa").val();
+    let codDis = $("#codigodistriaxa").val();
+    let tipDis = $("#tipdistriaxa").val();
+    let codCiu = $("#codCiuaxa").val();
+    let canal = $("#canalaxa").val();
+    let valEve= $("#valEveaxa").val();
+
+    $.ajax({
+        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=guardaraxa",
+        method: "POST",
+        data: { contra,
+            codDis,
+            tipDis,
+            codCiu,
+            canal,
+            valEve
+        },
+        success: function (data) {
+
+            if(data == "exitoso"){
+                Swal.fire({
+                    icon: 'success',
+                    text: '¡Credenciales guardadas con exito!'
+                  })
+            }else{
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: '¡No pudimos guardar las credenciales!'
+                  })
+            }
+        }
+    });
+}
+
+function guardarcredenHdi(){
+    let codSucu = $("#codSucurhdi").val()
+    let codAge = $("#codigoagenhdi").val()
+    let usu = $("#usuhdi").val()
+    let contra = $("#contraseñahdi").val()
+
+    $.ajax({
+        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=guardarhdi",
+        method: "POST",
+        data: { codSucu,
+            codAge,
+            usu,
+            contra
+        },
+        success: function (data) {
+
+            if(data == "exitoso"){
+                Swal.fire({
+                    icon: 'success',
+                    text: '¡Credenciales guardadas con exito!'
+                  })
+            }else{
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: '¡No pudimos guardar las credenciales!'
+                  })
+            }
+        }
+    });
+}
+
+function guardarcredenSbs(){
+    let usu = $("#ususbs").val();
+    let contra = $("#contraseñasbs").val();
+
+    $.ajax({
+        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=guardarsbs",
+        method: "POST",
+        data: { usu,
+            contra
+        },
+        success: function (data) {
+
+            if(data == "exitoso"){
+                Swal.fire({
+                    icon: 'success',
+                    text: '¡Credenciales guardadas con exito!'
+                  })
+            }else{
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: '¡No pudimos guardar las credenciales!'
+                  })
+            }
+        }
+    });
 }
 
 function guardarcredenZuri(){
-    
-}
+    let usu = $("#usuzur").val();
+    let contra = $("#contraseñazur").val();
+    let correo = $("#correozur").val();
+    let cookie = $("#cookiezur").val();
 
-function guardarcredenZuri(){
-    
-}
+    $.ajax({
+        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=guardarzuri",
+        method: "POST",
+        data: { usu,
+            contra,
+            correo,
+            cookie
+        },
+        success: function (data) {
 
-function guardarcredenZuri(){
-    
-}
-
-function guardarcredenZuri(){
-    
-}
-
-function guardarcredenZuri(){
-    
+            if(data == "exitoso"){
+                Swal.fire({
+                    icon: 'success',
+                    text: '¡Credenciales guardadas con exito!'
+                  })
+            }else{
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: '¡No pudimos guardar las credenciales!'
+                  })
+            }
+        }
+    });
 }
 
 //Funcion para traer credenciales
