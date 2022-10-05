@@ -16,6 +16,7 @@ function cargarIntermediario (){
 
 	var saludo = "hola"
 	const $idInter = document.getElementById("idIntermediario")
+	const $idInter2 = document.getElementById("idIntermediario2")
 
 $.ajax({
 
@@ -26,6 +27,7 @@ $.ajax({
 
 		console.log(respuesta);
 	   $idInter.innerHTML=respuesta;
+	   $idInter2.innerHTML=respuesta;
 
 	}
 
@@ -143,6 +145,8 @@ $(".tablas").on("click", ".btnEditarUsuario", function(){
 			$("#editarCargo").val(respuesta["usu_cargo"]);
 			$("#fotoActual").val(respuesta["usu_foto"]);
 			$("#editarRol").val(respuesta["id_rol"]);
+			$("#idIntermediario2").val(respuesta["id_Intermediario"]);
+
 
 			if(respuesta["usu_foto"] != ""){
 				$(".previsualizarEditar").attr("src", respuesta["usu_foto"]);

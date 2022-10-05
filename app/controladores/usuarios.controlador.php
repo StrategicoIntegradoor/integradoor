@@ -260,8 +260,9 @@ class ControladorUsuarios{
 
 		$tabla = "usuarios";
 		$tabla2 = "roles";
+		$tabla3= "intermediario";
 
-		$respuesta = ModeloUsuarios::MdlMostrarUsuarios($tabla, $tabla2, $item, $valor);
+		$respuesta = ModeloUsuarios::MdlMostrarUsuarios($tabla, $tabla2, $tabla3, $item, $valor);
 
 		return $respuesta;
 	}
