@@ -46,9 +46,10 @@ class ModeloUsuarios{
 
 	static public function mdlIngresarUsuario($tabla, $datos){
 
+
 		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(usu_documento, usu_nombre, usu_apellido, usu_usuario, usu_password, usu_genero, usu_telefono, usu_email, 
-																	usu_cargo, usu_foto, usu_estado, id_rol) 
-													VALUES (:documento, :nombre, :apellido, :usuario, :password, :genero, :telefono, :email, :cargo, :foto, 1, :rol)");
+																	usu_cargo, usu_foto, usu_estado, id_rol, id_Intermediario) 
+													VALUES (:documento, :nombre, :apellido, :usuario, :password, :genero, :telefono, :email, :cargo, :foto, 1, :rol, :intermediario)");
 
 		$stmt -> bindParam(":documento", $datos["documento"], PDO::PARAM_INT);
 		$stmt -> bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
@@ -61,6 +62,32 @@ class ModeloUsuarios{
 		$stmt -> bindParam(":cargo", $datos["cargo"], PDO::PARAM_STR);
 		$stmt -> bindParam(":foto", $datos["foto"], PDO::PARAM_STR);
 		$stmt -> bindParam(":rol", $datos["rol"], PDO::PARAM_INT);
+		$stmt -> bindParam(":intermediario", $datos["intermediario"], PDO::PARAM_INT);
+
+
+		echo '<script>
+
+		swal({
+
+			type: "success",
+			title: "'.$datos["intermediario"].'",
+			showConfirmButton: true,
+			confirmButtonText: "Cerrar"
+
+		}).then(function(result){
+
+			if(result.value){
+			
+				window.location = "usuarios";
+
+			}
+
+		});
+	
+
+		</script>';
+
+
 
 		if($stmt->execute()){
 

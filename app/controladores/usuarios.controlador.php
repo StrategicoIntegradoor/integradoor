@@ -171,6 +171,8 @@ class ControladorUsuarios{
 
 				}
 
+
+				
 				$tabla = "usuarios";
 
 				$encriptar = crypt($_POST["nuevoPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
@@ -185,6 +187,7 @@ class ControladorUsuarios{
 							   "telefono" => $_POST["nuevoTelefono"],
 							   "email" => $_POST["nuevoEmail"],
 							   "cargo" => $_POST["nuevoCargo"],
+							   "intermediario" => $_POST["Intermediario"],
 					           "foto" => $ruta);
 
 				$respuesta = ModeloUsuarios::mdlIngresarUsuario($tabla, $datos);
