@@ -19,9 +19,6 @@ if(!$enlace ){
 
 $query = "SELECT * FROM intermediario";
 $ejecucion = mysqli_query($enlace,$query);
-// $objeto = mysqli_fetch_assoc($ejecucion);
-// $numRows = mysqli_num_rows($ejecucion);
-// echo $numRows;
 $opcion = "";
 while($fila = $ejecucion->fetch_assoc()){
     $opcion.= "<option value =" . $fila['id_Intermediario'].">". $fila['nombre']."</option>";

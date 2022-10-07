@@ -2021,7 +2021,7 @@ while ($rowRespuesta29 = mysqli_fetch_assoc($respuestaquery29)) {
 	$html6 .= '<table style="width: 100%;" class="second2" cellpadding="2"  border="0">';
 
 	$html6 .= '<tr>';
-	$html6 .= '<td class="redondeotabla" style ="border-radius:50px; width: 100%;  background-color: #' . $color . '; color:white; font-family:dejavusanscondensedb; " colspan="' . ($fila6 + 1) . '"><div style="font-size:3pt">&nbsp;</div>OPCIÓN ' . $contador . '<div style="font-size:3pt">&nbsp;</div></td>';
+	$html6 .= '<td class="redondeotabla" style ="border-radius:50px; width: 100%;  background-color: #88D600' . $color . '; color:white; font-family:dejavusanscondensedb; " colspan="' . ($fila6 + 1) . '"><div style="font-size:3pt">&nbsp;</div>OPCIÓN ' . $contador . '<div style="font-size:3pt;">&nbsp;</div></td>';
 	$html6 .= '</tr>';
 	$html6 .= '<tr>';
 
@@ -2215,7 +2215,7 @@ $html7 = '
 $html7 .= '<table style="width: 100%;" class="second2" cellpadding="2"  border="0">';
 
 $html7 .= '<tr>';
-$html7 .= '<td style ="width: 100%;" colspan="' . ($fila6 + 1) . '"><font  size="18" style="text-align: center;">Queremos sugerirte <font style="color: #EC8923;">las ' . $asegRecomendada . ' mejores</font> aseguradoras</font></td>';
+$html7 .= '<td style ="width: 100%;  " colspan="' . ($fila6 + 1) . '"><font  size="18" style="text-align: center;">Queremos sugerirte <font style="color: #EC8923;">las ' . $asegRecomendada . ' mejores</font> aseguradoras</font></td>';
 $html7 .= '</tr>';
 
 $html7 .= '</table>';
@@ -2273,6 +2273,7 @@ $htmlFooter = '<p style="font-size: 7px;">Nota: Esta cotización no constituye u
 $pdf->writeHTML($htmlFooter, true, false, true, false, '');
 $pdf->Ln();
 $htmlFooter = '<p style="font-size: 12px;">Documento Generado Por Software Integradoor.</p>';
+$pdf->Image('../../../vistas/img/logos/imagencotizador.jpg', -5, 0, 0, 92, 'JPG', '', '', true, 200, '', false, false, 0, false, false, false);
 $pdf->writeHTML($htmlFooter, true, false, true, false, '');
 
 

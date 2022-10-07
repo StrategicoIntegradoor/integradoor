@@ -17,7 +17,7 @@ session_start();
   <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
   <meta http-equiv="Pragma" content="no-cache">
 
-  <title>Cotizador de Automoviles</title>
+  <title>Multicotizador de Seguros</title>
 
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -185,6 +185,7 @@ CUERPO DOCUMENTO
         :::::::::::::::::::::::::::::::::::::::::::::::::::*/ 
         $_GET["ruta"] == "cotizar"||
         $_GET["ruta"] == "pesados"||
+        $_GET["ruta"] == "motos"||
         $_GET["ruta"] == "autogestion" ||
         $_GET["ruta"] == "salir" || 
         $_GET["ruta"] == "modificacion-productos" ||

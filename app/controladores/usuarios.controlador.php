@@ -171,6 +171,8 @@ class ControladorUsuarios{
 
 				}
 
+
+				
 				$tabla = "usuarios";
 
 				$encriptar = crypt($_POST["nuevoPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
@@ -185,6 +187,7 @@ class ControladorUsuarios{
 							   "telefono" => $_POST["nuevoTelefono"],
 							   "email" => $_POST["nuevoEmail"],
 							   "cargo" => $_POST["nuevoCargo"],
+							   "intermediario" => $_POST["Intermediario"],
 					           "foto" => $ruta);
 
 				$respuesta = ModeloUsuarios::mdlIngresarUsuario($tabla, $datos);
@@ -257,8 +260,9 @@ class ControladorUsuarios{
 
 		$tabla = "usuarios";
 		$tabla2 = "roles";
+		$tabla3= "intermediario";
 
-		$respuesta = ModeloUsuarios::MdlMostrarUsuarios($tabla, $tabla2, $item, $valor);
+		$respuesta = ModeloUsuarios::MdlMostrarUsuarios($tabla, $tabla2, $tabla3, $item, $valor);
 
 		return $respuesta;
 	}
@@ -407,6 +411,7 @@ class ControladorUsuarios{
 							   "telefono" => $_POST["editarTelefono"],
 							   "email" => $_POST["editarEmail"],
 							   "cargo" => $_POST["editarCargo"],
+							   "intermediario" => $_POST["Intermediario2"],
 							   "foto" => $ruta);
 
 				$respuesta = ModeloUsuarios::mdlEditarUsuario($tabla, $datos);
