@@ -26,7 +26,22 @@ const countdown = (dateTo, element) => {
 
         if (currenTime.time <= 1) {
             clearInterval(timerUpdate);
-            alert('Se acabo el tiempo '+ element);
+
+            Swal.fire({
+                icon: 'error',
+                title: '!Tu tiempo de uso se agoto!.',
+                confirmButtonText: 'Ok',
+              }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location = "salir";
+                } else if (result.isDenied) {
+                }
+              })
+
+
+              setTimeout(function(){
+                window.location = "salir";
+            }, 10000);
         }
 
     }, 1000);
