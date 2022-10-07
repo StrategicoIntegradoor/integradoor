@@ -670,7 +670,7 @@ MODAL EDITAR USUARIO
 
                       <span class="input-group-addon"><i class="fa fa-users"></i></span>
 
-                      <select class="form-control input-lg" name="Intermediario" id="idIntermediario2">
+                      <select class="form-control input-lg" name="Intermediario2" id="idIntermediario2">
 
                       </select>
 

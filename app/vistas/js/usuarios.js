@@ -14,7 +14,6 @@ CARGAR INTERMEDIARIO
 
 function cargarIntermediario (){
 
-	var saludo = "hola"
 	const $idInter = document.getElementById("idIntermediario")
 	const $idInter2 = document.getElementById("idIntermediario2")
 
@@ -22,7 +21,6 @@ $.ajax({
 
 	url: "ajax/cargarIntermediario.php",
 	method : "POST",
-	data : {saludo: saludo},
 	success : function (respuesta){
 
 		console.log(respuesta);
@@ -42,14 +40,12 @@ CARGAR ROLL
 =============================================*/
 function cargarRoll (){
 
-	var saludo = "roll"
 	const $idRoll = document.getElementById("idRoll")
 
 $.ajax({
 
 	url: "ajax/cargarRoll.php",
 	method : "POST",
-	data : {saludo: saludo},
 	success : function (respuesta){
 
 		console.log(respuesta);

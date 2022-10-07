@@ -411,6 +411,7 @@ class ControladorUsuarios{
 							   "telefono" => $_POST["editarTelefono"],
 							   "email" => $_POST["editarEmail"],
 							   "cargo" => $_POST["editarCargo"],
+							   "intermediario" => $_POST["Intermediario2"],
 							   "foto" => $ruta);
 
 				$respuesta = ModeloUsuarios::mdlEditarUsuario($tabla, $datos);
