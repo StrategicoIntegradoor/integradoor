@@ -97,6 +97,75 @@ if ($_SESSION["rol"] != 1 && $_SESSION["rol"] != 2) {
         </thead>
 
         <tbody>
+          <tr role="row" class="odd">
+
+            <td class="text-center sorting_1" tabindex="0">0001</td>
+
+            <td class="text-center sorting_2">2022/10/05</td>
+
+            <td class="text-right">67042029</td>
+
+            <td class="text-right">Kerly Portilla</td><td class="text-center">KQL761</td>
+
+            <td class="">HYUNDAI CRETA [FL] ATRACTTION MT 1600CC 4X2 2AB ABS R17</td>
+
+            <td class=""><?php  echo $_SESSION["nombre"] . ' '. $_SESSION["apellido"]; ?></td>
+
+            <td class="text-center">
+
+              <div class="btn-group">
+              
+                <button class="btn btn-primary btnEditarCotizacion" idcotizacion="">Seleccionar</button></div>
+
+            </td>
+
+          </tr>
+          <tr role="row" class="odd">
+
+            <td class="text-center sorting_1" tabindex="0">0002</td>
+
+            <td class="text-center sorting_2">2022/10/05</td>
+
+            <td class="text-right">67042029</td>
+
+            <td class="text-right">Kerly Portilla</td><td class="text-center">KQL761</td>
+
+            <td class="">HYUNDAI CRETA [FL] ATRACTTION MT 1600CC 4X2 2AB ABS R17</td>
+
+            <td class=""><?php  echo $_SESSION["nombre"] . ' '. $_SESSION["apellido"]; ?></td>
+
+            <td class="text-center">
+
+              <div class="btn-group">
+              
+                <button class="btn btn-primary btnEditarCotizacion" idcotizacion="">Seleccionar</button></div>
+
+            </td>
+
+          </tr>
+          <tr role="row" class="odd">
+
+            <td class="text-center sorting_1" tabindex="0">0003</td>
+
+            <td class="text-center sorting_2">2022/10/05</td>
+
+            <td class="text-right">67042029</td>
+
+            <td class="text-right">Kerly Portilla</td><td class="text-center">KQL761</td>
+
+            <td class="">HYUNDAI CRETA [FL] ATRACTTION MT 1600CC 4X2 2AB ABS R17</td>
+
+            <td class=""><?php  echo $_SESSION["nombre"] . ' '. $_SESSION["apellido"]; ?></td>
+
+            <td class="text-center">
+
+              <div class="btn-group">
+              
+                <button class="btn btn-primary btnEditarCotizacion" idcotizacion="">Seleccionar</button></div>
+
+            </td>
+
+          </tr>
 
         <?php
 

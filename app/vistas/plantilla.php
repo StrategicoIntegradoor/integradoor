@@ -148,6 +148,8 @@ CUERPO DOCUMENTO
 
 <body class="hold-transition skin-blue sidebar-collapse sidebar-mini login-page">
 
+<input type="hidden" id="fechaLimi" value="Thu Oct 07 2022 12:03:00 GMT-0500">
+
   <?php
   if (isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok") {
 
@@ -225,7 +227,7 @@ CUERPO DOCUMENTO
   
 
   <script src="vistas/js/plantilla.js?v=<?php echo (rand()); ?>"></script>
- 
+  <script src="vistas/js/count.js?v=<?php echo (rand()); ?>"></script>
   <script src="vistas/js/clientes.js?v=<?php echo (rand()); ?>"></script>
   <script src="vistas/js/cotizar.js?v=<?php echo (rand()); ?>"></script>
   <script src="vistas/js/fasecolda.js?v=<?php echo (rand()); ?>"></script>

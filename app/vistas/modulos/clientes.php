@@ -112,11 +112,11 @@ if ($_SESSION["rol"] != 1 && $_SESSION["rol"] != 2) {
 
                       <div class="btn-group">
                           
-                        <button class="btn btn-primary btnEditarCliente" data-toggle="modal" data-target="#modalEditarCliente" idCliente="' . $value["id_cliente"] . '"><i class="fa fa-pencil"></i></button>';
+                        <button class="btn btn-primary btnEditarCliente" data-toggle="modal" data-target="#modalEditarCliente" idCliente="' . $value["id_cliente"] . '" style="float: none;"><i class="fa fa-pencil"></i></button>';
 
               if ($_SESSION["rol"] == 1) {
 
-                echo '<button class="btn btn-danger btnEliminarCliente" idCliente="' . $value["id_cliente"] . '"><i class="fa fa-times"></i></button>';
+                echo '<button class="btn btn-danger btnEliminarCliente" idCliente="' . $value["id_cliente"] . '" style="float: none;"><i class="fa fa-times"></i></button>';
               }
 
               echo '</div>

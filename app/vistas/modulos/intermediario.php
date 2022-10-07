@@ -14,6 +14,14 @@ if ($_SESSION["rol"] != 1) {
 ?>
 
 <style>
+
+input[type="checkbox"]{
+    content: "";
+    width: 26px;
+    height: 26px;
+    border: 2px solid #ccc;
+    background: #ddd;
+  }
   .contentnav {
     display: table;
     justify-content: space-around;
@@ -115,11 +123,12 @@ if ($_SESSION["rol"] != 1) {
           <div class="col-md-3">
             <div class="info">
               <div class="avatar-wrapper" style="text-align: center;">
-                <img class="profile-pic" src="https://www.grupoasistencia.com/autogestionpro/Assets/images/default-image.png" width="70%">
+                <img class="profile-pic previsualizarEditar" src="vistas/img/usuarios/default/anonymous.png" width="80%" height="">
                 <label class="btn btn-primary">
                   <input type="file" name="ImgInter" id="ImgInter" style="display:none;" />
                   Subir archivo
                 </label>
+                <input type="text" style="display: none;" id="fotoActual">
               </div>
             </div>
           </div>
@@ -204,15 +213,180 @@ if ($_SESSION["rol"] != 1) {
         <div clas="row" style="margin-bottom: 30px;">
           <b style="font-size: 35px">Informacion Aseguradoras Aliadas</b>
         </div>
+        <div class="row" style="margin-bottom: 30px;">
+          <div class="col-md-6">
+            <div class="row text-center">
+              <div class="col-md-2">
+                <span>Aseguradora</span>
+              </div>
+              <div class="col-md-2">
+                <span>Tienes clave?</span>
+              </div>
+              <div class="col-md-4">
+                <span>Claves intermediacion</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <label for="">Allianz</label>
+              </div>
+              <div class="col-md-2 text-center">
+                <input type="checkbox" name="tieneAlli" id="tieneAlli">
+              </div>
+              <div class="col-md-4">
+                <input type="text" id="claveparaIAlli" disabled="disabled">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <label for="">Bolivar</label>
+              </div>
+              <div class="col-md-2 text-center">
+                <input type="checkbox" name="tieneBoli" id="tieneBoli">
+              </div>
+              <div class="col-md-4">
+                <input type="text" id="claveparaBoli" disabled="disabled">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <label for="">La Equidad</label>
+              </div>
+              <div class="col-md-2 text-center">
+                <input type="checkbox" name="tieneEqui" id="tieneEqui">
+              </div>
+              <div class="col-md-4">
+                <input type="text" id="claveparaEqui" disabled="disabled">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <label for="">Mapfre</label>
+              </div>
+              <div class="col-md-2 text-center">
+                <input type="checkbox" name="tieneMap" id="tieneMap">
+              </div>
+              <div class="col-md-4">
+                <input type="text" id="claveparaMap" disabled="disabled">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <label for="">Previsora</label>
+              </div>
+              <div class="col-md-2 text-center">
+                <input type="checkbox" name="tienePrevi" id="tienePrevi">
+              </div>
+              <div class="col-md-4">
+                <input type="text" id="claveparaPrevi" disabled="disabled">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <label for="">Solidaria</label>
+              </div>
+              <div class="col-md-2 text-center">
+                <input type="checkbox" name="tieneSoli" id="tieneSoli">
+              </div>
+              <div class="col-md-4">
+                <input type="text" id="claveparaSoli" disabled="disabled">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+          <div class="row text-center">
+              <div class="col-md-2">
+                <span>Aseguradora</span>
+              </div>
+              <div class="col-md-2">
+                <span>Tienes clave?</span>
+              </div>
+              <div class="col-md-4">
+                <span>Claves intermediacion</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <label for="">Liberty</label>
+              </div>
+              <div class="col-md-2 text-center">
+                <input type="checkbox" name="tieneLibe" id="tieneLibe">
+              </div>
+              <div class="col-md-4">
+                <input type="text" id="claveparaLibe" disabled="disabled">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <label for="">Estado</label>
+              </div>
+              <div class="col-md-2 text-center">
+                <input type="checkbox" name="tieneEst" id="tieneEst">
+              </div>
+              <div class="col-md-4">
+                <input type="text" id="claveparaEst" disabled="disabled">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <label for="">Axa</label>
+              </div>
+              <div class="col-md-2 text-center">
+                <input type="checkbox" name="tieneAxa" id="tieneAxa">
+              </div>
+              <div class="col-md-4">
+                <input type="text" id="claveparaAxa" disabled="disabled">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <label for="">HDI</label>
+              </div>
+              <div class="col-md-2 text-center">
+                <input type="checkbox" name="tienehdi" id="tienehdi" >
+              </div>
+              <div class="col-md-4">
+                <input type="text" id="claveparahdi" disabled="disabled">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <label for="">sbs</label>
+              </div>
+              <div class="col-md-2 text-center">
+                <input type="checkbox" name="tienesbs" id="tienesbs">
+              </div>
+              <div class="col-md-4">
+                <input type="text" id="claveparasbs" disabled="disabled">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <label for="">zurich</label>
+              </div>
+              <div class="col-md-2 text-center">
+                <input type="checkbox" name="tienezuri" id="tienezuri">
+              </div>
+              <div class="col-md-4">
+                <input type="text" id="claveparazuri" disabled="disabled" >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin: 10px;">
+          <div class="col-md-12 divBoton">
+            <button class="btn btn-primary" onclick="guardarInfoInter()">Actualizar</button>
+          </div>
+        </div>
         <div clas="row" style="margin-bottom: 30px;">
-          <b style="font-size: 20px">Administracion de claves</b>
+          <b style="font-size: 20px">Credenciales Webservice</b>
         </div>
 
         <!-- ::::::::::::::::CABEZOTE CON NAVEGACION::::::::::::::::::::::::::::::::::::::::::::::: -->
         <div class="row" style="margin:auto;">
           <div class="col-12 ">
             <ul class="nav nav-tabs contentnav">
-              <li role="presentation" class="classli" id="ballili"><a class="classa" id="balli">Allianz</a></li>
+              <li role="presentation" class="classli active" id="ballili"><a class="classa" id="balli">Allianz</a></li>
               <li role="presentation" class="classli" id="bbolili"><a class="classa" id="bboli">Bolivar</a></li>
               <li role="presentation" class="classli" id="bequili"><a class="classa" id="bequi">La Equidad</a></li>
               <li role="presentation" class="classli" id="bmapli"><a class="classa" id="bmap">Mapfre</a></li>
@@ -226,7 +400,7 @@ if ($_SESSION["rol"] != 1) {
               <li role="presentation" class="classli" id="bzurili"><a class="classa" id="bzuri">Zurich</a></li>
             </ul>
           </div>
-          <div class="row" id="allianzdiv" style="display: none;">
+          <div class="row" id="allianzdiv">
             <div class="col-md-12">
               <div class="row" style="display: flex;">
                 <div class="col-md-12" style="background-color: #88d600; color: white; width: 100%;">
@@ -273,11 +447,11 @@ if ($_SESSION["rol"] != 1) {
                   </div>
                 </div>
               </div>
-              <div class="row" style="margin: 10px;">
+              <!-- <div class="row" style="margin: 10px;">
                 <div class="col-md-12 divBoton">
                   <button class="btn btn-primary" onclick="guardarcredenAlli()">Guardar</button>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="row" id="bolivardiv" style="display: none;">
@@ -305,12 +479,12 @@ if ($_SESSION["rol"] != 1) {
                   </div>
                 </div>
               </div>
-              <div class="row" style="margin: 10px;">
+              <!-- <div class="row" style="margin: 10px;">
                 <div class="col-md-12 divBoton">
                   <button class="btn btn-primary" onclick="guardarcredenBoli()">Guardar</button>
                 </div>
 
-              </div>
+              </div> -->
 
             </div>
           </div>
@@ -347,12 +521,12 @@ if ($_SESSION["rol"] != 1) {
                   </div>
                 </div>
               </div>
-              <div class="row" style="margin: 10px;">
+              <!-- <div class="row" style="margin: 10px;">
                 <div class="col-md-12 divBoton">
                   <button class="btn btn-primary" onclick="guardarcredenEqui()">Guardar</button>
                 </div>
 
-              </div>
+              </div> -->
 
             </div>
           </div>
@@ -373,12 +547,12 @@ if ($_SESSION["rol"] != 1) {
                   </div>
                 </div>
               </div>
-              <div class="row" style="margin: 10px;">
+              <!-- <div class="row" style="margin: 10px;">
                 <div class="col-md-12 divBoton">
                   <button class="btn btn-primary" disabled="disabled" onclick="guardarcredenMap()">Guardar</button>
                 </div>
 
-              </div>
+              </div> -->
 
             </div>
           </div>
@@ -398,12 +572,12 @@ if ($_SESSION["rol"] != 1) {
                   </div>
                 </div>
               </div>
-              <div class="row" style="margin: 10px;">
+              <!-- <div class="row" style="margin: 10px;">
                 <div class="col-md-12 divBoton">
                   <button class="btn btn-primary" onclick="guardarcredenPrevi()" disabled>Guardar</button>
                 </div>
 
-              </div>
+              </div> -->
 
             </div>
           </div>
@@ -468,12 +642,12 @@ if ($_SESSION["rol"] != 1) {
                   </div>
                 </div>
               </div>
-              <div class="row" style="margin: 10px;">
+              <!-- <div class="row" style="margin: 10px;">
                 <div class="col-md-12 divBoton">
                   <button class="btn btn-primary" onclick="guardarcredenSoli()">Guardar</button>
                 </div>
 
-              </div>
+              </div> -->
 
             </div>
           </div>
@@ -544,12 +718,12 @@ if ($_SESSION["rol"] != 1) {
                   </div>
                 </div>
               </div>
-              <div class="row" style="margin: 10px;">
+              <!-- <div class="row" style="margin: 10px;">
                 <div class="col-md-12 divBoton">
                   <button class="btn btn-primary" onclick="guardarcredenLiberty()">Guardar</button>
                 </div>
 
-              </div>
+              </div> -->
 
             </div>
           </div>
@@ -578,12 +752,12 @@ if ($_SESSION["rol"] != 1) {
                   </div>
                 </div>
               </div>
-              <div class="row" style="margin: 10px;">
+              <!-- <div class="row" style="margin: 10px;">
                 <div class="col-md-12 divBoton">
                   <button class="btn btn-primary" onclick="guardarcredenEst()">Guardar</button>
                 </div>
 
-              </div>
+              </div> -->
 
             </div>
           </div>
@@ -640,12 +814,12 @@ if ($_SESSION["rol"] != 1) {
                   </div>
                 </div>
               </div>
-              <div class="row" style="margin: 10px;">
+              <!-- <div class="row" style="margin: 10px;">
                 <div class="col-md-12 divBoton">
                   <button class="btn btn-primary" onclick="guardarcredenAxa()">Guardar</button>
                 </div>
 
-              </div>
+              </div> -->
 
             </div>
           </div>
@@ -688,12 +862,12 @@ if ($_SESSION["rol"] != 1) {
                   </div>
                 </div>
               </div>
-              <div class="row" style="margin: 10px;">
+              <!-- <div class="row" style="margin: 10px;">
                 <div class="col-md-12 divBoton">
                   <button class="btn btn-primary" onclick="guardarcredenHdi()">Guardar</button>
                 </div>
 
-              </div>
+              </div> -->
 
             </div>
           </div>
@@ -722,12 +896,12 @@ if ($_SESSION["rol"] != 1) {
                   </div>
                 </div>
               </div>
-              <div class="row" style="margin: 10px;">
+              <!-- <div class="row" style="margin: 10px;">
                 <div class="col-md-12 divBoton">
                   <button class="btn btn-primary" onclick="guardarcredenSbs()">Guardar</button>
                 </div>
 
-              </div>
+              </div> -->
 
             </div>
           </div>
@@ -771,11 +945,11 @@ if ($_SESSION["rol"] != 1) {
                 </div>
               </div>
             </div>
-            <div class="row" style="margin: 10px;">
+            <!-- <div class="row" style="margin: 10px;">
               <div class="col-md-12 divBoton">
                 <button class="btn btn-primary" onclick="guardarcredenZuri()">Guardar</button>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

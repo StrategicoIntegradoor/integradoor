@@ -3,6 +3,154 @@
 })()
 
 
+//FUNCION CARGAR NUEVA FOTO
+
+$("#ImgInter").change(function(){
+
+	var imagen = this.files[0];
+	
+	/*=============================================
+  	VALIDAMOS EL FORMATO DE LA IMAGEN SEA JPG O PNG
+  	=============================================*/
+
+  	if(imagen["type"] != "image/jpeg" && imagen["type"] != "image/png"){
+
+  		$("#ImgInter").val("");
+
+  		 swal({
+		      title: "Error al subir la imagen",
+		      text: "¡La imagen debe estar en formato JPG o PNG!",
+		      type: "error",
+		      confirmButtonText: "¡Cerrar!"
+		    });
+
+  	}else if(imagen["size"] > 2000000){
+
+  		$("#ImgInter").val("");
+
+  		 swal({
+		      title: "Error al subir la imagen",
+		      text: "¡La imagen no debe pesar más de 2MB!",
+		      type: "error",
+		      confirmButtonText: "¡Cerrar!"
+		    });
+
+  	}else{
+
+  		var datosImagen = new FileReader;
+  		datosImagen.readAsDataURL(imagen);
+
+  		$(datosImagen).on("load", function(event){
+
+  			var rutaImagen = event.target.result;
+
+  			$(".previsualizarEditar").attr("src", rutaImagen);
+
+  		});
+
+  	}
+
+});
+
+
+//funciones para cuando marquen aseguradora se habilite el campo del codigo
+
+$("#tieneAlli").click(function () {
+    if( $('#tieneAlli').is(':checked') ) {
+        $("#claveparaIAlli").prop('disabled', false);
+    }else{   
+        $("#claveparaIAlli").prop('disabled', true);
+    }
+})
+
+$("#tieneBoli").click(function () {
+    if( $('#tieneBoli').is(':checked') ) {
+        $("#claveparaBoli").prop('disabled', false);
+    }else{   
+        $("#claveparaBoli").prop('disabled', true);
+    }
+})
+
+$("#tieneEqui").click(function () {
+    if( $('#tieneEqui').is(':checked') ) {
+        $("#claveparaEqui").prop('disabled', false);
+    }else{   
+        $("#claveparaEqui").prop('disabled', true);
+    }
+})
+
+$("#tieneMap").click(function () {
+    if( $('#tieneMap').is(':checked') ) {
+        $("#claveparaMap").prop('disabled', false);
+    }else{   
+        $("#claveparaMap").prop('disabled', true);
+    }
+})
+
+$("#tienePrevi").click(function () {
+    if( $('#tienePrevi').is(':checked') ) {
+        $("#claveparaPrevi").prop('disabled', false);
+    }else{   
+        $("#claveparaPrevi").prop('disabled', true);
+    }
+})
+
+$("#tieneSoli").click(function () {
+    if( $('#tieneSoli').is(':checked') ) {
+        $("#claveparaSoli").prop('disabled', false);
+    }else{   
+        $("#claveparaSoli").prop('disabled', true);
+    }
+})
+
+$("#tieneLibe").click(function () {
+    if( $('#tieneLibe').is(':checked') ) {
+        $("#claveparaLibe").prop('disabled', false);
+    }else{   
+        $("#claveparaLibe").prop('disabled', true);
+    }
+})
+
+$("#tieneEst").click(function () {
+    if( $('#tieneEst').is(':checked') ) {
+        $("#claveparaEst").prop('disabled', false);
+    }else{   
+        $("#claveparaEst").prop('disabled', true);
+    }
+})
+
+$("#tieneAxa").click(function () {
+    if( $('#tieneAxa').is(':checked') ) {
+        $("#claveparaAxa").prop('disabled', false);
+    }else{   
+        $("#claveparaAxa").prop('disabled', true);
+    }
+})
+
+$("#tienehdi").click(function () {
+    if( $('#tienehdi').is(':checked') ) {
+        $("#claveparahdi").prop('disabled', false);
+    }else{   
+        $("#claveparahdi").prop('disabled', true);
+    }
+})
+
+$("#tienesbs").click(function () {
+    if( $('#tienesbs').is(':checked') ) {
+        $("#claveparasbs").prop('disabled', false);
+    }else{   
+        $("#claveparasbs").prop('disabled', true);
+    }
+})
+
+$("#tienezuri").click(function () {
+    if( $('#tienezuri').is(':checked') ) {
+        $("#claveparazuri").prop('disabled', false);
+    }else{   
+        $("#claveparazuri").prop('disabled', true);
+    }
+})
+
 
 ///Funcion para traer credenciales
 
@@ -17,10 +165,31 @@ function traerCredenciales(){
             //enviar datos del intermediario al formulario de arriba
             $("#razon").val(data["nombre"]);
             $("#numero_identificacionInter").val(data["num_documento"]);
+            $("#repre").val(data["nombre_representante"]);
+            $("#numero_identificacion_repre").val(data["Identificacion"]);
+            $("#email").val(data["correo"]);
+            $("#direccion").val(data["direccion"]);
+            $("#ciudad").val(data["ciudad"]);
+            $("#contac").val(data["contacto"]);
+            $("#cel").val(data["celular"]);
+            $("#claveparaIAlli").val(data["codigo_alli"]);
+            $("#claveparaBoli").val(data["codigo_boli"]);
+            $("#claveparaEqui").val(data["codigo_equi"]);
+            $("#claveparaMap").val(data["codigo_map"]);
+            $("#claveparaPrevi").val(data["codigo_previ"]);
+            $("#claveparaSoli").val(data["codigo_soli"]);
+            $("#claveparaLibe").val(data["codigo_libe"]);
+            $("#claveparaEst").val(data["codigo_est"]);
+            $("#claveparaAxa").val(data["codigo_axa"]);
+            $("#claveparahdi").val(data["codigo_hdi"]);
+            $("#claveparasbs").val(data["codigo_sbs"]);
+            $("#claveparazuri").val(data["codigo_zuri"]);
+            $(".previsualizarEditar").attr("src", data["intermediario_imagen"]);
+
 
             
             //Credenciales de Bolivar para enviar a la visual.
-            $("#apikeyBo").val(data["cre_bol_api-key"]);
+            $("#apikeyBo").val(data["cre_bol_api_key"]);
             $("#ClaveABo").val(data["cre_bol_claveAsesor"]);
 
             //Credenciales de allianz para enviar a la visual.
@@ -99,8 +268,6 @@ function traerCredenciales(){
 
 
 //Funciones para enviar a guardar o actualizar credenciales.
-
-// holiiiii
 
 function guardarcredenAlli(){
     let contra = $("#contraseñaAlli").val();
@@ -438,7 +605,86 @@ function guardarcredenZuri(){
 
 //Funcion para traer credenciales
 
+function guardarInfoInter(){
+    var tipodocumento = $("#tip_doc").val()
+    var correo = $("#email").val()
+    var identiInt = $("#numero_identificacionInter").val()
+    var direccion = $("#direccion").val()
+    var razonSO = $("#razon").val()
+    var ciudad  = $("#ciudad").val()
+    var nomRepre = $("#repre").val()
+    var indentiRepre = $("#numero_identificacion_repre").val()
+    var comConta = $("#contac").val()
+    var cel = $("#cel").val()
+    var alli = $("#claveparaIAlli").val()
+    var boli = $("#claveparaBoli").val()
+    var equi = $("#claveparaEqui").val()
+    var mapfre = $("#claveparaMap").val()
+    var previ = $("#claveparaPrevi").val()
+    var soli = $("#claveparaSoli").val()
+    var libe = $("#claveparaLibe").val()
+    var est = $("#claveparaEst").val()
+    var axa = $("#claveparaAxa").val()
+    var hdi = $("#claveparahdi").val()
+    var sbs = $("#claveparasbs").val()
+    var zuri = $("#claveparazuri").val()
 
+    debugger;
+
+    var img = $('#ImgInter').val();
+
+    $.ajax({
+        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=actualizarInter",
+        method: "POST",
+        data: { tipodocumento,
+        correo,
+        identiInt, 
+        direccion,
+        razonSO,
+        ciudad,
+        nomRepre,
+        indentiRepre, 
+        comConta,
+        cel,
+        alli,
+        boli,
+        equi,
+        mapfre,
+        previ,
+        soli,
+        libe,
+        est,
+        axa,
+        hdi,
+        sbs,
+        zuri,
+        img
+        },
+        success: function (data) {
+
+            if(data == "exitoso"){
+
+                // location.reload();
+                Swal.fire({
+                    title: '¡Intermediario guardado con Exito!',
+                    confirmButtonText: 'Ok',
+                  }).then((result) => {
+                    if (result.isConfirmed) {
+                        location.reload();
+                    } else if (result.isDenied) {
+                    }
+                  })
+                  
+            }else{
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: '¡No pudimos actualizar informacion!'
+                  })
+            }
+        }
+    });
+}
 
 
 

@@ -40,6 +40,10 @@
 		<div class="navbar-custom-menu">
 				
 			<ul class="nav navbar-nav">
+
+			<li>
+				<p id="cuentatras" style="font-size: 20px;"></p>
+			</li>
 				
 				<li class="dropdown user user-menu">
 					

@@ -724,3 +724,7 @@ $borrarUsuario->ctrBorrarUsuario();
 ?>
 
 <script src="vistas/js/usuarios.js?v=<?php echo (rand()); ?>"></script>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="vistas/js/invalidarPesadoDemo.js?v=<?php echo (rand()); ?>"></script>

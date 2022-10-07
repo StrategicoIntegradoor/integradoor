@@ -27,6 +27,21 @@ class ModeloInternediario{
 
     //funcion para actualizar informacion del intermediario
 
+    public static function editarInter($tipodocumento, $correo, $identiInt, $direccion, $razonSO, $ciudad, $nomRepre, $indentiRepre, $comConta, $cel, $alli, $boli, $equi, $mapfre, $previ, $soli, $libe, $est, $axa, $hdi, $sbs, $zuri ){
+        $inter = $_SESSION["intermediario"];
+
+        $sqledit = Conexion::conectar()->prepare("UPDATE intermediario SET nombre = '$razonSO', tipo_docuemento   =  '$tipodocumento', num_documento = '$identiInt', nombre_representante ='$nomRepre', Identificacion = '$indentiRepre', correo = '$correo', direccion = '$direccion', ciudad = '$ciudad', contacto = '$comConta', celular = '$cel', codigo_alli = '$alli', codigo_boli = '$boli', codigo_equi = '$equi', codigo_map = '$mapfre', codigo_previ = '$previ', codigo_soli = '$soli', codigo_libe = '$libe', codigo_est = '$est', codigo_axa = '$axa', codigo_hdi = '$hdi', codigo_sbs = '$sbs ', codigo_zuri = '$zuri' WHERE id_Intermediario = '$inter'");
+
+        $sqledit -> execute();
+        $resultedit =  $sqledit ->rowCount();
+
+        if($resultedit){
+            echo "exitoso";
+        }else{
+            echo "falle";
+        }
+    }
+
     //funcion para guardar credenciales del intermediario
 
     public static function guardarAlli($contra, $part, $idAge, $codPAt, $codAge){
