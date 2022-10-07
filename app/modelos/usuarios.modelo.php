@@ -14,7 +14,7 @@ class ModeloUsuarios{
 
 			if($item == 'id_usuario' || $item == 'usu_usuario' || $item == 'usu_documento'){
 
-				$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3 WHERE $tabla.id_rol = $tabla2.id_rol AND $tabla.id_Intermediario = $tabla3.id_Intermediario AND $item = :$item");
+				$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2 WHERE $tabla.id_rol = $tabla2.id_rol AND $item = :$item");
 
 				$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
 				$stmt -> execute();

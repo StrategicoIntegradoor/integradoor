@@ -2442,3 +2442,16 @@ $('#staticBackdrop').on('hidden.bs.modal', () => {
   document.querySelector('#buscar-fasecolda').value = ''
   document.querySelector('#modelo-fasecolda').value = ''
 })
+
+
+// Abrir modal
+document.querySelector('.buscarFasecolda').addEventListener('click', e => {
+  $('#staticBackdrop').modal('show')
+})
+
+document.querySelector('#txtFasecolda').addEventListener('keypress', e => {
+if (e.keyCode === 13) {
+  e.preventDefault()
+  $('#staticBackdrop').modal('show')
+}
+}) 
