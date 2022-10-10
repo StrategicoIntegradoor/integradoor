@@ -50,7 +50,7 @@ class ModeloUsuarios{
 
 		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(usu_documento, usu_nombre, usu_apellido, usu_usuario, usu_password, usu_genero, usu_telefono, usu_email, 
 																	usu_cargo, usu_foto, usu_estado, id_rol, id_Intermediario, numCotizaciones, fechaFin) 
-																	VALUES (:documento, :nombre, :apellido, :usuario, :password, :genero, :telefono, :email, :cargo, :foto, 1, :rol, :intermediario, :maxCot, :fechaLimite)");
+																	VALUES (:documento, :nombre, :apellido, :usuario, :password, :genero, :telefono, :email, :cargo, :foto, 1, :rol, :intermediario, :maxCot,  :fechaLimite )");
 
 		$stmt -> bindParam(":documento", $datos["documento"], PDO::PARAM_INT);
 		$stmt -> bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
@@ -65,7 +65,7 @@ class ModeloUsuarios{
 		$stmt -> bindParam(":rol", $datos["rol"], PDO::PARAM_INT);
 		$stmt -> bindParam(":intermediario", $datos["intermediario"], PDO::PARAM_INT);
 		$stmt -> bindParam(":maxCot", $datos["maxCotizaciones"], PDO::PARAM_INT);
-		$stmt -> bindParam(":fechaLimite", $datos["fechaLimite"], PDO::PARAM_INT);
+		$stmt -> bindParam(":fechaLimite", $datos["fechaLimite"], PDO::PARAM_STR);
 
 	
 

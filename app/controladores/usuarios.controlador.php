@@ -180,9 +180,10 @@ class ControladorUsuarios{
 				$tabla = "usuarios";
 				$fecha1= $_POST["fecLim"];
 				$fecha2 = explode("/",$fecha1);
-				$fecha = $fecha2[2] . "-" . $fecha2[1] . "-" . $fecha2[0];
+				$fecha3 = $fecha2[2] . "-" . $fecha2[1] . "-" . $fecha2[0];
+				$fecha = str_replace("--","",$fecha3);
 			
-			
+	
 			
 
 				$encriptar = crypt($_POST["nuevoPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
