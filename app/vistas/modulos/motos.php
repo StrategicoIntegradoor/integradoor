@@ -21,6 +21,7 @@ if ($_SESSION["rol"] != 1 && $_SESSION["rol"] != 2) {
         </div>
     </div>
 </div>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script src="vistas/js/invalidarPesadoDemo.js?v=<?php echo (rand()); ?>"></script>
 

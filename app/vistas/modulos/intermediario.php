@@ -375,7 +375,7 @@ input[type="checkbox"]{
         </div>
         <div class="row" style="margin: 10px;">
           <div class="col-md-12 divBoton">
-            <button class="btn btn-primary" onclick="guardarInfoInter()">Actualizar</button>
+            <button class="btn btn-primary" onclick="guardarInfoInter()" style="color: black"><strong>Actualizar</strong></button>
           </div>
         </div>
         <div clas="row" style="margin-bottom: 30px;">

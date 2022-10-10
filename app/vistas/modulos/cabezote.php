@@ -41,8 +41,13 @@
 				
 			<ul class="nav navbar-nav">
 
-			<li>
-				<p id="cuentatras" style="font-size: 20px;"></p>
+ 				<li style=" margin-right: 5px; color: #88d600;font-size: 30px;">
+				 <i class="fa fa-clock-o" aria-hidden="true"></i>
+				</li>
+			
+			<li style="font-size: 20px; margin-top:10px;">
+				<p id="cuentatras" ></p>
+				
 			</li>
 				
 				<li class="dropdown user user-menu">

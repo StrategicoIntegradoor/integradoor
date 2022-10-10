@@ -743,93 +743,152 @@ function verPdfOferta(aseguradora, numCotizOferta, numId) {
 FUNCION PARA CARGAR EL PDF OFICIAL DE SEGUROS DEL ESTADO
 ======================================================*/
 function verPdfEstado(aseguradora, numCotizOferta, numId, UrlPdf) {
-  $("#verPdf" + numCotizOferta + numId).html(
-    "VER PDF &nbsp;&nbsp;<img src='vistas/img/plantilla/loading.gif' width='18' height='18'>"
-  );
 
-  var ventanaPDF = window.open(
-    "",
-    aseguradora,
-    "width=" + 1024 + ", height=" + 768
-  );
-  ventanaPDF.document.write("Cargando vista previa Pdf " + aseguradora + "..."); // Carga un mensaje de espera
-  ventanaPDF.location.href = UrlPdf;
+  Swal.fire({
+    icon: 'error',
+    title: '¡Esta opcion no esta disponible en la version demo!.',
+    confirmButtonText: 'Cerrar',
+  }).then((result) => {
+    if (result.isConfirmed) {
+    } else if (result.isDenied) {
+    }
+  })
 
-  setTimeout(function () {
-    $("#verPdf" + numCotizOferta + numId).html(
-      'VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span>'
-    );
-  }, 6000);
+  // $("#verPdf" + numCotizOferta + numId).html(
+  //   "VER PDF &nbsp;&nbsp;<img src='vistas/img/plantilla/loading.gif' width='18' height='18'>"
+  // );
+
+  // var ventanaPDF = window.open(
+  //   "",
+  //   aseguradora,
+  //   "width=" + 1024 + ", height=" + 768
+  // );
+  // ventanaPDF.document.write("Cargando vista previa Pdf " + aseguradora + "..."); // Carga un mensaje de espera
+  // ventanaPDF.location.href = UrlPdf;
+
+  // setTimeout(function () {
+  //   $("#verPdf" + numCotizOferta + numId).html(
+  //     'VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span>'
+  //   );
+  // }, 6000);
 }
 
 /*======================================================
 FUNCION PARA CARGAR EL PDF OFICIAL DE SOLIDARIA
 ======================================================*/
 const verPdfSolidaria = async (cotizacion) => {
-  let base64 = await obtenerPdfSolidaria(cotizacion);
-  base64 = base64.slice(1, -1);
 
-  const linkSource = `data:application/pdf;base64,${base64}`;
-  const downloadLink = document.createElement("a");
-  const fileName = cotizacion + ".pdf";
+  Swal.fire({
+    icon: 'error',
+    title: '¡Esta opcion no esta disponible en la version demo!.',
+    confirmButtonText: 'Cerrar',
+  }).then((result) => {
+    if (result.isConfirmed) {
+        window.location = "inicio";
+    } else if (result.isDenied) {
+    }
+  })
 
-  downloadLink.href = linkSource;
-  downloadLink.download = fileName;
-  downloadLink.click();
+  // let base64 = await obtenerPdfSolidaria(cotizacion);
+  // base64 = base64.slice(1, -1);
+
+  // const linkSource = `data:application/pdf;base64,${base64}`;
+  // const downloadLink = document.createElement("a");
+  // const fileName = cotizacion + ".pdf";
+
+  // downloadLink.href = linkSource;
+  // downloadLink.download = fileName;
+  // downloadLink.click();
 };
 
 const obtenerPdfSolidaria = async (cotizacion) => {
-  const formData = new FormData();
-  formData.append("cotizacion", cotizacion);
 
-  const pdfText = await fetch(
-    "https://www.grupoasistencia.com/webservice_autosv1/WSSolidaria/get_pdf.php",
-    {
-      method: "POST",
-      body: formData,
+  Swal.fire({
+    icon: 'error',
+    title: '¡Esta opcion no esta disponible en la version demo!.',
+    confirmButtonText: 'Cerrar',
+  }).then((result) => {
+    if (result.isConfirmed) {
+        window.location = "inicio";
+    } else if (result.isDenied) {
     }
-  )
-    .then((response) => response.text())
-    .then((responseText) => {
-      return responseText;
-    });
+  })
 
-  return pdfText;
+  // const formData = new FormData();
+  // formData.append("cotizacion", cotizacion);
+
+  // const pdfText = await fetch(
+  //   "https://www.grupoasistencia.com/webservice_autosv1/WSSolidaria/get_pdf.php",
+  //   {
+  //     method: "POST",
+  //     body: formData,
+  //   }
+  // )
+  //   .then((response) => response.text())
+  //   .then((responseText) => {
+  //     return responseText;
+  //   });
+
+  // return pdfText;
 };
 
 /*======================================================
 FUNCION PARA CARGAR EL PDF OFICIAL DE ZURICH
 ======================================================*/
 const verPdfZurich = async (cotizacion) => {
-  let base64 = await obtenerPdfZurich(cotizacion);
-  base64 = base64.slice(1, -1);
 
-  const linkSource = `data:application/pdf;base64,${base64}`;
-  const downloadLink = document.createElement("a");
-  const fileName = cotizacion + ".pdf";
+  Swal.fire({
+    icon: 'error',
+    title: '¡Esta opcion no esta disponible en la version demo!.',
+    confirmButtonText: 'Cerrar',
+  }).then((result) => {
+    if (result.isConfirmed) {
+        window.location = "inicio";
+    } else if (result.isDenied) {
+    }
+  })
 
-  downloadLink.href = linkSource;
-  downloadLink.download = fileName;
-  downloadLink.click();
+
+  // let base64 = await obtenerPdfZurich(cotizacion);
+  // base64 = base64.slice(1, -1);
+
+  // const linkSource = `data:application/pdf;base64,${base64}`;
+  // const downloadLink = document.createElement("a");
+  // const fileName = cotizacion + ".pdf";
+
+  // downloadLink.href = linkSource;
+  // downloadLink.download = fileName;
+  // downloadLink.click();
 };
 
 const obtenerPdfZurich = async (cotizacion) => {
-  const formData = new FormData();
-  formData.append("cotizacion", cotizacion);
-
-  const pdfText = await fetch(
-    "https://www.grupoasistencia.com/webservice_autosv1/WSZurich/get_pdf.php",
-    {
-      method: "POST",
-      body: formData,
+  Swal.fire({
+    icon: 'error',
+    title: '¡Esta opcion no esta disponible en la version demo!.',
+    confirmButtonText: 'Cerrar',
+  }).then((result) => {
+    if (result.isConfirmed) {
+        window.location = "inicio";
+    } else if (result.isDenied) {
     }
-  )
-    .then((response) => response.text())
-    .then((responseText) => {
-      return responseText;
-    });
+  })
 
-  return pdfText;
+  // const formData = new FormData();
+  // formData.append("cotizacion", cotizacion);
+
+  // const pdfText = await fetch(
+  //   "https://www.grupoasistencia.com/webservice_autosv1/WSZurich/get_pdf.php",
+  //   {
+  //     method: "POST",
+  //     body: formData,
+  //   }
+  // )
+  //   .then((response) => response.text())
+  //   .then((responseText) => {
+  //     return responseText;
+  //   });
+
+  // return pdfText;
 };
 
 /*==================================================

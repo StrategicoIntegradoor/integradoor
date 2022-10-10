@@ -1,8 +1,8 @@
 (()=>{
     Swal.fire({
         icon: 'error',
-        title: 'No estas autorizado, Comunicate con el Administrador.',
-        confirmButtonText: 'Ok',
+        title: '¡Esta opcion no esta disponible en la version demo!.',
+        confirmButtonText: 'Cerrar',
       }).then((result) => {
         if (result.isConfirmed) {
             window.location = "inicio";
