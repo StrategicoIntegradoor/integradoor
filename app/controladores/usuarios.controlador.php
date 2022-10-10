@@ -36,6 +36,7 @@ class ControladorUsuarios{
 						$_SESSION["foto"] = $respuesta["usu_foto"];
 						$_SESSION["rol"] = $respuesta["id_rol"];
 						$_SESSION["intermediario"] = $respuesta["id_Intermediario"];
+						$_SESSION["cotRestantes"] = $respuesta["numCotizaciones"];
 
 						/*=============================================
 						REGISTRAR FECHA PARA SABER EL ÚLTIMO LOGIN
@@ -90,6 +91,8 @@ class ControladorUsuarios{
 	=============================================*/
 
 	static public function ctrCrearUsuario(){
+	
+		
 
 		if(isset($_POST["nuevoUsuario"])){
 
@@ -175,6 +178,12 @@ class ControladorUsuarios{
 
 				
 				$tabla = "usuarios";
+				$fecha1= $_POST["fecLim"];
+				$fecha2 = explode("/",$fecha1);
+				$fecha = $fecha2[2] . "-" . $fecha2[1] . "-" . $fecha2[0];
+			
+			
+			
 
 				$encriptar = crypt($_POST["nuevoPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
 
@@ -188,7 +197,9 @@ class ControladorUsuarios{
 							   "telefono" => $_POST["nuevoTelefono"],
 							   "email" => $_POST["nuevoEmail"],
 							   "cargo" => $_POST["nuevoCargo"],
+							   "maxCotizaciones" => $_POST["maxCot"],  
 							   "intermediario" => $_POST["Intermediario"],
+							   "fechaLimite" => $fecha,
 					           "foto" => $ruta);
 
 				$respuesta = ModeloUsuarios::mdlIngresarUsuario($tabla, $datos);
@@ -376,6 +387,7 @@ class ControladorUsuarios{
 					}else{
 
 						echo'<script>
+						
 
 								swal({
 									  type: "error",
@@ -413,10 +425,11 @@ class ControladorUsuarios{
 							   "email" => $_POST["editarEmail"],
 							   "cargo" => $_POST["editarCargo"],
 							   "intermediario" => $_POST["Intermediario2"],
+							   "maxCotEdi" => $_POST["maxCotEdi"],
 							   "foto" => $ruta);
 
 				$respuesta = ModeloUsuarios::mdlEditarUsuario($tabla, $datos);
-
+					
 				if($respuesta == "ok"){
 
 					echo'<script>
@@ -429,7 +442,8 @@ class ControladorUsuarios{
 						  }).then(function(result) {
 									if (result.value) {
 
-									window.location = "usuarios";
+											window.location = "usuarios";
+							
 
 									}
 								})

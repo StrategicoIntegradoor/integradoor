@@ -345,6 +345,40 @@ MODAL AGREGAR USUARIO
 
           <div class="row">
 
+            <!-- ENTRADA PARA EL NUMERO MAXIMO DE COTIZACIONES DIARIAS-->
+
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-sort-numeric-asc"></i></span>
+
+                <input type="text" class="form-control input-lg" name="maxCot" placeholder="Cotizaciones diarias" id="maxCot" required>
+
+              </div>
+
+            </div>
+
+            <!-- ENTRADA INGRESAR LA FECHA LIMITE DE USO -->
+
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-id-badge"></i></span>
+
+                <input type="date" min="0" class="form-control input-lg" name="fecLim" id="fecLim" placeholder="Ingresar documento" required>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="row">
+
             <div class="col-xs-12 col-sm-6 col-md-6">
 
               <div class="row">
@@ -612,6 +646,37 @@ MODAL EDITAR USUARIO
               </div> -->
 
             </div>
+            <div class="row">
+
+            <!-- ENTRADA PARA EL NUMERO MAXIMO DE COTIZACIONES DIARIAS-->
+
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-sort-numeric-asc"></i></span>
+
+                <input type="text" class="form-control input-lg" name="maxCotEdi" placeholder="Cotizaciones diarias" id="maxCotEdi" required>
+
+              </div>
+
+            </div>
+
+            <!-- ENTRADA INGRESAR LA FECHA LIMITE DE USO -->
+
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-id-badge"></i></span>
+
+                <!-- <input type="datetime-local" min="0" class="form-control input-lg" name="nuevoDocIdUser" id="nuevoDocIdUser" placeholder="Ingresar documento" required> -->
+
+              </div>
+
+            </div>
+
+          </div>
 
             <div class="row">
 
@@ -662,7 +727,7 @@ MODAL EDITAR USUARIO
 
                   </div>
 
-                    <!-- ENTRADA PARA EL INTERMEDIARIO -->
+                  <!-- ENTRADA PARA EL INTERMEDIARIO -->
 
                   <div class="col-lg-12 form-group">
 
@@ -743,4 +808,4 @@ $borrarUsuario->ctrBorrarUsuario();
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script src="vistas/js/invalidarPesadoDemo.js?v=<?php echo (rand()); ?>"></script>
+<!-- <script src="vistas/js/invalidarPesadoDemo.js?v=<?php echo (rand()); ?>"></script> -->

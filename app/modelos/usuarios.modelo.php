@@ -3,6 +3,7 @@
 require_once "conexion.php";
 
 class ModeloUsuarios{
+	
 
 	/*=============================================
 	MOSTRAR USUARIOS
@@ -48,8 +49,8 @@ class ModeloUsuarios{
 
 
 		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(usu_documento, usu_nombre, usu_apellido, usu_usuario, usu_password, usu_genero, usu_telefono, usu_email, 
-																	usu_cargo, usu_foto, usu_estado, id_rol, id_Intermediario) 
-													VALUES (:documento, :nombre, :apellido, :usuario, :password, :genero, :telefono, :email, :cargo, :foto, 1, :rol, :intermediario)");
+																	usu_cargo, usu_foto, usu_estado, id_rol, id_Intermediario, numCotizaciones, fechaFin) 
+																	VALUES (:documento, :nombre, :apellido, :usuario, :password, :genero, :telefono, :email, :cargo, :foto, 1, :rol, :intermediario, :maxCot, :fechaLimite)");
 
 		$stmt -> bindParam(":documento", $datos["documento"], PDO::PARAM_INT);
 		$stmt -> bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
@@ -63,6 +64,10 @@ class ModeloUsuarios{
 		$stmt -> bindParam(":foto", $datos["foto"], PDO::PARAM_STR);
 		$stmt -> bindParam(":rol", $datos["rol"], PDO::PARAM_INT);
 		$stmt -> bindParam(":intermediario", $datos["intermediario"], PDO::PARAM_INT);
+		$stmt -> bindParam(":maxCot", $datos["maxCotizaciones"], PDO::PARAM_INT);
+		$stmt -> bindParam(":fechaLimite", $datos["fechaLimite"], PDO::PARAM_INT);
+
+	
 
 
 		echo '<script>
@@ -112,7 +117,7 @@ class ModeloUsuarios{
 	static public function mdlEditarUsuario($tabla, $datos){
 	
 		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET usu_documento = :documento, usu_nombre = :nombre, usu_apellido = :apellido, usu_password = :password, 
-												usu_genero = :genero, usu_telefono = :telefono, usu_email = :email, usu_cargo = :cargo, usu_foto = :foto, id_rol = :rol, id_Intermediario = :intermediario 
+												usu_genero = :genero, usu_telefono = :telefono, usu_email = :email, usu_cargo = :cargo, usu_foto = :foto, id_rol = :rol, id_Intermediario = :intermediario, numCotizaciones = :maxCotEdi
 												WHERE usu_usuario = :usuario");
 
 		$stmt -> bindParam(":documento", $datos["documento"], PDO::PARAM_INT);
@@ -126,6 +131,7 @@ class ModeloUsuarios{
 		$stmt -> bindParam(":cargo", $datos["cargo"], PDO::PARAM_STR);
 		$stmt -> bindParam(":foto", $datos["foto"], PDO::PARAM_STR);
 		$stmt -> bindParam(":intermediario", $datos["intermediario"], PDO::PARAM_STR);
+		$stmt -> bindParam(":maxCotEdi", $datos["maxCotEdi"], PDO::PARAM_STR);
 		$stmt -> bindParam(":rol", $datos["rol"], PDO::PARAM_STR);
 
 		if($stmt -> execute()){

@@ -41,11 +41,20 @@
 				
 			<ul class="nav navbar-nav">
 
+			<li style=" margin-right: 5px; color: #88d600;font-size: 30px;">
+				 <i class="fa fa-calendar-times-o" aria-hidden="true"></i>
+				</li>
+
+				<li style="font-size: 15px; margin-top:10px; margin-right: 20px; ">
+					<p>Cotizaciones diarias: máx <b ><?php  echo $_SESSION['cotRestantes']; ?></b>, hoy llevas  <b id="cotRestantes"></b> </p>
+				</li>
+				
+
  				<li style=" margin-right: 5px; color: #88d600;font-size: 30px;">
 				 <i class="fa fa-clock-o" aria-hidden="true"></i>
 				</li>
 			
-			<li style="font-size: 20px; margin-top:10px;">
+			<li style="font-size: 15px; margin-top:10px;">
 				<p id="cuentatras" ></p>
 				
 			</li>

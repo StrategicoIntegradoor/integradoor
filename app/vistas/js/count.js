@@ -21,7 +21,7 @@ const countdown = (dateTo, element) => {
     const timerUpdate = setInterval( () => {
         let currenTime = getTime(dateTo);
 
-        item.innerHTML = currenTime.days + "D " + currenTime.hours +  'H ' + currenTime.minutes + 'M ' + currenTime.seconds + 'S';
+        item.innerHTML =  currenTime.days + "D " + currenTime.hours +  'H ' + currenTime.minutes + 'M ' + currenTime.seconds + 'S';
         
 
         if (currenTime.time <= 1) {
@@ -51,3 +51,29 @@ let fecha_fin = $("#fechaLimi").val();
 
 
 countdown(fecha_fin, 'cuentatras');
+
+
+const mostrarCotRestantes = ()=>{
+    fecha1 = new Date;
+    fecha2 = fecha1.toLocaleDateString();
+    fecha3 = fecha2.split("/");
+    fecha = fecha3[2] + "-" + fecha3[1] + "-" + fecha3[0];
+  
+  
+    $.ajax({
+  
+      url: "ajax/compararFecha.php",
+      method: "POST",
+      data: { fecha },
+      success: function (respuesta) {
+        console.log(respuesta);
+
+        $p=document.getElementById("cotRestantes");
+          $p.innerHTML = respuesta;
+      
+      }
+    })
+  
+}
+
+mostrarCotRestantes();
