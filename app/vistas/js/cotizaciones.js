@@ -1575,3 +1575,59 @@ document.querySelector("#btnCancelar").addEventListener("click", (e) => {
     }
   });
 });
+
+
+// FUNCION PARA OBTENER EL NOMBRE DEL MES
+function obtenerNombreMes(numero) {
+  var fecha = new Date();
+  if (0 < numero && numero <= 12) {
+    fecha.setMonth(numero - 1);
+    return new Intl.DateTimeFormat("es-ES", { month: "long" }).format(fecha);
+  }
+}
+
+
+function formatNumber(n) {
+  n = String(n).replace(/\D/g, "");
+  return n === "" ? n : Number(n).toLocaleString();
+}
+
+
+// Maximiza el formulario Datos Asegurado
+function masAseg() {
+  document.getElementById("DatosAsegurado").style.display = "block";
+  document.getElementById("menosAsegurado").style.display = "block";
+  document.getElementById("masAsegurado").style.display = "none";
+}
+// Minimiza el formulario Datos Asegurado
+function menosAseg() {
+  document.getElementById("DatosAsegurado").style.display = "none";
+  document.getElementById("menosAsegurado").style.display = "none";
+  document.getElementById("masAsegurado").style.display = "block";
+}
+
+// Maximizar el formulario Datos Vehiculo
+function masVeh() {
+  document.getElementById("DatosVehiculo").style.display = "block";
+  document.getElementById("menosVehiculo").style.display = "block";
+  document.getElementById("masVehiculo").style.display = "none";
+}
+// Minimiza el formulario Datos Vehiculo
+function menosVeh() {
+  document.getElementById("DatosVehiculo").style.display = "none";
+  document.getElementById("menosVehiculo").style.display = "none";
+  document.getElementById("masVehiculo").style.display = "block";
+}
+
+// Maximiza el Formulario Agregar Oferta
+function masAgr() {
+  document.getElementById("DatosAgregarOferta").style.display = "block";
+  document.getElementById("menosAgrOferta").style.display = "block";
+  document.getElementById("masAgrOferta").style.display = "none";
+}
+// Minimiza el Formulario Agregar Oferta
+function menosAgr() {
+  document.getElementById("DatosAgregarOferta").style.display = "none";
+  document.getElementById("menosAgrOferta").style.display = "none";
+  document.getElementById("masAgrOferta").style.display = "block";
+}
