@@ -2886,7 +2886,7 @@ function validarNumCotizaciones() {
   fecha2 = fecha1.toLocaleDateString();
   fecha3 = fecha2.split("/");
   fecha = fecha3[2] + "-" + fecha3[1] + "-" + fecha3[0];
-
+  cotRestan = $("#cotRestanv").val();
 
   $.ajax({
 
@@ -2895,7 +2895,7 @@ function validarNumCotizaciones() {
     data: { fecha },
     success: function (respuesta) {
       console.log(respuesta);
-      if (respuesta <= 0) {
+      if (respuesta <= cotRestan) {
 
       } else {
 
