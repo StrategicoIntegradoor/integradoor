@@ -690,53 +690,65 @@ function recomendarOferta(
 FUNCION PARA CARGAR EL PDF OFICIAL DE LA ASEGURADORA
 ==================================================*/
 function verPdfOferta(aseguradora, numCotizOferta, numId) {
-  $("#verPdf" + numCotizOferta + numId).html(
-    "VER PDF &nbsp;&nbsp;<img src='vistas/img/plantilla/loading.gif' width='18' height='18'>"
-  );
+  
 
-  var ventanaPDF = window.open(
-    "",
-    aseguradora,
-    "width=" + 1024 + ", height=" + 768
-  );
-  // var ventanaPDF = window.open('http://example.com/waiting.html', '_blank'); // Carga otra pagina
-  ventanaPDF.document.write("Cargando vista previa Pdf " + aseguradora + "..."); // Carga un mensaje de espera
+  Swal.fire({
+    icon: 'error',
+    title: '¡Esta opcion no esta disponible en la version demo!.',
+    confirmButtonText: 'Cerrar',
+  }).then((result) => {
+    if (result.isConfirmed) {
+    } else if (result.isDenied) {
+    }
+  })
+  
+  // $("#verPdf" + numCotizOferta + numId).html(
+  //   "VER PDF &nbsp;&nbsp;<img src='vistas/img/plantilla/loading.gif' width='18' height='18'>"
+  // );
 
-  var myHeaders = new Headers(); // Cabecera del Metodo
-  myHeaders.append("Content-Type", "application/json");
+  // var ventanaPDF = window.open(
+  //   "",
+  //   aseguradora,
+  //   "width=" + 1024 + ", height=" + 768
+  // );
+  // // var ventanaPDF = window.open('http://example.com/waiting.html', '_blank'); // Carga otra pagina
+  // ventanaPDF.document.write("Cargando vista previa Pdf " + aseguradora + "..."); // Carga un mensaje de espera
 
-  var raw = JSON.stringify({
-    aseguradora: aseguradora,
-    numero_cotizacion: numCotizOferta,
-  });
-  var requestOptions = {
-    mode: "cors",
-    method: "POST",
-    headers: myHeaders,
-    body: raw,
-    redirect: "follow",
-  };
+  // var myHeaders = new Headers(); // Cabecera del Metodo
+  // myHeaders.append("Content-Type", "application/json");
 
-  // Llama la URL del PDF oficial de la oferta generada por la aseguradora
-  fetch(
-    "https://www.grupoasistencia.com/webservice_autosv1/ImpresionPdf",
-    requestOptions
-  )
-    .then(function (response) {
-      if (!response.ok) {
-        throw Error(response.statusText);
-      }
-      return response.json();
-    })
-    .then(function (data) {
-      ventanaPDF.location.href = data;
-      $("#verPdf" + numCotizOferta + numId).html(
-        'VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span>'
-      );
-    })
-    .catch(function (error) {
-      console.log("Parece que hubo un problema: \n", error);
-    });
+  // var raw = JSON.stringify({
+  //   aseguradora: aseguradora,
+  //   numero_cotizacion: numCotizOferta,
+  // });
+  // var requestOptions = {
+  //   mode: "cors",
+  //   method: "POST",
+  //   headers: myHeaders,
+  //   body: raw,
+  //   redirect: "follow",
+  // };
+
+  // // Llama la URL del PDF oficial de la oferta generada por la aseguradora
+  // fetch(
+  //   "https://www.grupoasistencia.com/webservice_autosv1/ImpresionPdf",
+  //   requestOptions
+  // )
+  //   .then(function (response) {
+  //     if (!response.ok) {
+  //       throw Error(response.statusText);
+  //     }
+  //     return response.json();
+  //   })
+  //   .then(function (data) {
+  //     ventanaPDF.location.href = data;
+  //     $("#verPdf" + numCotizOferta + numId).html(
+  //       'VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span>'
+  //     );
+  //   })
+  //   .catch(function (error) {
+  //     console.log("Parece que hubo un problema: \n", error);
+  //   });
 }
 
 /*======================================================
