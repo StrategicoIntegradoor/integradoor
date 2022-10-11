@@ -1316,7 +1316,7 @@ function cotizarOfertas() {
                 /* Solidaria */
                 cont.push(
                         fetch(
-                          "https://grupoasistencia.com/webservicepruebasIntegrador/Solidaria",
+                          "https://grupoasistencia.com/webservicepruebasIntegrador2/Solidaria",
                           requestOptions
                         )
                           .then((res) => {
@@ -1342,7 +1342,7 @@ function cotizarOfertas() {
                   
                   /* Previsora */
                       cont.push(
-                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador/Previsora", requestOptions)
+                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/Previsora", requestOptions)
                           .then((res) => {
                             if (!res.ok) throw Error(res.statusText);
                             return res.json();
@@ -1365,7 +1365,7 @@ function cotizarOfertas() {
                   
                   /* Equidad */
                       cont.push(
-                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador/Equidad", requestOptions)
+                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/Equidad", requestOptions)
                           .then((res) => {
                             if (!res.ok) throw Error(res.statusText);
                             return res.json();
@@ -1388,7 +1388,7 @@ function cotizarOfertas() {
         
                   /* Bolivar */
                       cont.push(
-                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador/Bolivar", requestOptions)
+                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/Bolivar", requestOptions)
                           .then((res) => {
                             if (!res.ok) throw Error(res.statusText);
                             return res.json();
@@ -1412,7 +1412,7 @@ function cotizarOfertas() {
         
                   /* HDI */
                     cont.push(
-                        fetch("https://grupoasistencia.com/webservice_autosv1/HDI", requestOptions)
+                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/HDI", requestOptions)
                           .then((res) => {
                             if (!res.ok) throw Error(res.statusText);
                             return res.json();
@@ -1447,7 +1447,7 @@ function cotizarOfertas() {
                         body.Email = Math.round(Math.random() * 999999) + body.Email
                         requestOptions.body = JSON.stringify(body)
                         cont.push(
-                          fetch('https://grupoasistencia.com/webservicepruebasIntegrador/Zurich', requestOptions)
+                          fetch('https://grupoasistencia.com/webservicepruebasIntegrador2/Zurich', requestOptions)
                             .then(res => {
                               if (!res.ok) throw Error(res.statusText)
                               return res.json()
@@ -1505,7 +1505,7 @@ function cotizarOfertas() {
         
                   /* Estado2 */
                       cont.push(
-                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador/Estado2", requestOptions)
+                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/Estado2", requestOptions)
                           .then((res) => {
                             if (!res.ok) throw Error(res.statusText);
                             return res.json();
@@ -1533,7 +1533,7 @@ function cotizarOfertas() {
                   
                   /* Liberty */
                       cont.push(
-                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador/Liberty", requestOptions)
+                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/Liberty", requestOptions)
                           .then((res) => {
                             if (!res.ok) throw Error(res.statusText);
                             return res.json();
@@ -1556,7 +1556,7 @@ function cotizarOfertas() {
         
                   /* Allianz */
                     cont.push(
-                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador/Allianz", requestOptions)
+                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/Allianz", requestOptions)
                           .then((res) => {
                             if (!res.ok) throw Error(res.statusText);
                             console.log(res);
@@ -1580,7 +1580,7 @@ function cotizarOfertas() {
         
                   /* AXA */
                       cont.push(
-                        fetch("https://grupoasistencia.com/webservice_autosv1/AXA2", requestOptions)
+                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/AXA2", requestOptions)
                           .then((res) => {
                             if (!res.ok) throw Error(res.statusText);
                             return res.json();
@@ -1603,7 +1603,7 @@ function cotizarOfertas() {
                       
                   /* SBS */
                       cont.push(
-                        fetch("https://grupoasistencia.com/webservicepruebasIntegradorpruebasbs/SBS", requestOptions)
+                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/SBS", requestOptions)
                           .then((res) => {
                             if (!res.ok) throw Error(res.statusText);
                             return res.json();
@@ -1729,7 +1729,7 @@ function cotizarOfertas() {
                     if (comprobarFallida('Solidaria')) {
                         cont.push(
                         fetch(
-                          "https://grupoasistencia.com/webservicepruebasIntegrador/Solidaria",
+                          "https://grupoasistencia.com/webservicepruebasIntegrador2/Solidaria",
                           requestOptions
                         )
                           .then((res) => {
@@ -1756,7 +1756,7 @@ function cotizarOfertas() {
                   /* Previsora */
                   if (comprobarFallida('Previsora')) {
                       cont.push(
-                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador/Previsora", requestOptions)
+                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/Previsora", requestOptions)
                           .then((res) => {
                             if (!res.ok) throw Error(res.statusText);
                             return res.json();
@@ -1779,7 +1779,7 @@ function cotizarOfertas() {
                   /* Equidad */
                   if (comprobarFallida('Equidad')) {
                       cont.push(
-                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador/Equidad", requestOptions)
+                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/Equidad", requestOptions)
                           .then((res) => {
                             if (!res.ok) throw Error(res.statusText);
                             return res.json();
@@ -1805,7 +1805,7 @@ function cotizarOfertas() {
                   /* Bolivar */
                   if (comprobarFallida('Bolivar')) {
                       cont.push(
-                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador/Bolivar", requestOptions)
+                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/Bolivar", requestOptions)
                           .then((res) => {
                             if (!res.ok) throw Error(res.statusText);
                             return res.json();
@@ -1829,7 +1829,7 @@ function cotizarOfertas() {
                   /* HDI */
                   if (comprobarFallida('HDI')) {
                     cont.push(
-                        fetch("https://grupoasistencia.com/webservice_autosv1/HDI", requestOptions)
+                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/HDI", requestOptions)
                           .then((res) => {
                             if (!res.ok) throw Error(res.statusText);
                             return res.json();
@@ -1864,7 +1864,7 @@ function cotizarOfertas() {
                         body.Email = Math.round(Math.random() * 999999) + body.Email
                         requestOptions.body = JSON.stringify(body)
                         cont.push(
-                          fetch('https://grupoasistencia.com/webservicepruebasIntegrador/Zurich', requestOptions)
+                          fetch('https://grupoasistencia.com/webservicepruebasIntegrador2/Zurich', requestOptions)
                             .then(res => {
                               if (!res.ok) throw Error(res.statusText)
                               return res.json()
@@ -1892,7 +1892,7 @@ function cotizarOfertas() {
                   /* Estado */
                   if (comprobarFallida('Estado')) { 
                     cont.push(
-                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador/Estado", requestOptions)
+                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/Estado", requestOptions)
                           .then((res) => {
                             if (!res.ok) throw Error(res.statusText);
                             return res.json();
@@ -1920,7 +1920,7 @@ function cotizarOfertas() {
                   /* Estado2 */
                   if (comprobarFallida('Estado2')) { 
                       cont.push(
-                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador/Estado2", requestOptions)
+                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/Estado2", requestOptions)
                           .then((res) => {
                             if (!res.ok) throw Error(res.statusText);
                             return res.json();
@@ -1948,7 +1948,7 @@ function cotizarOfertas() {
                   /* Liberty */
                   if (comprobarFallida('Liberty')) {
                       cont.push(
-                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador/Liberty", requestOptions)
+                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/Liberty", requestOptions)
                           .then((res) => {
                             if (!res.ok) throw Error(res.statusText);
                             return res.json();
@@ -1971,7 +1971,7 @@ function cotizarOfertas() {
                   /* Allianz */
                   if (comprobarFallida('Allianz')) {
                         cont.push(
-                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador/Allianz", requestOptions)
+                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/Allianz", requestOptions)
                           .then((res) => {
                             if (!res.ok) throw Error(res.statusText);
                             console.log(res);
@@ -1995,7 +1995,7 @@ function cotizarOfertas() {
               /* AXA */
                 if (comprobarFallida('AXA')) {
                     cont.push(
-                        fetch("https://grupoasistencia.com/webservice_autosv1/AXA2", requestOptions)
+                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/AXA2", requestOptions)
                           .then((res) => {
                             if (!res.ok) throw Error(res.statusText);
                             return res.json();
@@ -2021,7 +2021,7 @@ function cotizarOfertas() {
                   /* SBS */
                   if (comprobarFallida('SBS')) {
                       cont.push(
-                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador/SBS", requestOptions)
+                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/SBS", requestOptions)
                           .then((res) => {
                             if (!res.ok) throw Error(res.statusText);
                             return res.json();
