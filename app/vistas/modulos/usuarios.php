@@ -670,7 +670,7 @@ MODAL EDITAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-id-badge"></i></span>
 
-                <!-- <input type="datetime-local" min="0" class="form-control input-lg" name="nuevoDocIdUser" id="nuevoDocIdUser" placeholder="Ingresar documento" required> -->
+                <input type="date" min="0" class="form-control input-lg" name="fechaLimEdi" id="fechaLimEdi" placeholder="Ingresar documento" required>
 
               </div>
 

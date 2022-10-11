@@ -2895,7 +2895,7 @@ function validarNumCotizaciones() {
     data: { fecha },
     success: function (respuesta) {
       console.log(respuesta);
-      if (respuesta <= cotRestan) {
+      if (respuesta < cotRestan) {
 
       } else {
 

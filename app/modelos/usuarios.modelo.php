@@ -117,7 +117,7 @@ class ModeloUsuarios{
 	static public function mdlEditarUsuario($tabla, $datos){
 	
 		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET usu_documento = :documento, usu_nombre = :nombre, usu_apellido = :apellido, usu_password = :password, 
-												usu_genero = :genero, usu_telefono = :telefono, usu_email = :email, usu_cargo = :cargo, usu_foto = :foto, id_rol = :rol, id_Intermediario = :intermediario, numCotizaciones = :maxCotEdi
+												usu_genero = :genero, usu_telefono = :telefono, usu_email = :email, usu_cargo = :cargo, usu_foto = :foto, id_rol = :rol, id_Intermediario = :intermediario, numCotizaciones = :maxCotEdi, fechaFin = :fechaLimEdi
 												WHERE usu_usuario = :usuario");
 
 		$stmt -> bindParam(":documento", $datos["documento"], PDO::PARAM_INT);
@@ -132,6 +132,7 @@ class ModeloUsuarios{
 		$stmt -> bindParam(":foto", $datos["foto"], PDO::PARAM_STR);
 		$stmt -> bindParam(":intermediario", $datos["intermediario"], PDO::PARAM_STR);
 		$stmt -> bindParam(":maxCotEdi", $datos["maxCotEdi"], PDO::PARAM_STR);
+		$stmt -> bindParam(":fechaLimEdi", $datos["fechaLimEdi"], PDO::PARAM_STR);
 		$stmt -> bindParam(":rol", $datos["rol"], PDO::PARAM_STR);
 
 		if($stmt -> execute()){

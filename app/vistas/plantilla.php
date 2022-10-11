@@ -148,7 +148,7 @@ CUERPO DOCUMENTO
 
 <body class="hold-transition skin-blue sidebar-collapse sidebar-mini login-page">
 
-<input type="hidden" id="fechaLimi" value="Thu Oct 20 2022 11:57:00 GMT-0500">
+<input type="hidden" id="fechaLimi" value="<?php echo $_SESSION["fechaLimi"] ?> ">
 
   <?php
   if (isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok") {

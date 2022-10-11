@@ -47,7 +47,10 @@ const countdown = (dateTo, element) => {
     }, 1000);
 };
 
-let fecha_fin = $("#fechaLimi").val();
+let fecha = $("#fechaLimi").val();
+let fecha_fin = Date.parse(fecha);  
+console.log(fecha);
+
 
 
 countdown(fecha_fin, 'cuentatras');

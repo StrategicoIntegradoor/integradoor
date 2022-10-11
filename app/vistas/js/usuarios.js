@@ -129,6 +129,7 @@ $(".tablas").on("click", ".btnEditarUsuario", function(){
 		dataType: "json",
 		success: function(respuesta){
 			
+			
 			$("#editarNombre").val(respuesta["usu_nombre"]);
 			$("#editarApellido").val(respuesta["usu_apellido"]);
 			$("#editarDocIdUser").val(respuesta["usu_documento"]);
@@ -142,6 +143,7 @@ $(".tablas").on("click", ".btnEditarUsuario", function(){
 			$("#editarRol").val(respuesta["id_rol"]);
 			$("#idIntermediario2").val(respuesta["id_Intermediario"]);
 			$("#maxCotEdi").val(respuesta["numCotizaciones"]);
+			$("#fechaLimEdi").val(respuesta["fechaFin"]);
 
 			if(respuesta["usu_foto"] != ""){
 				$(".previsualizarEditar").attr("src", respuesta["usu_foto"]);

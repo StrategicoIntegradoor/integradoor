@@ -37,6 +37,7 @@ class ControladorUsuarios{
 						$_SESSION["rol"] = $respuesta["id_rol"];
 						$_SESSION["intermediario"] = $respuesta["id_Intermediario"];
 						$_SESSION["cotRestantes"] = $respuesta["numCotizaciones"];
+						$_SESSION["fechaLimi"] = $respuesta["fechaFin"];
 
 						/*=============================================
 						REGISTRAR FECHA PARA SABER EL ÚLTIMO LOGIN
@@ -178,10 +179,10 @@ class ControladorUsuarios{
 
 				
 				$tabla = "usuarios";
-				$fecha1= $_POST["fecLim"];
-				$fecha2 = explode("/",$fecha1);
-				$fecha3 = $fecha2[2] . "-" . $fecha2[1] . "-" . $fecha2[0];
-				$fecha = str_replace("--","",$fecha3);
+				$fecha= $_POST["fecLim"];
+				// $fecha2 = explode("/",$fecha1);
+				// $fecha3 = $fecha2[2] . "-" . $fecha2[1] . "-" . $fecha2[0];
+				// $fecha = str_replace("--","",$fecha3);
 			
 	
 			
@@ -427,6 +428,7 @@ class ControladorUsuarios{
 							   "cargo" => $_POST["editarCargo"],
 							   "intermediario" => $_POST["Intermediario2"],
 							   "maxCotEdi" => $_POST["maxCotEdi"],
+							   "fechaLimEdi" => $_POST["fechaLimEdi"],
 							   "foto" => $ruta);
 
 				$respuesta = ModeloUsuarios::mdlEditarUsuario($tabla, $datos);
