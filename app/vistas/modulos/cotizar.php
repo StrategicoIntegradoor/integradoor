@@ -99,6 +99,7 @@ if ($_SESSION["rol"] != 1 && $_SESSION["rol"] != 2) {
 
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <input type="hidden" class="form-control" id="intermediario" value="<?php echo $_SESSION["intermediario"];?>">
+                      <input type="hidden" class="form-control" id="cotRestanv" value="<?php echo $_SESSION["cotRestantes"];?>">
                       <label for="tipoDocumentoID">Tipo de Documento</label>
                       <select class="form-control" id="tipoDocumentoID" required>
                         <option value=""></option>
