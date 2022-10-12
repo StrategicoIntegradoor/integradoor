@@ -73,13 +73,16 @@
     </div>
     <!-- END VUE INSTANCE -->
   </div>
+<div style="display:;">
 
-  <?php
+<?php
 
   $login = new ControladorUsuarios();
   $login->ctrIngresoUsuario();
 
   ?>
+</div>
+  
 
 </div>
 

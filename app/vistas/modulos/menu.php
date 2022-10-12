@@ -236,17 +236,5 @@
 
 </aside>
 
-<style>
-
-</style>
 
 
-<a href="https://web.whatsapp.com/send?phone=" target="_blank" class="btn-wasap" style="margin-top: 40%; margin-left: 1%; float: unset; position: fixed; z-index: 999;">
-
-
-
-	<img src="vistas/img/logos/wasap.png" width="50" height="50" alt="" >
-
-
-
-</a>

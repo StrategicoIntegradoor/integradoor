@@ -22,63 +22,70 @@ class ControladorUsuarios{
 				$valor = $_POST["ingUsuario"];
 
 				$respuesta = ModeloUsuarios::MdlMostrarUsuarios($tabla, $tabla2, $tabla3, $item, $valor);
-				var_dump($respuesta);
+				
+				if($respuesta["usu_usuario"] == $_POST["ingUsuario"] || $respuesta["usu_password"] == $encriptar){
+					if($respuesta["usu_usuario"] == $_POST["ingUsuario"]){
+						if( $respuesta["usu_password"] == $encriptar){
+							if($respuesta["usu_estado"] == 1){
 
-				if($respuesta["usu_usuario"] == $_POST["ingUsuario"] && $respuesta["usu_password"] == $encriptar){
+								$_SESSION["iniciarSesion"] = "ok";
+								$_SESSION["idUsuario"] = $respuesta["id_usuario"];
+								$_SESSION["nombre"] = $respuesta["usu_nombre"];
+								$_SESSION["apellido"] = $respuesta["usu_apellido"];
+								$_SESSION["usuario"] = $respuesta["usu_usuario"];
+								$_SESSION["foto"] = $respuesta["usu_foto"];
+								$_SESSION["rol"] = $respuesta["id_rol"];
+								$_SESSION["intermediario"] = $respuesta["id_Intermediario"];
+								$_SESSION["cotRestantes"] = $respuesta["numCotizaciones"];
+								$_SESSION["fechaLimi"] = $respuesta["fechaFin"];
 
-					if($respuesta["usu_estado"] == 1){
+								/*=============================================
+								REGISTRAR FECHA PARA SABER EL ÚLTIMO LOGIN
+								=============================================*/
 
-						$_SESSION["iniciarSesion"] = "ok";
-						$_SESSION["idUsuario"] = $respuesta["id_usuario"];
-						$_SESSION["nombre"] = $respuesta["usu_nombre"];
-						$_SESSION["apellido"] = $respuesta["usu_apellido"];
-						$_SESSION["usuario"] = $respuesta["usu_usuario"];
-						$_SESSION["foto"] = $respuesta["usu_foto"];
-						$_SESSION["rol"] = $respuesta["id_rol"];
-						$_SESSION["intermediario"] = $respuesta["id_Intermediario"];
-						$_SESSION["cotRestantes"] = $respuesta["numCotizaciones"];
-						$_SESSION["fechaLimi"] = $respuesta["fechaFin"];
+								date_default_timezone_set('America/Bogota');
 
-						/*=============================================
-						REGISTRAR FECHA PARA SABER EL ÚLTIMO LOGIN
-						=============================================*/
+								$fecha = date('Y-m-d');
+								$hora = date('H:i:s');
 
-						date_default_timezone_set('America/Bogota');
+								$fechaActual = $fecha.' '.$hora;
 
-						$fecha = date('Y-m-d');
-						$hora = date('H:i:s');
+								$item1 = "usu_ultimo_login";
+								$valor1 = $fechaActual;
 
-						$fechaActual = $fecha.' '.$hora;
+								$item2 = "id_usuario";
+								$valor2 = $respuesta["id_usuario"];
 
-						$item1 = "usu_ultimo_login";
-						$valor1 = $fechaActual;
+								$ultimoLogin = ModeloUsuarios::mdlActualizarUsuario($tabla, $item1, $valor1, $item2, $valor2);
 
-						$item2 = "id_usuario";
-						$valor2 = $respuesta["id_usuario"];
+								if($ultimoLogin == "ok"){
 
-						$ultimoLogin = ModeloUsuarios::mdlActualizarUsuario($tabla, $item1, $valor1, $item2, $valor2);
+									echo '<script>
 
-						if($ultimoLogin == "ok"){
+										window.location = "inicio";
 
-							echo '<script>
+									</script>';
 
-								window.location = "inicio";
+								}				
+								
+							}else{
 
-							</script>';
+								echo '<br>
+									<div class="alert alert-danger">El usuario aún no está activado</div>';
 
-						}				
-						
+							}
+						}else{
+							echo '<br><div class="alert alert-danger">Contraseña incorrecta, vuelve a intentarlo</div>';
+						}		
+
 					}else{
 
-						echo '<br>
-							<div class="alert alert-danger">El usuario aún no está activado</div>';
+						echo '<br><div class="alert alert-danger">usuario incorrecto, vuelve a intentarlo</div>';
 
-					}		
-
+					}
 				}else{
-
-					echo '<br><div class="alert alert-danger">Error al ingresar, vuelve a intentarlo</div>';
-
+					echo '<br>
+									<div class="alert alert-danger">Usuario y contraseña incorrecta</div>';
 				}
 
 			}	

@@ -167,6 +167,15 @@ CUERPO DOCUMENTO
 
     include "modulos/menu.php";
 
+
+    ?>
+
+<a href="https://web.whatsapp.com/send?phone=" target="_blank" class="btn-wasap" style="float: unset; position: fixed; z-index: 999; bottom: 4%; left: 2%;">
+<img src="vistas/img/logos/wasap.png" width="50" height="50" alt="" >
+</a>
+
+
+<?php
     /*=============================================
     CONTENIDO
     =============================================*/

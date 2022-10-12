@@ -2273,7 +2273,7 @@ $htmlFooter = '<p style="font-size: 7px;">Nota: Esta cotización no constituye u
 $pdf->writeHTML($htmlFooter, true, false, true, false, '');
 $pdf->Ln();
 $htmlFooter = '<p style="font-size: 12px;">Documento Generado Por Software Integradoor.</p>';
-$pdf->Image('../../../vistas/img/logos/imagencotizador.jpg', -5, 0, 0, 92, 'JPG', '', '', true, 200, '', false, false, 0, false, false, false);
+//$pdf->Image('../../../vistas/img/logos/imagencotizador.jpg', -5, 0, 0, 92, 'JPG', '', '', true, 200, '', false, false, 0, false, false, false);
 $pdf->writeHTML($htmlFooter, true, false, true, false, '');
 
 
