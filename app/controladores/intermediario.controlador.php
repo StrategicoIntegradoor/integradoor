@@ -88,9 +88,7 @@ Switch ($_GET['function']){
         break;
     case "actualizarInter":
 
-        $_POST['formData'];
-        die();
-        $modelo = ModeloInternediario::editarInter($_POST['tipodocumento'], $_POST['correo'], $_POST['identiInt'], $_POST['direccion'], $_POST['razonSO'], $_POST['ciudad'], $_POST['nomRepre'], $_POST['indentiRepre'], $_POST['comConta'], $_POST['cel'], $_POST['alli'], $_POST['boli'], $_POST['equi'], $_POST['mapfre'], $_POST['previ'], $_POST['soli'], $_POST['libe'], $_POST['est'], $_POST['axa'], $_POST['hdi'], $_POST['sbs'], $_POST['zuri'], $_POST['formData']);
+        $modelo = ModeloInternediario::editarInter($_POST['tipodocumento'], $_POST['correo'], $_POST['identiInt'], $_POST['direccion'], $_POST['razonSO'], $_POST['ciudad'], $_POST['nomRepre'], $_POST['indentiRepre'], $_POST['comConta'], $_POST['cel'], $_POST['alli'], $_POST['boli'], $_POST['equi'], $_POST['mapfre'], $_POST['previ'], $_POST['soli'], $_POST['libe'], $_POST['est'], $_POST['axa'], $_POST['hdi'], $_POST['sbs'], $_POST['zuri']);
         echo $modelo; 
 
         break;

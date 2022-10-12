@@ -172,18 +172,68 @@ function traerCredenciales(){
             $("#ciudad").val(data["ciudad"]);
             $("#contac").val(data["contacto"]);
             $("#cel").val(data["celular"]);
-            $("#claveparaIAlli").val(data["codigo_alli"]);
-            $("#claveparaBoli").val(data["codigo_boli"]);
-            $("#claveparaEqui").val(data["codigo_equi"]);
-            $("#claveparaMap").val(data["codigo_map"]);
-            $("#claveparaPrevi").val(data["codigo_previ"]);
-            $("#claveparaSoli").val(data["codigo_soli"]);
-            $("#claveparaLibe").val(data["codigo_libe"]);
-            $("#claveparaEst").val(data["codigo_est"]);
-            $("#claveparaAxa").val(data["codigo_axa"]);
-            $("#claveparahdi").val(data["codigo_hdi"]);
-            $("#claveparasbs").val(data["codigo_sbs"]);
-            $("#claveparazuri").val(data["codigo_zuri"]);
+            if(data["codigo_alli"]){
+                $("#tieneAlli").prop("checked", true);
+                $("#claveparaIAlli").prop('disabled', false);
+                $("#claveparaIAlli").val(data["codigo_alli"]);
+            }
+            if(data["codigo_boli"]){
+                $("#claveparaBoli").prop('disabled', false);
+                $("#tieneBoli").prop("checked", true);
+                $("#claveparaBoli").val(data["codigo_boli"]);
+            }
+            if(data["codigo_equi"]){
+                $("#tieneEqui").prop("checked", true);
+                $("#claveparaEqui").prop('disabled', false);
+                $("#claveparaEqui").val(data["codigo_equi"]);
+            }
+            if(data["codigo_map"]){
+                $("#tieneMap").prop("checked", true);
+                $("#claveparaMap").prop('disabled', false);
+                $("#claveparaMap").val(data["codigo_map"]);
+            }
+            if(data["codigo_previ"]){
+                $("#claveparaPrevi").val(data["codigo_previ"]);
+                $("#tienePrevi").prop("checked", true);
+                $("#claveparaPrevi").prop('disabled', false);
+            }
+            if(data["codigo_soli"]){
+                $("#claveparaSoli").val(data["codigo_soli"]);
+                $("#tieneSoli").prop("checked", true);
+                $("#claveparaSoli").prop('disabled', false);
+            }
+            if(data["codigo_libe"]){
+                $("#claveparaLibe").val(data["codigo_libe"]);
+                $("#tieneLibe").prop("checked", true);
+                $("#claveparaLibe").prop('disabled', false);
+            }
+            if(data["codigo_est"]){
+                $("#claveparaEst").val(data["codigo_est"]);
+                $("#tieneEst").prop("checked", true);
+                $("#claveparaEst").prop('disabled', false);
+            }
+            if(data["codigo_axa"]){
+                $("#claveparaAxa").val(data["codigo_axa"]);
+                $("#tieneAxa").prop("checked", true);
+                $("#claveparaAxa").prop('disabled', false);
+            }
+            if(data["codigo_hdi"]){
+                $("#claveparahdi").val(data["codigo_hdi"]);
+                $("#tienehdi").prop("checked", true);
+                $("#claveparahdi").prop('disabled', false);
+            }
+            if(data["codigo_sbs"]){
+                $("#claveparasbs").val(data["codigo_sbs"]);
+                $("#tienesbs").prop("checked", true);
+                $("#claveparasbs").prop('disabled', false);
+            }
+            if(data["codigo_zuri"]){
+                $("#claveparazuri").val(data["codigo_zuri"]);
+                $("#tienezuri").prop("checked", true);
+                $("#claveparazuri").prop('disabled', false);
+            }
+
+
             $(".previsualizarEditar").attr("src", data["intermediario_imagen"]);
 
 
@@ -629,7 +679,6 @@ function guardarInfoInter(){
     var sbs = $("#claveparasbs").val()
     var zuri = $("#claveparazuri").val()
 
-    debugger;
 
     var img = $('#ImgInter').val();
 
@@ -657,8 +706,7 @@ function guardarInfoInter(){
         axa,
         hdi,
         sbs,
-        zuri,
-        img
+        zuri
         },
         success: function (data) {
 
