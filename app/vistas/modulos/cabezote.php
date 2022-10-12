@@ -46,7 +46,7 @@
 				</li>
 
 				<li style="font-size: 15px; margin-top:10px; margin-right: 20px; ">
-					<p>Cotizaciones diarias: máx <b ><?php  echo $_SESSION['cotRestantes']; ?></b>, hoy llevas  <b id="cotRestantes"></b> </p>
+					<p>Cotizaciones diarias: máx. <b ><?php  echo $_SESSION['cotRestantes']; ?></b>, hoy llevas  <b id="cotRestantes"></b> </p>
 				</li>
 				
 

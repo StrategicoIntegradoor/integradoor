@@ -1,7 +1,7 @@
 (()=>{
     Swal.fire({
         icon: 'error',
-        title: '¡Esta opcion no esta disponible en la version demo!.',
+        title: '¡Esta opción no está disponible en la versión Demo!',
         confirmButtonText: 'Cerrar',
       }).then((result) => {
         if (result.isConfirmed) {

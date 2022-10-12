@@ -1413,27 +1413,27 @@ function cotizarOfertas() {
                       );
                   
                   /* Equidad */
-                      cont.push(
-                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/Equidad", requestOptions)
-                          .then((res) => {
-                            if (!res.ok) throw Error(res.statusText);
-                            return res.json();
-                          })
-                          .then((ofertas) => {
-                            if (typeof ofertas[0].Resultado !== 'undefined') {
-                                agregarAseguradoraFallida('Equidad')
-                                ofertas[0].Mensajes.forEach(mensaje => {
-                                    mostrarAlertarCotizacionFallida('Equidad', mensaje)
-                                })
-                            } else {
-                              validarOfertas(ofertas);
-                              mostrarAlertaCotizacionExitosa('Equidad')
-                            }
-                          })
-                          .catch((err) => {
-                            console.error(err);
-                          })
-                      );
+                      // cont.push(
+                      //   fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/Equidad", requestOptions)
+                      //     .then((res) => {
+                      //       if (!res.ok) throw Error(res.statusText);
+                      //       return res.json();
+                      //     })
+                      //     .then((ofertas) => {
+                      //       if (typeof ofertas[0].Resultado !== 'undefined') {
+                      //           agregarAseguradoraFallida('Equidad')
+                      //           ofertas[0].Mensajes.forEach(mensaje => {
+                      //               mostrarAlertarCotizacionFallida('Equidad', mensaje)
+                      //           })
+                      //       } else {
+                      //         validarOfertas(ofertas);
+                      //         mostrarAlertaCotizacionExitosa('Equidad')
+                      //       }
+                      //     })
+                      //     .catch((err) => {
+                      //       console.error(err);
+                      //     })
+                      // );
         
                   /* Bolivar */
                       cont.push(
@@ -1827,30 +1827,30 @@ function cotizarOfertas() {
                   }
                   
                   /* Equidad */
-                  if (comprobarFallida('Equidad')) {
-                      cont.push(
-                        fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/Equidad", requestOptions)
-                          .then((res) => {
-                            if (!res.ok) throw Error(res.statusText);
-                            return res.json();
-                          })
-                          .then((ofertas) => {
-                            if (typeof ofertas[0].Resultado !== 'undefined') {
-                                agregarAseguradoraFallida('Equidad')
-                                ofertas[0].Mensajes.forEach(mensaje => {
-                                    mostrarAlertarCotizacionFallida('Equidad', mensaje)
-                                })
-                            } else {
-                              validarOfertas(ofertas);
-                              mostrarAlertaCotizacionExitosa('Equidad')
-                              eliminarAseguradoraFallida('Equidad')
-                            }
-                          })
-                          .catch((err) => {
-                            console.error(err);
-                          })
-                      );
-                  }
+                  // if (comprobarFallida('Equidad')) {
+                  //     cont.push(
+                  //       fetch("https://grupoasistencia.com/webservicepruebasIntegrador2/Equidad", requestOptions)
+                  //         .then((res) => {
+                  //           if (!res.ok) throw Error(res.statusText);
+                  //           return res.json();
+                  //         })
+                  //         .then((ofertas) => {
+                  //           if (typeof ofertas[0].Resultado !== 'undefined') {
+                  //               agregarAseguradoraFallida('Equidad')
+                  //               ofertas[0].Mensajes.forEach(mensaje => {
+                  //                   mostrarAlertarCotizacionFallida('Equidad', mensaje)
+                  //               })
+                  //           } else {
+                  //             validarOfertas(ofertas);
+                  //             mostrarAlertaCotizacionExitosa('Equidad')
+                  //             eliminarAseguradoraFallida('Equidad')
+                  //           }
+                  //         })
+                  //         .catch((err) => {
+                  //           console.error(err);
+                  //         })
+                  //     );
+                  // }
         
                   /* Bolivar */
                   if (comprobarFallida('Bolivar')) {
@@ -2200,30 +2200,30 @@ function cotizarOfertas() {
         }
 
         /* Equidad */
-        if (comprobarFallida('Equidad')) {
-          cont.push(
-            fetch("https://grupoasistencia.com/webservicepruebasIntegrador/Equidad", requestOptions)
-              .then((res) => {
-                if (!res.ok) throw Error(res.statusText);
-                return res.json();
-              })
-              .then((ofertas) => {
-                if (typeof ofertas[0].Resultado !== 'undefined') {
-                  agregarAseguradoraFallida('Equidad')
-                  ofertas[0].Mensajes.forEach(mensaje => {
-                    mostrarAlertarCotizacionFallida('Equidad', mensaje)
-                  })
-                } else {
-                  validarOfertas(ofertas);
-                  mostrarAlertaCotizacionExitosa('Equidad')
-                  eliminarAseguradoraFallida('Equidad')
-                }
-              })
-              .catch((err) => {
-                console.error(err);
-              })
-          );
-        }
+        // if (comprobarFallida('Equidad')) {
+        //   cont.push(
+        //     fetch("https://grupoasistencia.com/webservicepruebasIntegrador/Equidad", requestOptions)
+        //       .then((res) => {
+        //         if (!res.ok) throw Error(res.statusText);
+        //         return res.json();
+        //       })
+        //       .then((ofertas) => {
+        //         if (typeof ofertas[0].Resultado !== 'undefined') {
+        //           agregarAseguradoraFallida('Equidad')
+        //           ofertas[0].Mensajes.forEach(mensaje => {
+        //             mostrarAlertarCotizacionFallida('Equidad', mensaje)
+        //           })
+        //         } else {
+        //           validarOfertas(ofertas);
+        //           mostrarAlertaCotizacionExitosa('Equidad')
+        //           eliminarAseguradoraFallida('Equidad')
+        //         }
+        //       })
+        //       .catch((err) => {
+        //         console.error(err);
+        //       })
+        //   );
+        // }
 
         /* Bolivar */
         if (comprobarFallida('Bolivar')) {

@@ -148,10 +148,10 @@ $pdf->Image('../../../vistas/img/logos/cheque.png', 100.5, 150.5, 0, -12, 'PNG',
 
 $pdf->SetFont('dejavusanscondensed', '', 2);
 
-$pdf->SetFont('dejavusanscondensed', 'B', 12);
-$pdf->SetXY(160, 3);
+$pdf->SetFont('dejavusanscondensed', 'B', 9);
+$pdf->SetXY(171, 3);
 $pdf->SetTextColor(104, 104, 104);
-$pdf->Cell(25, 6, "cotización #". $identificador ."", 0, 1, '');
+$pdf->Cell(25, 6, "Cotización #". $identificador ."", 0, 1, '');
 
 $pdf->SetFont('dejavusanscondensed', 'B', 12);
 $pdf->SetXY(98, 19.2);
@@ -198,7 +198,7 @@ $pdf->SetXY(39, 73);
 $pdf->Cell(25, 6, $ciudad, 0, 1, '');
 
 $pdf->SetXY(35, 79);
-$pdf->Cell(25, 6, "15 DIAS A PARTIR DEL " . $fechaVigencia, 0, 1, '');
+$pdf->Cell(25, 6, "8 DIAS A PARTIR DEL " . $fechaVigencia, 0, 1, '');
 
 $pdf->SetXY(155, 56);
 $pdf->Cell(25, 6, strtoupper($nomAsesor), 0, 1, '');
@@ -1909,43 +1909,43 @@ while ($rowRespuesta28 = mysqli_fetch_assoc($respuestaquery28)) {
 
 $html5 .= '</tr>';
 
-$html5 .= '<tr>';
+// $html5 .= '<tr>';
 
 
-$html5 .= '<td class="fondo puntos" style="width:10%;"><font size="8" style="font-family:dejavusanscondensedb; text-align: center;">Dias de Vigencia</font></td>';
+// $html5 .= '<td class="fondo puntos" style="width:10%;"><font size="8" style="font-family:dejavusanscondensedb; text-align: center;">Dias de Vigencia</font></td>';
 
-$query26 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
-$respuestaquery75 =  $conexion->query($query26);
+// $query26 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
+// $respuestaquery75 =  $conexion->query($query26);
 
-$cont21 = 1;
-$cont99 = 0;
-while ($rowRespuesta76= mysqli_fetch_assoc($respuestaquery75)) {
+// $cont21 = 1;
+// $cont99 = 0;
+// while ($rowRespuesta76= mysqli_fetch_assoc($respuestaquery75)) {
 
-	if ($cont99 % 2 == 0) {
-		if ($rowRespuesta76['Aseguradora'] == 'Seguros del Estado' || $rowRespuesta76['Aseguradora'] == 'Seguros Mapfre' 
-			|| $rowRespuesta76['Aseguradora'] == 'Previsora Seguros' || $rowRespuesta76['Aseguradora'] == 'Previsora' 
-			|| $rowRespuesta76['Aseguradora'] == 'SBS Seguros'
-			|| $rowRespuesta76['Aseguradora'] == 'Aseguradora Solidaria' || $rowRespuesta76['Aseguradora'] == 'Solidaria'
-			|| $rowRespuesta76['Aseguradora'] == 'Seguros Sura') {
-				$html5 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center; font-size: 7px;">15 días</td>';
-			} else {
-				$html5 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center; font-size: 7px;">30 días</td>';
-			}
-	} else {
-		if ($rowRespuesta76['Aseguradora'] == 'Seguros del Estado' || $rowRespuesta76['Aseguradora'] == 'Seguros Mapfre' 
-			|| $rowRespuesta76['Aseguradora'] == 'Previsora Seguros' || $rowRespuesta76['Aseguradora'] == 'Previsora' 
-			|| $rowRespuesta76['Aseguradora'] == 'SBS Seguros'
-			|| $rowRespuesta76['Aseguradora'] == 'Aseguradora Solidaria' || $rowRespuesta76['Aseguradora'] == 'Solidaria'
-			|| $rowRespuesta76['Aseguradora'] == 'Seguros Sura') {
-				$html5 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center; font-size: 7px;">15 días</td>';
-			} else {
-				$html5 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center; font-size: 7px;">30 días</td>';
-			}
-	}
+// 	if ($cont99 % 2 == 0) {
+// 		if ($rowRespuesta76['Aseguradora'] == 'Seguros del Estado' || $rowRespuesta76['Aseguradora'] == 'Seguros Mapfre' 
+// 			|| $rowRespuesta76['Aseguradora'] == 'Previsora Seguros' || $rowRespuesta76['Aseguradora'] == 'Previsora' 
+// 			|| $rowRespuesta76['Aseguradora'] == 'SBS Seguros'
+// 			|| $rowRespuesta76['Aseguradora'] == 'Aseguradora Solidaria' || $rowRespuesta76['Aseguradora'] == 'Solidaria'
+// 			|| $rowRespuesta76['Aseguradora'] == 'Seguros Sura') {
+// 				$html5 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center; font-size: 7px;">15 días</td>';
+// 			} else {
+// 				$html5 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center; font-size: 7px;">30 días</td>';
+// 			}
+// 	} else {
+// 		if ($rowRespuesta76['Aseguradora'] == 'Seguros del Estado' || $rowRespuesta76['Aseguradora'] == 'Seguros Mapfre' 
+// 			|| $rowRespuesta76['Aseguradora'] == 'Previsora Seguros' || $rowRespuesta76['Aseguradora'] == 'Previsora' 
+// 			|| $rowRespuesta76['Aseguradora'] == 'SBS Seguros'
+// 			|| $rowRespuesta76['Aseguradora'] == 'Aseguradora Solidaria' || $rowRespuesta76['Aseguradora'] == 'Solidaria'
+// 			|| $rowRespuesta76['Aseguradora'] == 'Seguros Sura') {
+// 				$html5 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center; font-size: 7px;">15 días</td>';
+// 			} else {
+// 				$html5 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center; font-size: 7px;">30 días</td>';
+// 			}
+// 	}
 
-	$cont99 += 1;
-}
-$html5 .= '</tr>';
+// 	$cont99 += 1;
+// }
+// $html5 .= '</tr>';
 
 
 $html5 .= '</table>';
@@ -2021,7 +2021,7 @@ while ($rowRespuesta29 = mysqli_fetch_assoc($respuestaquery29)) {
 	$html6 .= '<table style="width: 100%;" class="second2" cellpadding="2"  border="0">';
 
 	$html6 .= '<tr>';
-	$html6 .= '<td class="redondeotabla" style ="border-radius:50px; width: 100%;  background-color: #88D600' . $color . '; color:white; font-family:dejavusanscondensedb; " colspan="' . ($fila6 + 1) . '"><div style="font-size:3pt">&nbsp;</div>OPCIÓN ' . $contador . '<div style="font-size:3pt;">&nbsp;</div></td>';
+	$html6 .= '<td class="redondeotabla" style ="border-radius:50px; width: 100%;  background-color: #88D600;' . $color . '; color:white; font-family:dejavusanscondensedb; " colspan="' . ($fila6 + 1) . '"><div style="font-size:3pt">&nbsp;</div>OPCIÓN ' . $contador . '<div style="font-size:3pt;">&nbsp;</div></td>';
 	$html6 .= '</tr>';
 	$html6 .= '<tr>';
 
@@ -2215,7 +2215,7 @@ $html7 = '
 $html7 .= '<table style="width: 100%;" class="second2" cellpadding="2"  border="0">';
 
 $html7 .= '<tr>';
-$html7 .= '<td style ="width: 100%;  " colspan="' . ($fila6 + 1) . '"><font  size="18" style="text-align: center;">Queremos sugerirte <font style="color: #EC8923;">las ' . $asegRecomendada . ' mejores</font> aseguradoras</font></td>';
+$html7 .= '<td style ="width: 100%;" colspan="' . ($fila6 + 1) . '"><font  size="18" style="text-align: center;">Queremos sugerirte <font style="color: #EC8923;">las ' . $asegRecomendada . ' mejores</font> aseguradoras</font></td>';
 $html7 .= '</tr>';
 
 $html7 .= '</table>';

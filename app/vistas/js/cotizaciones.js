@@ -694,7 +694,7 @@ function verPdfOferta(aseguradora, numCotizOferta, numId) {
 
   Swal.fire({
     icon: 'error',
-    title: '¡Esta opcion no esta disponible en la version demo!.',
+    title: '¡Esta opción no está disponible en la versión Demo!',
     confirmButtonText: 'Cerrar',
   }).then((result) => {
     if (result.isConfirmed) {
@@ -758,7 +758,7 @@ function verPdfEstado(aseguradora, numCotizOferta, numId, UrlPdf) {
 
   Swal.fire({
     icon: 'error',
-    title: '¡Esta opcion no esta disponible en la version demo!.',
+    title: '¡Esta opción no está disponible en la versión Demo!',
     confirmButtonText: 'Cerrar',
   }).then((result) => {
     if (result.isConfirmed) {
@@ -792,7 +792,7 @@ const verPdfSolidaria = async (cotizacion) => {
 
   Swal.fire({
     icon: 'error',
-    title: '¡Esta opcion no esta disponible en la version demo!.',
+    title: '¡Esta opción no está disponible en la versión Demo!',
     confirmButtonText: 'Cerrar',
   }).then((result) => {
     if (result.isConfirmed) {
@@ -817,7 +817,7 @@ const obtenerPdfSolidaria = async (cotizacion) => {
 
   Swal.fire({
     icon: 'error',
-    title: '¡Esta opcion no esta disponible en la version demo!.',
+    title: '¡Esta opción no está disponible en la versión Demo!',
     confirmButtonText: 'Cerrar',
   }).then((result) => {
     if (result.isConfirmed) {
@@ -851,7 +851,7 @@ const verPdfZurich = async (cotizacion) => {
 
   Swal.fire({
     icon: 'error',
-    title: '¡Esta opcion no esta disponible en la version demo!.',
+    title: '¡Esta opción no está disponible en la versión Demo!',
     confirmButtonText: 'Cerrar',
   }).then((result) => {
     if (result.isConfirmed) {
@@ -876,7 +876,7 @@ const verPdfZurich = async (cotizacion) => {
 const obtenerPdfZurich = async (cotizacion) => {
   Swal.fire({
     icon: 'error',
-    title: '¡Esta opcion no esta disponible en la version demo!.',
+    title: '¡Esta opción no está disponible en la versión Demo!',
     confirmButtonText: 'Cerrar',
   }).then((result) => {
     if (result.isConfirmed) {

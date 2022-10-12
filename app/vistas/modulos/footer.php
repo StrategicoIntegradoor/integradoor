@@ -1,10 +1,10 @@
 <footer class="main-footer">
 
 	<div class="row">
-		<div class="col-md-6">
-		<p style="text-align: left !important;"><strong>Copyright &copy; 2022 <a href="https://www.grupoasistencia.com/" target="_blank">Grupo Asistencia</a>.</strong> Todos los derechos reservados.</p>
+		<div class="col-md-8">
+		<p style="text-align: left !important;"><strong> Software integradoor Copyright &copy; 2022.</strong> Strategico Technologies SAS BIC. Todos los derechos reservados.</p>
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-4">
 		<p style="text-align: right !important; margin-right: 10%"><strong>Versión Demo 1.0.0</strong></p>
 		</div>
 	</div>

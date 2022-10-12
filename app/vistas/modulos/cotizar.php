@@ -19,7 +19,7 @@ if ($_SESSION["rol"] != 1 && $_SESSION["rol"] != 2) {
 
     <h1>
 
-      Cotizar Todo Riesgo Livianos <?php echo $_SESSION["idUsuario"]   ?>
+      Cotizar Todo Riesgo Livianos 
 
     </h1>
 

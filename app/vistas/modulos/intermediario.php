@@ -329,7 +329,7 @@ input[type="checkbox"]{
             </div>
             <div class="row">
               <div class="col-md-2">
-                <label for="">Axa</label>
+                <label for="">AXA</label>
               </div>
               <div class="col-md-2 text-center">
                 <input type="checkbox" name="tieneAxa" id="tieneAxa">
@@ -351,7 +351,7 @@ input[type="checkbox"]{
             </div>
             <div class="row">
               <div class="col-md-2">
-                <label for="">sbs</label>
+                <label for="">SBS</label>
               </div>
               <div class="col-md-2 text-center">
                 <input type="checkbox" name="tienesbs" id="tienesbs">
@@ -362,7 +362,7 @@ input[type="checkbox"]{
             </div>
             <div class="row">
               <div class="col-md-2">
-                <label for="">zurich</label>
+                <label for="">Zurich</label>
               </div>
               <div class="col-md-2 text-center">
                 <input type="checkbox" name="tienezuri" id="tienezuri">
