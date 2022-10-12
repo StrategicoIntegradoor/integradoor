@@ -93,8 +93,10 @@
 						?>
 						
 							<li class="user-body">
+
+							
 									
-								<a href="intermediario" class="btn btn-default btn-flat">Ver mi perfil</a>
+								<a href="intermediario" class="btn btn-default btn-flat "><i class="fa fa-user" style="color: #88D600;"></i>Ver mi perfil</a>
 							</li>
 
 						<?php
@@ -103,7 +105,7 @@
 						
 						<li class="user-body">
 								
-							<a href="salir" class="btn btn-default btn-flat">Cerrar Sesión</a>
+							<a href="salir" class="btn btn-default btn-flat"><i class="fa fa-times" style="color: red;"></i>Cerrar Sesión</a>
 
 						</li>
 						

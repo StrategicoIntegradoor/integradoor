@@ -51,9 +51,14 @@ let fecha = $("#fechaLimi").val();
 let fecha_fin = Date.parse(fecha);  
 console.log(fecha);
 
+debugger;
+if(fecha != null || fecha != "0000-00-00 "  ){
+    countdown(fecha_fin, 'cuentatras');
+}
 
 
-countdown(fecha_fin, 'cuentatras');
+
+
 
 
 const mostrarCotRestantes = ()=>{

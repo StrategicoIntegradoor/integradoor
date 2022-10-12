@@ -153,6 +153,9 @@ $pdf->SetXY(171, 3);
 $pdf->SetTextColor(104, 104, 104);
 $pdf->Cell(25, 6, "Cotización #". $identificador ."", 0, 1, '');
 
+
+
+
 $pdf->SetFont('dejavusanscondensed', 'B', 12);
 $pdf->SetXY(98, 19.2);
 $pdf->SetTextColor(235, 135, 39);
@@ -228,6 +231,9 @@ $pdf->SetTextColor(103, 181, 252);
 $pdf->SetXY(90.5, 93);
 $pdf->Cell(10, 0, 'cotizado ' . $asegSelecionada . ' aseguradoras,', 0, $ln = 0, 'C', 0, '', 0, false, 'C', 'C');
 
+
+
+
 $pdf->SetFont('dejavusanscondensed', 'I', 15);
 $pdf->SetTextColor(104, 104, 104);
 $pdf->SetXY(145.5, 93);
@@ -238,6 +244,14 @@ $pdf->SetTextColor(104, 104, 104);
 $pdf->SetXY(98, 101);
 $pdf->Cell(10, 0, 'te presentamos un comparativo de precios', 0, $ln = 0, 'C', 0, '', 0, false, 'C', 'C');
 
+$pdf->SetFont('dejavusanscondensed', 'B', 9);
+$pdf -> StartTransform();
+$pdf->SetXY(203, 250);
+$pdf -> Rotate(90);
+$pdf -> setAlpha(0.5);
+$pdf->SetTextColor(104, 104, 104);
+$pdf->Cell(25, 6, "Elaborador por Software Integradoor propiedad del proveedor tecnológico Strategico Technologies SAS BIC Nit: 901.542.216-8", 0, 1, '');
+$pdf->StopTransform();
 
 $pdf->SetAlpha(0.7);
 
@@ -2268,13 +2282,6 @@ $pdf->writeHTML($html4, true, false, true, false, '');
 $pdf->Ln();
 $pdf->writeHTML($html5, true, false, true, false, '');
 //$pdf->Ln();
-$pdf->SetXY(0, 274);
-$htmlFooter = '<p style="font-size: 7px;">Nota: Esta cotización no constituye una oferta comercial. La misma se expide única y exclusivamente con un propósito informativo sobre los posibles costos del seguro y sus condiciones, los cuales serán susceptibles de modificación hasta tanto no se concreten y determinen las características de los respectivos riesgos.</p>';
-$pdf->writeHTML($htmlFooter, true, false, true, false, '');
-$pdf->Ln();
-$htmlFooter = '<p style="font-size: 12px;">Documento Generado Por Software Integradoor.</p>';
-//$pdf->Image('../../../vistas/img/logos/imagencotizador.jpg', -5, 0, 0, 92, 'JPG', '', '', true, 200, '', false, false, 0, false, false, false);
-$pdf->writeHTML($htmlFooter, true, false, true, false, '');
 
 
 //$pdf->lastPage();
@@ -2286,6 +2293,21 @@ if ($asegRecomendada > 0) {
 	$pdf->writeHTML($html7, true, false, true, false, '');
 	$pdf->writeHTML($html6, true, false, true, false, '');
 }
+
+$htmlimg = '<img src="../../../vistas/img/logos/pasosaseguradora.jpg">';
+$pdf -> writeHTML($htmlimg, true, false, true, false, '');
+
+// $pdf->Image('../../../vistas/img/logos/imagencotizador.jpg', -5, 0, 0, 92, 'JPG', '', '', true, 200, '', false, false, 0, false, false, false);
+
+$pdf->SetXY(0, 274);
+// $pdf->SetY(-45);
+$htmlFooter = '<p style="font-size: 7px;">Nota: Esta cotización no constituye una oferta comercial. La misma se expide única y exclusivamente con un propósito informativo sobre los posibles costos del seguro y sus condiciones, los cuales serán susceptibles de modificación hasta tanto no se concreten y determinen las características de los respectivos riesgos.</p>';
+$pdf->writeHTML($htmlFooter, true, false, true, false, '');
+$pdf->Ln();
+
+//$pdf->Image('../../../vistas/img/logos/imagencotizador.jpg', -5, 0, 0, 92, 'JPG', '', '', true, 200, '', false, false, 0, false, false, false);
+
+
 
 
 
@@ -2501,6 +2523,9 @@ function productoAseguradora($aseguradora, $producto)
 	}
 	return $resultado;
 } 	
+
+
+
 
 
 

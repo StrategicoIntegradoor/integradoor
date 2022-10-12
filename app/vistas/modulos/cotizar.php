@@ -496,10 +496,12 @@ if ($_SESSION["rol"] != 1 && $_SESSION["rol"] != 2) {
                       </div>
                     </div>
                   </div>
-                  <div class="row button-recotizar" style="display: none;">
-                    <div class="col-xs-12 col-sm-12 col-md-12 form-group">
-                        <button class="btn btn-primary btn-block" id="btnReCotizarFallidas">Re Cotizar Ofertas Fallidas</button>
+                  <div class="row button-recotizar" style="display: none; margin:5px">
+                  <div class="col-md-6"></div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 form-group">
+                        <button class="btn btn-primary btn-block" id="btnReCotizarFallidas" >Re Cotizar Ofertas Fallidas</button>
                     </div>
+                    <div class="col-md-3"></div>
                    </div>
                 </div>
               </div>
