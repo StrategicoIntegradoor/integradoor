@@ -20,28 +20,32 @@ const countdown = (dateTo, element) => {
 
     const timerUpdate = setInterval( () => {
         let currenTime = getTime(dateTo);
+        if(currenTime.hours != 'aN'){
 
-        item.innerHTML =  currenTime.days + "D " + currenTime.hours +  'H ' + currenTime.minutes + 'M ' + currenTime.seconds + 'S';
-        
+            item.innerHTML =  currenTime.days + "D " + currenTime.hours +  'H ' + currenTime.minutes + 'M ' + currenTime.seconds + 'S';
+            
 
-        if (currenTime.time <= 1) {
-            clearInterval(timerUpdate);
+            if (currenTime.time <= 1) {
+                clearInterval(timerUpdate);
 
-            Swal.fire({
-                icon: 'error',
-                title: '!Tu tiempo de uso se agoto!.',
-                confirmButtonText: 'Ok',
-              }).then((result) => {
-                if (result.isConfirmed) {
+                Swal.fire({
+                    icon: 'error',
+                    title: '!Tu tiempo de uso se agoto!.',
+                    confirmButtonText: 'Ok',
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location = "salir";
+                    } else if (result.isDenied) {
+                    }
+                })
+
+
+                setTimeout(function(){
                     window.location = "salir";
-                } else if (result.isDenied) {
-                }
-              })
+                }, 10000);
+            }
+        }else{
 
-
-              setTimeout(function(){
-                window.location = "salir";
-            }, 10000);
         }
 
     }, 1000);
@@ -51,10 +55,9 @@ let fecha = $("#fechaLimi").val();
 let fecha_fin = Date.parse(fecha);  
 console.log(fecha);
 
-debugger;
-if(fecha != null || fecha != "0000-00-00 "  ){
-    countdown(fecha_fin, 'cuentatras');
-}
+
+countdown(fecha_fin, 'cuentatras');
+
 
 
 

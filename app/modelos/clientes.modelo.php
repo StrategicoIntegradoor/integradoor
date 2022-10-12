@@ -93,7 +93,7 @@ class ModeloClientes{
 			}			
 
 		}else{
-		    setcookie('if', 'else');
+		    // setcookie('if', 'else');
 			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 WHERE $tabla.id_tipo_documento = $tabla2.id_tipo_documento 
 													AND $tabla.id_estado_civil = $tabla3.id_estado_civil AND $tabla.id_cliente = $tabla4.id_cliente 
 													AND $tabla4.id_usuario = $tabla5.id_usuario $condicion GROUP BY $tabla.id_cliente");
