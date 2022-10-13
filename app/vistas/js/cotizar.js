@@ -2901,7 +2901,6 @@ function validarNumCotizaciones() {
 
       cotRestan = parseInt(cotRestan);
 
-      debugger;
       if (respuesta < cotRestan) {
 
       } else {

@@ -123,7 +123,7 @@ input[type="checkbox"]{
           <div class="col-md-3">
             <div class="info">
               <div class="avatar-wrapper" style="text-align: center;">
-                <img class="profile-pic " src="vistas/img/usuarios/default/anonymous.png" width="80%" height="80%">
+                <img class="profile-pic previsualizarEditar" src="vistas/img/usuarios/default/anonymous.png" width="80%" height="80%">
                 <label class="btn btn-primary">
                   <input type="file" name="ImgInter" id="ImgInter" style="display:none;" />
                   Subir archivo
