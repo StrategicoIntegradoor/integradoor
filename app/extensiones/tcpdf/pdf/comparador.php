@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 header('Content-Type: text/html; charset=utf-8');
 date_default_timezone_set('America/Bogota');
 
@@ -26,6 +26,15 @@ $conexion->set_charset("utf8");
 $query2 = "SELECT *	FROM cotizaciones, clientes WHERE cotizaciones.id_cliente = clientes.id_cliente AND `id_cotizacion` = $identificador";
 $valor2 = $conexion->query($query2);
 $fila = mysqli_fetch_array($valor2);
+
+// :::::::::::::::::::::::Query para imagen logo::::::::::::::::::::::::::.
+$intermediario = $_SESSION['intermediario'];
+$queryLogo = "SELECT urlLogo FROM intermediario  WHERE id_Intermediario = $intermediario";
+$valorLogo = $conexion->query($queryLogo);
+$valorLogo = mysqli_fetch_array($valorLogo);
+$valorLogo = $valorLogo['urlLogo'];
+
+
 
 $query3 = "SELECT DISTINCT Aseguradora FROM ofertas WHERE `id_cotizacion` = $identificador";
 $valor3 = $conexion->query($query3);
@@ -140,9 +149,18 @@ $pdf->AddPage();
 //$pdf->Image('../../../vistas/img/logos/imagencotizador.jpg', -5, 0, 0, 92, 'JPG', '', '', true, 160, '', false, false, 0, false, false, false);
 //$pdf->Image('../../../vistas/img/logos/cheque.png', 99.5, 159.5, 0, 0, 'PNG', '', '', true, 160, '', false, false, 0, false, false, false);
 
-$pdf->Image('../../../vistas/img/logos/imagencotizador.jpg', -5, 0, 0, 92, 'JPG', '', '', true, 200, '', false, false, 0, false, false, false);
+$pdf->Image('../../../vistas/img/logos/imagencotizador2.jpg', -5, 0, 0, 92, 'JPG', '', '', true, 200, '', false, false, 0, false, false, false);
 
-$pdf->Image('../../../vistas/img/logos/cheque.png', 100.5, 150.5, 0, -12, 'PNG', '', '', true, 160, '', false, false, 0, false, false, false);
+
+// :::::::::::::::.prueba:::::::::::::::
+
+$pdf->Image('../../../vistas/img/logosIntermediario/'.$valorLogo, 8, 13, 0, 20, 'PNG', '', '', true, 160, '', false, false, 0, false, false, false);
+
+
+// ================================================
+
+
+$pdf->Image('../../../vistas/img/logos/cheque.png', 80.5, 150.5, 0, -12, 'PNG', '', '', true, 160, '', false, false, 0, false, false, false);
 
 //$pdf->Image('images/img/QUIMERA_BONO_FINAL3.jpg', 0, 130, 0, 117, 'JPG', '', '', false, 140, '', false, false, 0, false, false, false);
 
