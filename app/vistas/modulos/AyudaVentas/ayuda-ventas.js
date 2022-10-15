@@ -4,7 +4,7 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
     if (centrosDeInspeccion.length === 0) return ''
     let html = '<ul>'
     centrosDeInspeccion.forEach(centro => {
-        html += `<li>- ${centro}</li>`
+        if (centro !== '') html += `<li>- ${centro}</li>`
     })
     html += '</ul>'
 
@@ -14,7 +14,7 @@ const construirHtmlContinuidad = continuidades => {
     if (continuidades.length === 0) return ''
     let html = '<ul>'
     continuidades.forEach(continuidad => {
-        html += `<li>- ${continuidad}</li>`
+        if (continuidad !== '') html += `<li>- ${continuidad}</li>`
     })
     html += '</ul>'
 
@@ -24,7 +24,7 @@ const construirHtmlFormasDePago = formasDePago => {
     if (formasDePago.length === 0) return ''
     let html = '<ul>'
     formasDePago.forEach(formaDePago => {
-        html += `<li>- ${formaDePago}</li>`
+        if (formaDePago !== '') html += `<li>- ${formaDePago}</li>`
     })
     html += '</ul>'
 

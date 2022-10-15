@@ -128,27 +128,6 @@
 
 
 
-				<a href="motos">
-
-
-
-					<i class="fa fa-motorcycle"></i>
-
-					<span>Cotizar Motos</span>
-
-
-
-				</a>
-
-
-
-			</li>
-
-
-			<li>
-
-
-
 				<a href="inicio">
 
 
@@ -215,6 +194,26 @@
 
 
 
+			</li>
+			
+			<li>
+
+
+
+				<a href="ayuda-ventas">
+
+
+
+					<i class="fa fa-credit-card"></i>
+
+					<span>Ayuda Ventas</span>
+
+
+
+				</a>
+
+
+
 			</li>';
 
 
@@ -226,6 +225,7 @@
 		?>
 
 
+
 		</ul>
 
 
@@ -235,6 +235,3 @@
 
 
 </aside>
-
-
-
