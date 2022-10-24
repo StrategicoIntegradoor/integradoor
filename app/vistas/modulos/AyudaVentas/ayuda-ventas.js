@@ -1,4 +1,3 @@
-
 // Funciones
 const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
     if (centrosDeInspeccion.length === 0) return ''
@@ -30,23 +29,23 @@ const construirHtmlFormasDePago = formasDePago => {
 
     return html
 }
-
 document.querySelector('#editarAyudaVenta').addEventListener('click', e => {
     editarAyudaVenta()
 })
 const editarAyudaVenta = async () => {
     const d = document
-    const issetClausulado = d.querySelector('#clausulado').files.length > 0
     const issetSarlaft = d.querySelector('#sarlaft').files.length > 0
+    const issetSarlaft2 = d.querySelector('#sarlaft2').files.length > 0
     const formData = new FormData()
     formData.append('funcion', 'editarAyudaVenta');
     formData.append('linea_de_atencion', d.querySelector('#linea_atencion').value)
     formData.append('id_ayuda_venta', d.querySelector('#id_ayuda_venta').value)
-    if (issetClausulado) {
-        formData.append('clausulado', d.querySelector('#clausulado').files[0])
-    }
+    formData.append('clausulado', d.querySelector('#clausulado').value)
     if (issetSarlaft) {
         formData.append('sarlaft', d.querySelector('#sarlaft').files[0])
+    }
+    if (issetSarlaft2) {
+        formData.append('sarlaft2', d.querySelector('#sarlaft2').files[0])
     }
     formData.append('aseguradora', d.querySelector('#aseguradora').value)
     formData.append('centro_de_inspeccion', centros.join('-').toString())
@@ -106,6 +105,7 @@ const llenarFormulario = _data => {
     d.querySelector('#aseguradora').value = _data.aseguradora
     d.querySelector('#id_ayuda_venta').value = _data.id 
     d.querySelector('#linea_atencion').value = _data.linea_de_atencion
+    d.querySelector('#clausulado').value = _data.link_clausulado
     d.querySelector('#continuidad').innerText = _data.continuidad
     d.querySelector('#tips_expedicion').innerText = _data.tips_de_expedicion
     d.querySelector('.form-editar-ayuda-venta').style.display = 'block'
@@ -121,7 +121,11 @@ const obtenerAyudaVentas = async () => {
         },
         body: formData
     })
-    .then(res => res.json())
+    .then(res => {
+        const test = res.json()
+        //return res.json()
+        return test
+    })
     .then(data => {
         let template = ''
         data.forEach(ayudaVenta => {
@@ -135,16 +139,19 @@ const obtenerAyudaVentas = async () => {
                 <tr>
                     <td><img src="./vistas/modulos/AyudaVentas/src/logos/${ayudaVenta.aseguradora}.png" class="img-responsive" width="80"></td>
                     <td>${ayudaVenta.linea_de_atencion}</td>`
-            if (ayudaVenta.path_clausulado) {
-                partTemplate += `<td><button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="window.open('./vistas/modulos/AyudaVentas/pdf/clausulado/${ayudaVenta.path_clausulado}')">PDF</button></td>`
+            if (ayudaVenta.link_clausulado) {
+                partTemplate += `<td><a class="btn btn-alert" style="border-color: #88d600; color: #88d600; font-weight: 500;" target="_blank" href="${ayudaVenta.link_clausulado}">${ayudaVenta.link_clausulado.substring(0, 12)}</a></td>`
             } else {
                 partTemplate += '<td></td>'
             }
-            if (ayudaVenta.path_sarlaft) {
-                partTemplate += `<td><button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="window.open('./vistas/modulos/AyudaVentas/pdf/sarlaft/${ayudaVenta.path_sarlaft}')">PDF</button></td>`
+            if (ayudaVenta.path_sarlaft || ayudaVenta.path_sarlaft2) {
+                let sarlaftButtons = '<td>'
+                sarlaftButtons += ayudaVenta.path_sarlaft ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="window.open('./vistas/modulos/AyudaVentas/pdf/sarlaft/${ayudaVenta.path_sarlaft}')">PDF #1</button>` : ''
+                sarlaftButtons += ayudaVenta.path_sarlaft2 ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="window.open('./vistas/modulos/AyudaVentas/pdf/sarlaft2/${ayudaVenta.path_sarlaft2}')">PDF #2</button>` : ''
+                partTemplate += sarlaftButtons + '</td>'
             } else {
                 partTemplate += '<td></td>'
-            }  
+            }
             partTemplate += `
                 <td>${construirHtmlCentrosDeInspeccion(centrosDeInspeccion)}</td>
                 <td>${construirHtmlContinuidad(continuidades)}</td>
@@ -164,6 +171,20 @@ const obtenerAyudaVentas = async () => {
         document.querySelector('.ayuda-ventas-body').innerHTML = template   
     })
 }
+// document.querySelector('#subirpn').addEventListener('click', async () => {
+//     const _formData = new FormData();
+//     const filePN = document.querySelector('#sarlaft-pn').files[0]
+//     _formData.append('sarlaft-pn')
+//     const req = await fetch('./vistas/modulos/AyudaVentas/AyudaVentasController.php', {
+//         method: 'POST',
+//         headers: {
+//             'Accept': 'application/json',
+//         },
+//         body: _formData
+//     }).then(() => {
+
+//     })
+// })
 
 /* CENTROS DE INSPECCIÓN */
 /* Agregar centro */
@@ -231,7 +252,6 @@ const agregarContinuidad = () => {
     d.querySelector('#continuidades').innerHTML += template
     d.querySelector('#continuidad').value = ''
 }
-
 const llenarContinuidades = _continuidades => {
     const d = document
     let template = ''

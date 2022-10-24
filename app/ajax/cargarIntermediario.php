@@ -4,8 +4,8 @@
 $mensaje = $_POST['saludo'];
 
 $DB_host = "localhost";
-$DB_user = "root";
-$DB_pass = "";
+$DB_user = "grupoasi_cotizautos";
+$DB_pass = "M1graci0n123";
 $DB_name = "grupoasi_cotizautos";
 
 

@@ -51,7 +51,7 @@ if ($_SESSION["rol"] != 1 && $_SESSION["rol"] != 2) {
                             <h4>Continuidades</h4>
                             <div id="continuidades"></div>
                         </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
                             <h4>Formas De Pago</h4>
                             <div id="formas_de_pago"></div>
                         </div>
@@ -65,20 +65,19 @@ if ($_SESSION["rol"] != 1 && $_SESSION["rol"] != 2) {
                             <input type="text" class="form-control" id="linea_atencion">
                         </div>
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <label>Clausulado</label>
-                            <input type="file" class="form-control" id="clausulado">
+                            <label>Link Clausulado</label>
+                            <input type="text" class="form-control" id="clausulado">
                         </div>
                     </div>
                     
                     <div class="row">
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <label>Sarlaft</label>
+                            <label>Sarlaft #1</label>
                             <input type="file" class="form-control" id="sarlaft">
                         </div>
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <label>Centro de inspección</label>
-                            <input type="text" class="form-control" id="centro_inspeccion">
-                            <button id="agregarCentroDeInspeccion">Agregar Centro</button>
+                            <label>Sarlaft #2</label>
+                            <input type="file" class="form-control" id="sarlaft2">
                         </div>
                     </div>
                     
@@ -89,14 +88,19 @@ if ($_SESSION["rol"] != 1 && $_SESSION["rol"] != 2) {
                             <button id="agregarContinuidad">Agregar Continuidad</button>
                         </div>
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <label>Formas de pago</label>
-                            <input type="text" class="form-control" id="forma_de_pago"></textarea>
-                            <button id="agregarFormaDePago">Agregar Forma De Pago</button>
+                            <label>Centro de inspección</label>
+                            <input type="text" class="form-control" id="centro_inspeccion">
+                            <button id="agregarCentroDeInspeccion">Agregar Centro</button>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="form-group col-md-12">
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <label>Formas de pago</label>
+                            <input type="text" class="form-control" id="forma_de_pago"></textarea>
+                            <button id="agregarFormaDePago">Agregar Forma De Pago</button>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
                             <label>Tips de expedición</label>
                             <input type="text" class="form-control" id="tips_expedicion">
                         </div>
@@ -134,11 +138,19 @@ if ($_SESSION["rol"] != 1 && $_SESSION["rol"] != 2) {
                 </table>
             </div>
 
-            <div style="margin-left: 1em; padding-bottom: 1em;">
+            <!-- <div style="margin-left: 1em; padding-bottom: 1em;">
                 <p>* PN: Persona natural. PJ: Persona Jurídica</p>
-                <p><b>Sarlaft general PN PDF</b><p>
-                <p><b>Sarlaft general PJ PDF</b><p>
-            </div>
+                <p>
+                    <b>Sarlaft general PN PDF: </b>
+                    <input type="file" name="" id="sarlaft-pn">
+                    <button id="subirpn">Subir PDF</button>
+                <p>
+                <p>
+                    <b>Sarlaft general PJ PDF: </b>
+                    <input type="file" name="" id="sarlaft-pj">
+                    <button id="subirpj">Subir PDF</button>
+                <p>
+            </div> -->
         </div>
     </section>
 </div>

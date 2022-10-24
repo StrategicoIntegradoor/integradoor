@@ -1,2 +1,106 @@
 [22-Aug-2022 16:12:48 UTC] PHP Notice:  Undefined variable: _SESSION in /home3/grupoasi/public_html/integradoor.com/app/modelos/clientes.modelo.php on line 65
 [15-Sep-2022 20:02:51 UTC] PHP Notice:  Undefined variable: _SESSION in /home3/grupoasi/public_html/integradoor.com/app/modelos/clientes.modelo.php on line 65
+[18-Oct-2022 13:39:55 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[18-Oct-2022 13:39:55 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 15
+[18-Oct-2022 13:43:57 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[18-Oct-2022 13:43:57 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 15
+[18-Oct-2022 13:44:02 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[18-Oct-2022 13:44:02 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 15
+[18-Oct-2022 13:44:06 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[18-Oct-2022 13:44:06 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 15
+[18-Oct-2022 13:44:14 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[18-Oct-2022 13:44:14 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 15
+[18-Oct-2022 13:44:15 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[18-Oct-2022 13:44:15 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 15
+[18-Oct-2022 13:44:22 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 15
+[18-Oct-2022 13:44:36 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 15
+[18-Oct-2022 13:44:42 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 15
+[18-Oct-2022 13:49:11 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[18-Oct-2022 13:49:11 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[18-Oct-2022 14:13:03 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[18-Oct-2022 14:13:03 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[18-Oct-2022 14:59:40 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[18-Oct-2022 14:59:40 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[18-Oct-2022 15:07:48 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[18-Oct-2022 15:07:48 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[18-Oct-2022 15:08:42 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[18-Oct-2022 15:08:42 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[18-Oct-2022 15:09:07 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarIntermediario.php on line 4
+[18-Oct-2022 15:09:07 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarRoll.php on line 4
+[18-Oct-2022 15:09:21 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarIntermediario.php on line 4
+[18-Oct-2022 15:09:21 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarRoll.php on line 4
+[18-Oct-2022 15:09:24 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarIntermediario.php on line 4
+[18-Oct-2022 15:09:24 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarRoll.php on line 4
+[18-Oct-2022 15:09:27 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[18-Oct-2022 15:09:27 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[18-Oct-2022 16:07:28 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[18-Oct-2022 16:07:28 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[18-Oct-2022 16:59:51 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[18-Oct-2022 16:59:51 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[18-Oct-2022 17:16:54 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarIntermediario.php on line 4
+[18-Oct-2022 17:16:54 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarRoll.php on line 4
+[18-Oct-2022 17:17:11 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarIntermediario.php on line 4
+[18-Oct-2022 17:17:11 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarRoll.php on line 4
+[18-Oct-2022 17:17:31 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarIntermediario.php on line 4
+[18-Oct-2022 17:17:31 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarRoll.php on line 4
+[18-Oct-2022 17:42:06 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarIntermediario.php on line 4
+[18-Oct-2022 17:42:06 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarRoll.php on line 4
+[18-Oct-2022 17:42:53 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarIntermediario.php on line 4
+[18-Oct-2022 17:42:53 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarRoll.php on line 4
+[18-Oct-2022 17:42:55 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarIntermediario.php on line 4
+[18-Oct-2022 17:42:55 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarRoll.php on line 4
+[18-Oct-2022 17:42:58 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[18-Oct-2022 17:42:58 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[18-Oct-2022 17:43:31 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[18-Oct-2022 17:43:31 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[19-Oct-2022 12:51:13 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[19-Oct-2022 12:51:13 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[19-Oct-2022 16:40:24 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[19-Oct-2022 16:40:24 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[19-Oct-2022 19:18:33 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[19-Oct-2022 19:18:33 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[19-Oct-2022 19:22:46 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarIntermediario.php on line 4
+[19-Oct-2022 19:22:46 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarRoll.php on line 4
+[19-Oct-2022 19:28:05 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarIntermediario.php on line 4
+[19-Oct-2022 19:28:05 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarRoll.php on line 4
+[19-Oct-2022 19:28:09 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarIntermediario.php on line 4
+[19-Oct-2022 19:28:09 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarRoll.php on line 4
+[19-Oct-2022 19:28:13 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[19-Oct-2022 19:28:13 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[19-Oct-2022 19:47:13 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarIntermediario.php on line 4
+[19-Oct-2022 19:47:13 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarRoll.php on line 4
+[19-Oct-2022 19:50:34 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarIntermediario.php on line 4
+[19-Oct-2022 19:50:34 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarRoll.php on line 4
+[19-Oct-2022 19:51:00 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarIntermediario.php on line 4
+[19-Oct-2022 19:51:00 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarRoll.php on line 4
+[19-Oct-2022 19:51:53 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarIntermediario.php on line 4
+[19-Oct-2022 19:51:53 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarRoll.php on line 4
+[19-Oct-2022 19:51:55 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarIntermediario.php on line 4
+[19-Oct-2022 19:51:55 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarRoll.php on line 4
+[19-Oct-2022 19:52:53 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[19-Oct-2022 19:52:53 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[20-Oct-2022 12:47:45 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[20-Oct-2022 12:47:45 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[20-Oct-2022 16:54:56 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[20-Oct-2022 16:55:14 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[20-Oct-2022 16:55:14 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[20-Oct-2022 16:59:30 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarIntermediario.php on line 4
+[20-Oct-2022 16:59:30 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarRoll.php on line 4
+[20-Oct-2022 16:59:56 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarIntermediario.php on line 4
+[20-Oct-2022 16:59:56 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarRoll.php on line 4
+[20-Oct-2022 16:59:57 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarIntermediario.php on line 4
+[20-Oct-2022 16:59:57 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoorDemo/app/ajax/cargarRoll.php on line 4
+[20-Oct-2022 17:00:17 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[20-Oct-2022 17:00:17 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[21-Oct-2022 15:32:18 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[21-Oct-2022 15:32:18 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[22-Oct-2022 14:04:02 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[22-Oct-2022 14:04:02 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[22-Oct-2022 14:04:29 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[22-Oct-2022 14:04:29 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[22-Oct-2022 14:05:42 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[22-Oct-2022 14:05:42 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[24-Oct-2022 13:32:26 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[24-Oct-2022 13:32:26 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
+[24-Oct-2022 13:42:02 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 5
+[24-Oct-2022 13:42:02 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoorDemo/app/ajax/compararFecha.php on line 24
