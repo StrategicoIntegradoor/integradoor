@@ -208,6 +208,18 @@ if ($_SESSION["rol"] != 1 && $_SESSION["rol"] != 2) {
                       </select>
                     </div>
 
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="emailID">Email</label>
+                      <input type="text" maxlength="10" class="form-control" id="emailID">
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="telefonoID">Telefono</label>
+                      <input type="text" maxlength="10" class="form-control" id="telefonoID">
+                    </div>
+
+
+
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group" id="contenBtnConsultarPlaca">
                       <button class="btn btn-primary btn-block" id="btnConsultarPlaca">Siguiente</button>
                     </div>

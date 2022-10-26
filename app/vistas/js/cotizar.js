@@ -72,7 +72,13 @@ $(document).ready(function () {
     var esCeroKmNo = document.getElementById("txtEsCeroKmNo").checked;
 
     if (conoceslaPlaca == true && esCeroKmNo == true) {
-      swal({ text: "! Si el Vehiculo No es Cero KM debe tener Placa. ¡" });
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: true,
+        timer: 11500
+      })
       $("#txtEsCeroKmNo").prop("checked", false);
     }
   });
@@ -1684,6 +1690,10 @@ function cotizarOfertas() {
                       showConfirmButton: true,
                       confirmButtonText: "Cerrar",
                     });
+                    setTimeout(function(){
+                      window.location = "index.php?ruta=editar-cotizacion&idCotizacion=" + idCotizacion;
+                  }, 3000);
+                    
                     console.log("Se completo todo");
                     document.querySelector('.button-recotizar').style.display = 'block'
                     /* Se monta el botón para generar el pdf con 

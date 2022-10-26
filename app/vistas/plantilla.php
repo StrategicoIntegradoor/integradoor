@@ -94,9 +94,10 @@ session_start();
   <script src="vistas/bower_components/datatables.net-bs/js/responsive.bootstrap.min.js"></script>
 
   <!-- SweetAlert 2 -->
-  <script src="vistas/plugins/sweetalert2/sweetalert2.all.js"></script>
+  <!-- <script src="vistas/plugins/sweetalert2/sweetalert2.all.js"></script> -->
+             <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- By default SweetAlert2 doesn't support IE. To enable IE 11 support, include Promise polyfill:-->
-  <script src="vistas/plugins/sweetalert2/core-2.4.1.js"></script>
+  <!-- <script src="vistas/plugins/sweetalert2/core-2.4.1.js"></script> -->
 
   <!-- iCheck 1.0.1 -->
   <script src="vistas/plugins/iCheck/icheck.min.js"></script>

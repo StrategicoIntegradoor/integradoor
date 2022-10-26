@@ -50,16 +50,26 @@ $(document).ready(function () {
 
   // Visualiza el formulario para agregar cotizaciones manualmente
   $("#btnMostrarFormCotManual").click(function () {
-    document.getElementById("formularioCotizacionManual").style.display =
-      "block";
-    document.querySelector(".btnAgregar").innerHTML =
-      '<button class="btn btn-primary btn-block" id="btnAgregarCotizacion">Agregar Cotización</button>';
-    $("#btnAgregarCotizacion").click(function () {
-      agregarCotizacion();
-    });
-    vaciarCamposOfertaManual();
-    menosVeh();
-    masAgr();
+    Swal.fire({
+      icon: 'error',
+      title: '¡Esta opción no está disponible en la versión Demo!',
+      confirmButtonText: 'Cerrar',
+    }).then((result) => {
+      if (result.isConfirmed) {
+      } else if (result.isDenied) {
+      }
+    })
+
+    // document.getElementById("formularioCotizacionManual").style.display =
+    //   "block";
+    // document.querySelector(".btnAgregar").innerHTML =
+    //   '<button class="btn btn-primary btn-block" id="btnAgregarCotizacion">Agregar Cotización</button>';
+    // $("#btnAgregarCotizacion").click(function () {
+    //   agregarCotizacion();
+    // });
+    // vaciarCamposOfertaManual();
+    // menosVeh();
+    // masAgr();
   });
 
   // Funcion para seleccionar el Producto Manualmente
@@ -320,6 +330,9 @@ function editarCotizacion(id) {
       $("#txtApellidos").val(respuesta["cli_apellidos"]);
       $("#genero").val(respuesta["cli_genero"]);
       $("#estadoCivil").val(respuesta["id_estado_civil"]);
+      $("#emailID").val(respuesta["cli_email"]);
+      $("#telefonoID").val(respuesta["cli_telefono"]);
+
 
       var fecha = respuesta["cli_fch_nacimiento"].split("-");
       var nombreMes = obtenerNombreMes(fecha[1]);

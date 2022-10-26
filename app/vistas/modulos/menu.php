@@ -122,7 +122,25 @@
 
 			</li>
 
+			<li>
 
+
+
+			<a href="motos">
+
+
+
+				<i class="fa fa-motorcycle"></i>
+
+				<span>Cotizar Motos</span>
+
+
+
+			</a>
+
+
+
+		</li>
 
 			<li>
 
@@ -180,7 +198,7 @@
 
 
 
-				<a href="estadisticas">
+				<a href="motos">
 
 
 
