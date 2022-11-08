@@ -96,6 +96,10 @@ input[type="checkbox"]{
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
   }
+
+  .separador{
+    margin-left: 15px;
+  }
 </style>
 
 <div class="box" style="margin-left: 50px;">
@@ -120,7 +124,7 @@ input[type="checkbox"]{
     <div class="box">
       <div class="box-header with-border ">
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-2" >
             <div class="info">
               <div class="avatar-wrapper" style="text-align: center;">
                 <img class="profile-pic previsualizarEditar" src="vistas/img/usuarios/default/anonymous.png" width="80%" height="80%">
@@ -134,7 +138,7 @@ input[type="checkbox"]{
           </div>
           <div class="col-md-8">
             <div clas="row" style="margin-bottom: 30px;">
-              <b style="font-size: 40px">Informacion General</b>
+              <b style="font-size: 40px">Información General</b>
             </div>
             <div class="row" style="margin-bottom: 22px;">
               <div class="col-md-3">
@@ -146,7 +150,7 @@ input[type="checkbox"]{
                 </select>
               </div>
               <div class="col-md-3">
-                <label for="">Correo Electronico:</label>
+                <label for="">Correo Electrónico:</label>
               </div>
               <div class="col-md-3">
                 <input type="email" name="email" id="email">
@@ -168,7 +172,7 @@ input[type="checkbox"]{
             </div>
             <div class="row" style="margin-bottom: 22px;">
               <div class="col-md-3">
-                <label for="">Razon social:</label>
+                <label for="">Razón social:</label>
               </div>
               <div class="col-md-3">
                 <input type="text" id="razon">
@@ -209,164 +213,189 @@ input[type="checkbox"]{
               </div>
             </div>
             <div clas="row" style="margin-bottom: 30px;">
-              <b style="font-size: 35px">Informacion Aseguradoras Aliadas</b>
+              <b style="font-size: 35px">Información Aseguradoras Aliadas</b>
+            </div>
+            <div clas="row" style="margin-bottom: 30px;">
+              <b style="font-size: 20px">Con que aseguradoras tienes clave como Intermediario:</b>
             </div>
             <div class="row" style="margin-bottom: 30px;">
               <div class="col-md-6">
                 <div class="row text-center">
-                  <div class="col-md-2">
+                  <div class="col-xs-3 col-md-2">
                     <span>Aseguradora</span>
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-xs-3 col-md-2 separador" >
                     <span>Tienes clave?</span>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-xs-3 col-md-4">
                     <span>Claves intermediación</span>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-2">
+                  <div class="col-xs-3 col-md-2">
                     <label for="">Allianz</label>
                   </div>
-                  <div class="col-md-2 text-center">
+                  <div class="col-xs-3 col-md-2 text-center separador">
                     <input type="checkbox" name="tieneAlli" id="tieneAlli">
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-xs-3 col-md-4">
                     <input type="text" id="claveparaIAlli" disabled="disabled">
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-2">
+                  <div class="col-xs-3 col-md-2">
                     <label for="">Bolivar</label>
                   </div>
-                  <div class="col-md-2 text-center">
+                  <div class="col-xs-3 col-md-2 text-center separador">
                     <input type="checkbox" name="tieneBoli" id="tieneBoli">
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-xs-3 col-md-4">
                     <input type="text" id="claveparaBoli" disabled="disabled">
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-2">
-                    <label for="">La Equidad</label>
+                  <div class="col-xs-3 col-md-2">
+                    <label for="">Equidad</label>
                   </div>
-                  <div class="col-md-2 text-center">
+                  <div class="col-xs-3 col-md-2 text-center separador">
                     <input type="checkbox" name="tieneEqui" id="tieneEqui">
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-xs-3 col-md-4">
                     <input type="text" id="claveparaEqui" disabled="disabled">
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-2">
+                  <div class="col-xs-3 col-md-2">
                     <label for="">Mapfre</label>
                   </div>
-                  <div class="col-md-2 text-center">
+                  <div class="col-xs-3 col-md-2 text-center separador">
                     <input type="checkbox" name="tieneMap" id="tieneMap">
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-xs-3 col-md-4">
                     <input type="text" id="claveparaMap" disabled="disabled">
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-2">
+                  <div class="col-xs-3 col-md-2">
                     <label for="">Previsora</label>
                   </div>
-                  <div class="col-md-2 text-center">
+                  <div class="col-xs-3 col-md-2 text-center separador">
                     <input type="checkbox" name="tienePrevi" id="tienePrevi">
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-xs-3 col-md-4">
                     <input type="text" id="claveparaPrevi" disabled="disabled">
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-2">
+                  <div class="col-xs-3 col-md-2">
                     <label for="">Solidaria</label>
                   </div>
-                  <div class="col-md-2 text-center">
+                  <div class="col-xs-3 col-md-2 text-center separador">
                     <input type="checkbox" name="tieneSoli" id="tieneSoli">
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-xs-3 col-md-4">
                     <input type="text" id="claveparaSoli" disabled="disabled">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-3 col-md-2">
+                    <label for="">Mundial</label>
+                  </div>
+                  <div class="col-xs-3 col-md-2 text-center separador">
+                    <input type="checkbox" name="tieneMund" id="tieneMund">
+                  </div>
+                  <div class="col-xs-3 col-md-4">
+                    <input type="text" id="claveparaMund" disabled="disabled">
                   </div>
                 </div>
               </div>
               <div class="col-md-6">
               <div class="row text-center">
-                  <div class="col-md-2">
+                  <div class="col-xs-3 col-md-2">
                     <span>Aseguradora</span>
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-xs-3 col-md-2 separador">
                     <span>Tienes clave?</span>
                   </div>
-                  <div class="col-md-4">
-                    <span>Claves intermediacion</span>
+                  <div class="col-xs-3 col-md-4">
+                    <span>Claves intermediación</span>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-2">
+                  <div class="col-xs-3 col-md-2">
                     <label for="">Liberty</label>
                   </div>
-                  <div class="col-md-2 text-center">
+                  <div class="col-xs-3 col-md-2 text-center separador">
                     <input type="checkbox" name="tieneLibe" id="tieneLibe">
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-xs-3 col-md-4">
                     <input type="text" id="claveparaLibe" disabled="disabled">
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-2">
+                  <div class="col-xs-3 col-md-2">
                     <label for="">Estado</label>
                   </div>
-                  <div class="col-md-2 text-center">
+                  <div class="col-xs-3 col-md-2 text-center separador">
                     <input type="checkbox" name="tieneEst" id="tieneEst">
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-xs-3 col-md-4">
                     <input type="text" id="claveparaEst" disabled="disabled">
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-2">
+                  <div class="col-xs-3 col-md-2">
                     <label for="">AXA</label>
                   </div>
-                  <div class="col-md-2 text-center">
+                  <div class="col-xs-3 col-md-2 text-center separador">
                     <input type="checkbox" name="tieneAxa" id="tieneAxa">
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-xs-3 col-md-4">
                     <input type="text" id="claveparaAxa" disabled="disabled">
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-2">
+                  <div class="col-xs-3 col-md-2">
                     <label for="">HDI</label>
                   </div>
-                  <div class="col-md-2 text-center">
+                  <div class="col-xs-3 col-md-2 text-center separador">
                     <input type="checkbox" name="tienehdi" id="tienehdi" >
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-xs-3 col-md-4">
                     <input type="text" id="claveparahdi" disabled="disabled">
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-2">
+                  <div class="col-xs-3 col-md-2">
                     <label for="">SBS</label>
                   </div>
-                  <div class="col-md-2 text-center">
+                  <div class="col-xs-3 col-md-2 text-center separador">
                     <input type="checkbox" name="tienesbs" id="tienesbs">
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-xs-3 col-md-4">
                     <input type="text" id="claveparasbs" disabled="disabled">
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-2">
+                  <div class="col-xs-3 col-md-2">
                     <label for="">Zurich</label>
                   </div>
-                  <div class="col-md-2 text-center">
+                  <div class="col-xs-3 col-md-2 text-center separador">
                     <input type="checkbox" name="tienezuri" id="tienezuri">
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-xs-3 col-md-4">
                     <input type="text" id="claveparazuri" disabled="disabled" >
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-3 col-md-2">
+                    <label for="">Sura</label>
+                  </div>
+                  <div class="col-xs-3 col-md-2 text-center separador">
+                    <input type="checkbox" name="tieneSura" id="tieneSura">
+                  </div>
+                  <div class="col-xs-3 col-md-4">
+                    <input type="text" id="claveparaSura" disabled="disabled">
                   </div>
                 </div>
               </div>
@@ -429,7 +458,7 @@ input[type="checkbox"]{
                           <input type="text" id="idagentAlli" disabled="disabled">
                         </div>
                         <div class="col-md-3">
-                          <label for="">Codigo Partner:</label>
+                          <label for="">Código Partner:</label>
                         </div>
                         <div class="col-md-3">
                           <input type="text" name="contac" id="codigoPartAlli" disabled="disabled">
@@ -437,7 +466,7 @@ input[type="checkbox"]{
                       </div>
                       <div class="row">
                         <div class="col-md-3" style="margin-bottom: 10px;">
-                          <label for="">Codigo Agente:</label>
+                          <label for="">Código Agente:</label>
                         </div>
                         <div class="col-md-3">
                           <input type="text" id="codigoagenAlli" disabled="disabled">

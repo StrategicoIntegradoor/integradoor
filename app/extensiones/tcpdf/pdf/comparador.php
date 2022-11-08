@@ -6,14 +6,41 @@ date_default_timezone_set('America/Bogota');
 // Incluye la biblioteca TCPDF principal (busca la ruta de instalación).
 require_once('tcpdf_include.php');
 
+
+// class MYPDF extends TCPDF {
+
+//     //Page header
+//     public function Header() {
+        
+
+// 		$this->SetFont('dejavusanscondensed', 'B', 9);
+// 		$this->StartTransform();
+// 		$this->SetXY(203, 250);
+// 		$this->Rotate(90);
+// 		$this->setAlpha(0.5);
+// 		$this->SetTextColor(104, 104, 104);
+// 		$this->Cell(25, 6, "Elaborado por Software Integradoor propiedad del proveedor tecnológico Strategico Technologies SAS BIC Nit: 901.542.216-8", 0, 1, '');
+// 		$this->StopTransform();
+
+
+
+//     }
+
+   
+// }
+
+
+
 //$pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT,array(150,  255), true, 'UTF-8', false);
-$pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, 'A4', true, 'UTF-8', false);
+$pdf = new TCPDF (PDF_PAGE_ORIENTATION, PDF_UNIT, 'A4', true, 'UTF-8', false);
+// $pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+
 
 $identificador = $_GET['cotizacion'];
 
 $server = "localhost";
-$user = "grupoasi_cotizautos";
-$password = "M1graci0n123"; //poner tu propia contraseña, si tienes una.
+$user = "root";
+$password = ""; //poner tu propia contraseña, si tienes una.
 $bd = "grupoasi_cotizautos";
 
 $conexion = mysqli_connect($server, $user, $password, $bd);
@@ -144,6 +171,8 @@ $pdf->SetFont('dejavusanscondensed', '', 11);
 
 // Add a page
 // This method has several options, check the source code documentation for more information.
+
+
 $pdf->AddPage();
 
 //$pdf->Image('../../../vistas/img/logos/imagencotizador.jpg', -5, 0, 0, 92, 'JPG', '', '', true, 160, '', false, false, 0, false, false, false);
@@ -270,6 +299,19 @@ $pdf -> setAlpha(0.5);
 $pdf->SetTextColor(104, 104, 104);
 $pdf->Cell(25, 6, "Elaborado por Software Integradoor propiedad del proveedor tecnológico Strategico Technologies SAS BIC Nit: 901.542.216-8", 0, 1, '');
 $pdf->StopTransform();
+
+
+
+
+// ::::::::::::::::::::::::::::prueba:::::::::::::::::::::::::
+
+
+
+// ::::::::::::::::::::::::::::prueba:::::::::::::::::::::::::
+
+
+
+
 
 $pdf->SetAlpha(0.7);
 
@@ -2308,8 +2350,10 @@ $pdf->writeHTML($html5, true, false, true, false, '');
 if ($asegRecomendada > 0) {
 
 	$pdf->AddPage();
+
 	$pdf->writeHTML($html7, true, false, true, false, '');
 	$pdf->writeHTML($html6, true, false, true, false, '');
+
 }
 
 $htmlimg = '<img src="../../../vistas/img/logos/pasosaseguradora.jpg">';
@@ -2317,9 +2361,23 @@ $pdf -> writeHTML($htmlimg, true, false, true, false, '');
 
 // $pdf->Image('../../../vistas/img/logos/imagencotizador.jpg', -5, 0, 0, 92, 'JPG', '', '', true, 200, '', false, false, 0, false, false, false);
 
+
+
+
+$pdf->SetFont('dejavusanscondensed', 'B', 9);
+$pdf -> StartTransform();
+$pdf->SetXY(203, 250);
+$pdf -> Rotate(90);
+$pdf -> setAlpha(0.5);
+$pdf->SetTextColor(104, 104, 104);
+$pdf->Cell(25, 6, "Elaborado por Software Integradoor propiedad del proveedor tecnológico Strategico Technologies SAS BIC Nit: 901.542.216-8", 0, 1, '');
+$pdf->StopTransform();
+
+
+
 $pdf->SetXY(0, 274);
 // $pdf->SetY(-45);
-$htmlFooter = '<p style="font-size: 7px;">Nota: Esta cotización no constituye una oferta comercial. La misma se expide única y exclusivamente con un propósito informativo sobre los posibles costos del seguro y sus condiciones, los cuales serán susceptibles de modificación hasta tanto no se concreten y determinen las características de los respectivos riesgos.</p>';
+$htmlFooter = '<p style="font-size: 6.2px;">Nota: Esta cotización no constituye una oferta comercial. La misma se expide única y exclusivamente con un propósito informativo sobre los posibles costos del seguro y sus condiciones, los cuales serán susceptibles de modificación hasta tanto no se concreten y determinen las características de los respectivos riesgos.</p>';
 $pdf->writeHTML($htmlFooter, true, false, true, false, '');
 $pdf->Ln();
 

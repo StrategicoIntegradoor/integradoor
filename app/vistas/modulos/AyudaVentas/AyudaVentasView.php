@@ -72,11 +72,11 @@ if ($_SESSION["rol"] != 1 && $_SESSION["rol"] != 2) {
                     
                     <div class="row">
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <label>Sarlaft #1</label>
+                            <label>Sarlaft PN</label>
                             <input type="file" class="form-control" id="sarlaft">
                         </div>
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <label>Sarlaft #2</label>
+                            <label>Sarlaft PJ</label>
                             <input type="file" class="form-control" id="sarlaft2">
                         </div>
                     </div>
@@ -120,17 +120,18 @@ if ($_SESSION["rol"] != 1 && $_SESSION["rol"] != 2) {
                 <!-- END Form -->
 
                 <table class="table table-bordered table-striped dt-responsive tablas-asistencias" width="100%">
-                    <thead style="background: #88d600; color: #FFF;">
+                    <thead style="background: #88d600; color: #FFF; ">
                         <tr>
-                            <th>Aseguradora</th>
-                            <th>Linea de atención</th>
-                            <th>Clausulado</th>
-                            <th>Sarlaft</th>
-                            <th>Centro de inspección</th>
-                            <th>Continuidad</th>
-                            <th>Formas de pago</th>
-                            <th>Tips de expedición</th>
-                            <th>Editar</th>
+                            <th style="text-align: center">Aseguradora</th>
+                            <th style="text-align: center">Linea de atención</th>
+                            <th style="text-align: center">Clausulado</th>
+                            <th style="text-align: center">Sarlaft PN</th>
+                            <th style="text-align: center">Sarlaft PJ</th>
+                            <th style="text-align: center">Centro de inspección</th>
+                            <th style="text-align: center">Continuidad</th>
+                            <th style="text-align: center">Formas de pago</th>
+                            <th style="text-align: center">Tips de expedición</th>
+                            <th style="text-align: center">Editar</th>
                         </tr>
                     </thead>
                     <tbody class="ayuda-ventas-body">

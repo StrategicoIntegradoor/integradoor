@@ -1644,3 +1644,4 @@ function menosAgr() {
   document.getElementById("menosAgrOferta").style.display = "none";
   document.getElementById("masAgrOferta").style.display = "block";
 }
+

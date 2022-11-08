@@ -60,6 +60,7 @@ $("#tieneAlli").click(function () {
         $("#claveparaIAlli").prop('disabled', false);
     }else{   
         $("#claveparaIAlli").prop('disabled', true);
+        $("#claveparaIAlli").val("");
     }
 })
 
@@ -68,6 +69,7 @@ $("#tieneBoli").click(function () {
         $("#claveparaBoli").prop('disabled', false);
     }else{   
         $("#claveparaBoli").prop('disabled', true);
+        $("#claveparaBoli").val("");
     }
 })
 
@@ -76,6 +78,7 @@ $("#tieneEqui").click(function () {
         $("#claveparaEqui").prop('disabled', false);
     }else{   
         $("#claveparaEqui").prop('disabled', true);
+        $("#claveparaEqui").val("");
     }
 })
 
@@ -84,6 +87,7 @@ $("#tieneMap").click(function () {
         $("#claveparaMap").prop('disabled', false);
     }else{   
         $("#claveparaMap").prop('disabled', true);
+        $("#claveparaMap").val("");
     }
 })
 
@@ -92,6 +96,7 @@ $("#tienePrevi").click(function () {
         $("#claveparaPrevi").prop('disabled', false);
     }else{   
         $("#claveparaPrevi").prop('disabled', true);
+        $("#claveparaPrevi").val("");
     }
 })
 
@@ -100,6 +105,7 @@ $("#tieneSoli").click(function () {
         $("#claveparaSoli").prop('disabled', false);
     }else{   
         $("#claveparaSoli").prop('disabled', true);
+        $("#claveparaSoli").val("");
     }
 })
 
@@ -108,6 +114,7 @@ $("#tieneLibe").click(function () {
         $("#claveparaLibe").prop('disabled', false);
     }else{   
         $("#claveparaLibe").prop('disabled', true);
+        $("#claveparaLibe").val("");
     }
 })
 
@@ -116,6 +123,7 @@ $("#tieneEst").click(function () {
         $("#claveparaEst").prop('disabled', false);
     }else{   
         $("#claveparaEst").prop('disabled', true);
+        $("#claveparaEst").val("");
     }
 })
 
@@ -124,6 +132,7 @@ $("#tieneAxa").click(function () {
         $("#claveparaAxa").prop('disabled', false);
     }else{   
         $("#claveparaAxa").prop('disabled', true);
+        $("#claveparaAxa").val("");
     }
 })
 
@@ -132,6 +141,7 @@ $("#tienehdi").click(function () {
         $("#claveparahdi").prop('disabled', false);
     }else{   
         $("#claveparahdi").prop('disabled', true);
+        $("#claveparahdi").val("");
     }
 })
 
@@ -140,6 +150,7 @@ $("#tienesbs").click(function () {
         $("#claveparasbs").prop('disabled', false);
     }else{   
         $("#claveparasbs").prop('disabled', true);
+        $("#claveparasbs").val("");
     }
 })
 
@@ -148,6 +159,7 @@ $("#tienezuri").click(function () {
         $("#claveparazuri").prop('disabled', false);
     }else{   
         $("#claveparazuri").prop('disabled', true);
+        $("#claveparazuri").val("");
     }
 })
 
@@ -156,7 +168,7 @@ $("#tienezuri").click(function () {
 
 function traerCredenciales(){
     $.ajax({
-        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=traerCrede",
+        url: "controladores/intermediario.controlador.php?function=traerCrede",
         method: "POST",
         success: function (data) {
 
@@ -176,7 +188,7 @@ function traerCredenciales(){
                 $("#tieneAlli").prop("checked", true);
                 $("#claveparaIAlli").prop('disabled', false);
                 $("#claveparaIAlli").val(data["codigo_alli"]);
-            }
+            } 
             if(data["codigo_boli"]){
                 $("#claveparaBoli").prop('disabled', false);
                 $("#tieneBoli").prop("checked", true);
@@ -223,10 +235,14 @@ function traerCredenciales(){
                 $("#claveparahdi").prop('disabled', false);
             }
             if(data["codigo_sbs"]){
+                if (data["codigo_sbs"] != " "){
+
                 $("#claveparasbs").val(data["codigo_sbs"]);
                 $("#tienesbs").prop("checked", true);
                 $("#claveparasbs").prop('disabled', false);
             }
+            }
+
             if(data["codigo_zuri"]){
                 $("#claveparazuri").val(data["codigo_zuri"]);
                 $("#tienezuri").prop("checked", true);
@@ -327,7 +343,7 @@ function guardarcredenAlli(){
     let codAge = $("#codigoagenAlli").val();
 
     $.ajax({
-        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=guardarallianz",
+        url: "controladores/intermediario.controlador.php?function=guardarallianz",
         method: "POST",
         data: { contra,
             part,
@@ -358,7 +374,7 @@ function guardarcredenBoli(){
     let clave = $("#ClaveABo").val();
 
     $.ajax({
-        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=guardarvoli",
+        url: "controladores/intermediario.controlador.php?function=guardarvoli",
         method: "POST",
         data: { apikey,
             clave
@@ -387,7 +403,7 @@ function guardarcredenEqui(){
     let sucur  =$("#codSucuEqui").val();
 
     $.ajax({
-        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=guardarequi",
+        url: "controladores/intermediario.controlador.php?function=guardarequi",
         method: "POST",
         data: { usu,
             contra,
@@ -429,7 +445,7 @@ function guardarcredenSoli(){
     let cookie  = $("#cookieSoli").val();
 
     $.ajax({
-        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=guardarsoli",
+        url: "controladores/intermediario.controlador.php?function=guardarsoli",
         method: "POST",
         data: { sucur,
             codPer,
@@ -468,7 +484,7 @@ function guardarcredenLiberty(){
     let terminal = $("#termilibe").val();
 
     $.ajax({
-        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=guardarliber",
+        url: "controladores/intermediario.controlador.php?function=guardarliber",
         method: "POST",
         data: { cookTo,
             cookRe,
@@ -502,7 +518,7 @@ function guardarcredenEst(){
     let contra = $("#ContraLibe").val();
 
     $.ajax({
-        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=guardarest",
+        url: "controladores/intermediario.controlador.php?function=guardarest",
         method: "POST",
         data: { usu,
             contra
@@ -534,7 +550,7 @@ function guardarcredenAxa(){
     let valEve= $("#valEveaxa").val();
 
     $.ajax({
-        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=guardaraxa",
+        url: "controladores/intermediario.controlador.php?function=guardaraxa",
         method: "POST",
         data: { contra,
             codDis,
@@ -568,7 +584,7 @@ function guardarcredenHdi(){
     let contra = $("#contraseñahdi").val()
 
     $.ajax({
-        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=guardarhdi",
+        url: "controladores/intermediario.controlador.php?function=guardarhdi",
         method: "POST",
         data: { codSucu,
             codAge,
@@ -598,7 +614,7 @@ function guardarcredenSbs(){
     let contra = $("#contraseñasbs").val();
 
     $.ajax({
-        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=guardarsbs",
+        url: "controladores/intermediario.controlador.php?function=guardarsbs",
         method: "POST",
         data: { usu,
             contra
@@ -628,7 +644,7 @@ function guardarcredenZuri(){
     let cookie = $("#cookiezur").val();
 
     $.ajax({
-        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=guardarzuri",
+        url: "controladores/intermediario.controlador.php?function=guardarzuri",
         method: "POST",
         data: { usu,
             contra,
@@ -683,7 +699,7 @@ function guardarInfoInter(){
     var img = $('#ImgInter').val();
 
     $.ajax({
-        url: "http://localhost/integradoor/app/controladores/intermediario.controlador.php?function=actualizarInter",
+        url: "controladores/intermediario.controlador.php?function=actualizarInter",
         method: "POST",
         data: { tipodocumento,
         correo,

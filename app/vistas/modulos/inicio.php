@@ -88,7 +88,7 @@
         <tbody>
           <tr role="row" class="odd">
 
-            <td class="text-center sorting_1" tabindex="0">1</td>
+            <td class="text-center sorting_1" tabindex="0">3</td>
 
             <td class="text-center sorting_2">2022/09/13</td>
 
@@ -115,7 +115,7 @@
 
             <td class="text-center sorting_1" tabindex="0">2</td>
 
-            <td class="text-center sorting_2">2022/10/09</td>
+            <td class="text-center sorting_2">2022/09/09</td>
 
             <td class="text-right">90876543</td>
 
@@ -138,9 +138,9 @@
           </tr>
           <tr role="row" class="odd">
 
-            <td class="text-center sorting_1" tabindex="0">3</td>
+            <td class="text-center sorting_1" tabindex="0">1</td>
 
-            <td class="text-center sorting_2">2022/02/09</td>
+            <td class="text-center sorting_2">2022/09/02</td>
 
             <td class="text-right">34567891</td>
 

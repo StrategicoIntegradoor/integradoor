@@ -222,7 +222,7 @@
 
 
 
-					<i class="fa fa-credit-card"></i>
+					<i class="fa fa-book"></i>
 
 					<span>Ayuda Ventas</span>
 

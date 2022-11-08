@@ -36,44 +36,44 @@
     </form>
 
     <!-- VUE INSTANCE -->
-    <div id="app">
-      <transition name="fade">
-        <div class="modal-olvido-contrasenia" v-if="mostrarModal">
-          <div class="modal-olvido-contrasenia-container">
-            <p class="titulo-modal-olvido-contrasenia">Le hemos enviado un correo</p>
-            <button class="boton-modal-olvido-contrasenia btn" @click="cerrarModal">Entendido!</button>
-          </div>
-        </div>
-      </transition>
-
-      <div class="olvido-contrasenia-container">
-        <div class="row">
-          <p style="color: #88d600;" id="olvido-contrasenia" @click="pressedShowFormSet"><b>{{ messageButton }}</b></p>
-        </div>
-
+    <div id="app" >
         <transition name="fade">
-          <div class="row form-olvido-contrasenia" v-if="mostrarFormulario">
-            <form>
-              <div class="form-group">
-                <label>Correo eléctronico</label>
-                <input type="email" class="form-control" placeholder="Correo" required v-model="correo">
-              </div>
-
-              <div class="row">
-                <div class="col-xs-4">
-                  <button type="button" class="btn btn-primary btn-block btn-flat" @click="enviarCorreo">Enviar</button>
-                </div>
-              </div>
-
-              <p class="error-feedback" v-if="correoError"><b>{{ MessageErrorCorreo }}</b></p>
-            </form>
+          <div class="modal-olvido-contrasenia" v-if="mostrarModal">
+            <div class="modal-olvido-contrasenia-container">
+              <p class="titulo-modal-olvido-contrasenia">Le hemos enviado un correo</p>
+              <button class="boton-modal-olvido-contrasenia btn" @click="cerrarModal">Entendido!</button>
+            </div>
           </div>
         </transition>
-      </div>
+        
+        <div class="olvido-contrasenia-container">
+          <div class="row">
+            <p style="color: #88d600;" id="olvido-contrasenia" @click="pressedShowFormSet"><b>{{ messageButton }}</b></p>
+          </div>
+
+          <transition name="fade">
+            <div class="row form-olvido-contrasenia" v-if="mostrarFormulario">
+              <form>
+                <div class="form-group">
+                  <label>Correo eléctronico</label>
+                  <input type="email" class="form-control" placeholder="Correo" required v-model="correo">
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-4">
+                    <button type="button" class="btn btn-primary btn-block btn-flat" @click="enviarCorreo">Enviar</button>
+                  </div>
+                </div>
+
+                <p class="error-feedback" v-if="correoError"><b>{{ MessageErrorCorreo }}</b></p>
+              </form>
+            </div>
+          </transition>
+        </div> 
     </div>
     <!-- END VUE INSTANCE -->
   </div>
-<div style="display:;">
+<div>
 
 <?php
 

@@ -22,7 +22,7 @@ const countdown = (dateTo, element) => {
         let currenTime = getTime(dateTo);
         if(currenTime.hours != 'aN'){
 
-            item.innerHTML =  currenTime.days + "D " + currenTime.hours +  'H ' + currenTime.minutes + 'M ' + currenTime.seconds + 'S';
+            
             
 
             if (currenTime.time <= 1) {
@@ -37,12 +37,16 @@ const countdown = (dateTo, element) => {
                         window.location = "salir";
                     } else if (result.isDenied) {
                     }
+
+
                 })
 
 
                 setTimeout(function(){
                     window.location = "salir";
                 }, 10000);
+            }else{
+                item.innerHTML =  currenTime.days + "D " + currenTime.hours +  'H ' + currenTime.minutes + 'M ' + currenTime.seconds + 'S';
             }
         }else{
 

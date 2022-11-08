@@ -146,10 +146,13 @@ const obtenerAyudaVentas = async () => {
             }
             if (ayudaVenta.path_sarlaft || ayudaVenta.path_sarlaft2) {
                 let sarlaftButtons = '<td>'
-                sarlaftButtons += ayudaVenta.path_sarlaft ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="window.open('./vistas/modulos/AyudaVentas/pdf/sarlaft/${ayudaVenta.path_sarlaft}')">PDF #1</button>` : ''
-                sarlaftButtons += ayudaVenta.path_sarlaft2 ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="window.open('./vistas/modulos/AyudaVentas/pdf/sarlaft2/${ayudaVenta.path_sarlaft2}')">PDF #2</button>` : ''
+                sarlaftButtons += ayudaVenta.path_sarlaft ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="window.open('./vistas/modulos/AyudaVentas/pdf/sarlaft/${ayudaVenta.path_sarlaft}')">PDF PN</button>` : ''
                 partTemplate += sarlaftButtons + '</td>'
+                let sarlaftButtons2 = '<td>'
+                sarlaftButtons2 += ayudaVenta.path_sarlaft2 ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="window.open('./vistas/modulos/AyudaVentas/pdf/sarlaft2/${ayudaVenta.path_sarlaft2}')">PDF PJ</button>` : ''
+                partTemplate += sarlaftButtons2 + '</td>'
             } else {
+                partTemplate += '<td></td>'
                 partTemplate += '<td></td>'
             }
             partTemplate += `
